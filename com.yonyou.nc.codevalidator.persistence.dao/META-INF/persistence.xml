@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+
+	<persistence-unit name="rule-openjpa">
+		<provider>org.apache.openjpa.persistence.PersistenceProviderImpl
+		</provider>
+		<class>com.yonyou.nc.codevalidator.persistence.entity.ExecuteRecordVO
+		</class>
+		<class>com.yonyou.nc.codevalidator.persistence.entity.ExecuteUnitVO
+		</class>
+		<class>com.yonyou.nc.codevalidator.persistence.entity.RuleDefinitionVO
+		</class>
+		<class>com.yonyou.nc.codevalidator.persistence.entity.RuleExecuteResultVO
+		</class>
+
+		<properties>
+			<property name="openjpa.ConnectionDriverName" value="org.postgresql.Driver" />
+			<property name="openjpa.ConnectionUserName" value="postgres" />
+			<property name="openjpa.ConnectionPassword" value="postgres" />
+			<property name="openjpa.DynamicEnhancementAgent" value="false" />
+			<property name="openjpa.RuntimeUnenhancedClasses" value="supported" />
+			<property name="openjpa.ConnectionURL" value="jdbc:postgresql://localhost:5432/ncrcc" />
+			<property name="openjpa.Multithreaded" value="true" />
+			<property name="openjpa.DataCache" value="true(CacheSize=5000, SoftReferenceSize=0)"/>
+			<property name="openjpa.RemoteCommitProvider" value="sjvm"/>
+		</properties>
+		<!-- <properties> <property name="openjpa.ConnectionDriverName" value="oracle.jdbc.OracleDriver" 
+			/> <property name="openjpa.ConnectionUserName" value="rulevalidator" /> <property 
+			name="openjpa.ConnectionPassword" value="1" /> <property name="openjpa.DynamicEnhancementAgent" 
+			value="false"/> <property name="openjpa.RuntimeUnenhancedClasses" value="supported" 
+			/> <property name="openjpa.ConnectionURL" value="jdbc:oracle:thin:@20.10.80.129:1521:ora11g" 
+			/> <property name="openjpa.Multithreaded" value="true" /> </properties> -->
+	</persistence-unit>
+	<persistence-unit name="rule-hibernate" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>com.yonyou.nc.codevalidator.persistence.entity.ExecuteRecordVO
+		</class>
+		<class>com.yonyou.nc.codevalidator.persistence.entity.ExecuteUnitVO
+		</class>
+		<class>com.yonyou.nc.codevalidator.persistence.entity.RuleDefinitionVO
+		</class>
+		<class>com.yonyou.nc.codevalidator.persistence.entity.RuleExecuteResultVO
+		</class>
+		<properties>
+			<property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+			<property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/ncrcc-backup" />
+			<property name="hibernate.connection.username" value="postgres" />
+			<property name="hibernate.connection.password" value="postgres" />
+			<property name="hibernate.show_sql" value="true" />
+			<!-- JDBC抓取记录的大小，相当于设置 Statement.setFetchSize -->
+			<property name="hibernate.jdbc.fetch_size" value="50" />
+			<!-- JDBC批量更新的大小，建议设置为 5～30之间的值，默认为5 -->
+			<property name="hibernate.jdbc.batch_size"  value="25"/>
+			<!-- JDBC执行批量操作时，是否同时更新版本数据 -->
+			<property name="hibernate.jdbc.batch_versioned_data"  value="false"/>
+			<!-- 是否使用JDBC自动提交 -->
+			<property name="hibernate.connection.autocommit"  value="false"/>
+			<!-- 对DDL的自动生成方式 -->
+			<property name=" hibernate.hbm2ddl.auto"  value="create"/>
+			<!-- 一对一和多对一映射时，实体加载的最大深 度，0表示不抓取相关实体。建议值在0～3之间，默认为1 -->
+			<property name="hibernate.max_fetch_depth"  value="2"/>
+			<!-- 加载相关联的实体集合时，所加载的相关实体 数。建议使用2的倍数值，例如4、8（默认）、16。 -->
+			<property name="hibernate.default_batch_fetch_size"  value="16"/>
+		</properties>
+
+	</persistence-unit>
+
+</persistence>
+

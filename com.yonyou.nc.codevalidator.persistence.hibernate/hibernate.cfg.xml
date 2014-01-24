@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd" >
+
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="connection.driver.class">org.postgresql.Driver</property>
+		<!-- JDBC URL -->
+		<property name="connection.url">jdbc:postgresql://127.0.0.1:5432/ncrcc</property>
+		<!-- 数据库用户名 -->
+		<property name="connection.username">postgres</property>
+		<!-- 数据库密码 -->
+		<property name="connection.password">postgres</property>
+
+		<!-- 显示实际操作数据库时的SQL -->
+		<property name="show_sql">true</property>
+		<!-- SQL方言，这边设定的是MySQL -->
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		
+		<!--连接池配置，c3p0连接池是Hibernate推荐使用的连接池-->
+		<property name="c3p0.min_size">5</property>
+		<property name="c3p0.max_size">20</property>
+		<property name="c3p0.timeout">1800</property>
+		<property name="c3p0.max_statements">50</property>
+		
+		<!-- 对象与数据库表格映像文件 -->
+		<mapping class="com.yonyou.nc.codevalidator.persistence.entity.ExecuteRecordVO"></mapping>
+		<mapping class="com.yonyou.nc.codevalidator.persistence.entity.ExecuteUnitVO"></mapping>
+		<mapping class="com.yonyou.nc.codevalidator.persistence.entity.RuleDefinitionVO"></mapping>
+		<mapping class="com.yonyou.nc.codevalidator.persistence.entity.RuleExecuteResultVO"></mapping>
+
+	</session-factory>
+</hibernate-configuration>

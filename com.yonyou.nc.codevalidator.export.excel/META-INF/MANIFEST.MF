@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Export.Excel
+Bundle-SymbolicName: com.yonyou.nc.codevalidator.export.excel;singleton:=true
+Bundle-Version: 2.9.0
+Bundle-Vendor: YONYOU
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: com.yonyou.nc.codevalidator.export,
+ com.yonyou.nc.codevalidator.rule-api,
+ com.yonyou.nc.codevalidator.sdk.common
+Import-Package: org.osgi.framework
+Export-Package: com.yonyou.nc.codevalidator.export.excel
+Service-Component: OSGI-INF/ExcelExport.xml
+Bundle-ActivationPolicy: lazy

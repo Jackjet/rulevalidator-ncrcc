@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.yonyou.nc.codevalidator.plugin.feature"
+      label="Plugin.Feature"
+      version="2.9.0"
+      provider-name="YONYOU">
+
+   <description url="http://ncrcc.yonyou.com">
+      规则验证系统最终的产物为一组eclipse插件集合，帮助开发（验证）人员进行规则的验证。
+插件运行态需要依赖NC MDE插件，仅对开发态中的MDE工程进行验证
+本插件包中仅包含NC规则验证系统必备的包，并不包含规则包
+   </description>
+
+   <copyright url="http://ufpark">
+      用友软件股份有限公司 NC平台技术部
+   </copyright>
+
+   <license url="http://ufpark">
+      用友软件股份有限公司
+   </license>
+
+   <url>
+      <discovery label="codevalidator updatesite" url="http://ncrcc.yonyou.com:8088/com.yonyou.nc.codevalidator.updatesite"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.osgi"/>
+   </requires>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.export"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.log"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.mdplugin.simple"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.resparser-api"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.resparser.db"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.resparser.file"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.resparser.md-plugin"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.rule-api"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.sdk.common"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.runtime.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.code.pmdadaptor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.export.xml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.config"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.config.xml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.export.excel"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Plugin.Domain.AM
+Bundle-SymbolicName: com.yonyou.nc.codevalidator.plugin.domain.am;singleton:=true
+Bundle-Version: 2.9.0
+Bundle-Vendor: YONYOU
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Service-Component: OSGI-INF/code/*.xml, OSGI-INF/i18n/*.xml, OSGI-INF/md/*.xml, OSGI-INF/script/*.xml, OSGI-INF/uif/*.xml, OSGI-INF/upm/*.xml
+Require-Bundle: com.yonyou.nc.codevalidator.sdk.common,
+ com.yonyou.nc.codevalidator.resparser-api,
+ com.yonyou.nc.codevalidator.rule-api,
+ com.yonyou.nc.codevalidator.code.pmdadaptor

@@ -1,0 +1,13 @@
+*.class
+# Package Files #
+*.war
+*.ear
+*.rar
+/bin
+*.iml
+build.xml
+*...args
+@dot
+*/bin
+*/target
+*/.settings

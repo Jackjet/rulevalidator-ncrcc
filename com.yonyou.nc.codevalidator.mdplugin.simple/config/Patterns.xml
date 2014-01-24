@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="gb2312"?>
+<patterns>
+	<pattern name="orderPattern" displayName="订单模式">
+		<entitys>
+			<entity name="order" displayName="订单" accessorClassName="AggVO"  isPrimary="true" versionType="0"  isAuthen="true" keyAttributeName="ID" >
+				<propertys>
+					<attribute  sequence="0"  name="ID" displayName="订单ID" dataTypeStyle="SINGLE" dataType="BS000010000100001051"isHide="true" isNullable="false" isReadOnly="true" versionType="0" fixedLength="true" length="20" />
+					<attribute  sequence="1"  name="orderType" displayName="订单类型" dataTypeStyle="SINGLE" dataType="" typeName="OrderType" isNullable="false" isReadOnly="false" versionType="0" fixedLength="false" length=""  />
+					<attribute  sequence="2"  name="deliveryDate" displayName="交货日期" dataTypeStyle="SINGLE" dataType="BS000010000100001033" isNullable="true" isReadOnly="false" versionType="0" fixedLength="false" length="10"  />
+					<attribute  sequence="3"  name="orderItems" displayName="订单明细" dataTypeStyle="ARRAY" dataType="" typeName="OrderItem" isNullable="true" isReadOnly="false" versionType="0" fixedLength="false" length=""  />
+				</propertys>
+			</entity>
+
+			<entity name="orderItem" displayName="订单明细" accessorClassName="POJO"  isPrimary="false" isAuthen="true" keyAttributeName="ID" >
+				<propertys>
+					<attribute  sequence='0'  name='ID' displayName='订单项ID' dataTypeStyle='SINGLE' dataType='BS000010000100001051' isHide='true' isNullable='false' isReadOnly='true' versionType='0' fixedLength='true' length='20' />
+					<attribute  sequence='1'  name='product' displayName='商品' dataTypeStyle='SINGLE' dataType='' isHide='false' isNullable='false' isReadOnly='false' versionType='0'  fixedLength='false' length='' />
+					<attribute  sequence='2'  name='salesPrice' displayName='销售价格' dataTypeStyle='SINGLE' dataType='BS000010000100001052' isHide='false' isNullable='true' isReadOnly='false' versionType='0' fixedLength='false' length='28' />
+					<attribute  sequence='3'  name='quantity' displayName='数量' dataTypeStyle='SINGLE' dataType='BS000010000100001004' isHide='false' isNullable='true' isReadOnly='false' versionType='0' fixedLength='false' length='' />
+					<attribute  sequence='4'  name='amount' displayName='金额' dataTypeStyle='SINGLE' dataType='BS000010000100001031' isHide='false' isKey='false' isNullable='true' isReadOnly='false' versionType='0' fixedLength='false' length='28' />
+				</propertys>
+			</entity>
+		</entitys>
+
+		<enums>
+			<enum name="OrderType" displayName="订单类型" description="" versionType="0"  retuenDataType="BS000010000100001006" >
+				<enumitem  enumValue="0" enumDisplay="先单后货" description=""  versionType="0" />
+				<enumitem  enumValue="1" enumDisplay="先货后单" description="" versionType="0"/>
+			</enum>
+		</enums>
+
+		<valueObjects>
+			<valueObject name="address" displayName="地址"  versionType="0">
+				<propertys>
+					<property name="country" displayName="国家" dataType="BS000010000100001001" length="50"  versionType="0"/>
+					<property name="city" displayName="城市" dataType="BS000010000100001001" length="50"  versionType="0"/>
+					<property name="postCode" displayName="" dataType="BS000010000100001001" length="50"  versionType="0"/>
+					<property name="email" displayName="" dataType="BS000010000100001001" length="50"  versionType="0"/>
+				</propertys>
+			</valueObject>
+		</valueObjects>
+
+		<busiIterfaces>
+			<busiIterface>
+				<propertys>
+					<property />
+				</propertys>
+			</busiIterface>
+		</busiIterfaces>
+
+		<notes>
+			<note relativeElement="order" versionType="0" >
+				<remark>销售订单是主实体</remark>
+			</note>
+		</notes>
+
+		<associations>
+			<AggregationRelation name="" startElement="order" startProperty="orderItems" endElement="orderItem" startMultiplicity='1' startMultiplicity='1..n' versionType="0"/>
+		</associations>
+	</pattern >
+</patterns>

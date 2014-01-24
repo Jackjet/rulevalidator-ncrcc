@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="com.yonyou.nc.codevalidator.runtime.webservice.RuleRuntimeExecutor">
+   <implementation class="com.yonyou.nc.codevalidator.runtime.webservice.RuleRuntimeExecutor"/>
+   <!-- 
+   <property name="service.exported.interfaces" value="*" />
+   <property name="service.exported.configs" value="org.apache.cxf.ws" />
+   <property name="org.apache.cxf.ws.address" value="http://127.0.0.1:8099/ruleexecute" />
+   -->
+   <service>
+      <provide interface="com.yonyou.nc.codevalidator.runtime.IRuleRuntimeExecutor"/>
+   </service>
+</scr:component>

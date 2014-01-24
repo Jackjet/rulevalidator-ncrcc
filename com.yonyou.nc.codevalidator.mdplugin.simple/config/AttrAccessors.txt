@@ -1,0 +1,3 @@
+nc.md.model.access.PojoAccessor
+nc.md.model.access.NCBeanAccessor
+nc.md.model.access.BodyOfAggVOAccessor

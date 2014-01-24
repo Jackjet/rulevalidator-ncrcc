@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.yonyou.nc.codevalidator.plugin.domain.feature"
+      label="Domain.Plugin.Feature"
+      version="2.9.0"
+      provider-name="YONYOU">
+
+   <description url="http://ncrcc.yonyou.com/">
+      本安装包中仅含有一些公用检查规则
+其中包含以下几个部门实现的规则：
+NC流程制造开发部
+NC资产与项目管理开发部
+NC维护开发部
+NC平台技术部
+注意：如果想让这些规则能够正常运行，需要依赖必备的com.yonyou.nc.codevalidator.plugin.feature包相关内容。
+   </description>
+
+   <copyright url="http://ufpark">
+      用友软件股份有限公司 NC平台技术部
+   </copyright>
+
+   <license url="http://ufpark">
+      用友软件股份有限公司
+   </license>
+
+   <requires>
+      <import plugin="com.yonyou.nc.codevalidator.rule-api"/>
+      <import plugin="com.yonyou.nc.codevalidator.sdk.common"/>
+      <import plugin="com.yonyou.nc.codevalidator.resparser-api"/>
+      <import plugin="com.yonyou.nc.codevalidator.code.pmdadaptor"/>
+      <import plugin="org.eclipse.osgi"/>
+   </requires>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.plugin.domain.mm"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.plugin.domain.platform"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.plugin.domain.ncm"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.plugin.domain.am"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.plugin.domain.scm"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.yonyou.nc.codevalidator.plugin.domain.dmm"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='gb2312'?>
+<accessorTemplates>
+	<accessor>
+		<name>pojo</name>
+		<displayName>POJO</displayName>
+		<classFullname>nc.md.model.access.javamap.POJOStyle</classFullname>
+		<properties>
+		</properties>
+	</accessor>
+	<accessor>
+		<name>NCVO</name>
+		<displayName>NCVO</displayName>
+		<classFullname>nc.md.model.access.javamap.NCBeanStyle</classFullname>
+		<properties>
+		</properties>
+	</accessor>
+	<accessor>
+		<name>AggVO</name>
+		<displayName>AggVO</displayName>
+		<classFullname>nc.md.model.access.javamap.AggVOStyle</classFullname>
+		<properties>
+			<property name='wrapclsname'>包装类名</property>
+		</properties>
+	</accessor>
+</accessorTemplates>
