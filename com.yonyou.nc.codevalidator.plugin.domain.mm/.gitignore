@@ -1,0 +1,13 @@
+*.class
+*.classpath
+# Package Files #
+*.war
+*.ear
+*.rar
+/bin
+*.iml
+/*/*.classpath
+.svn
+bin
+.settings
+.project

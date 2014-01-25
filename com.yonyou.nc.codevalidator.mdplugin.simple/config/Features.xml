@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='gb2312'?>
+<features>
+	<feature name="TreeMode" displayName="树型结构">
+		<propertys>
+			<property name="parentObject" displayName="上级对象" dataType="me" />
+		</propertys>
+	</feature>
+
+	<feature name="creditMode" displayName="单据主实体">
+		<propertys>
+			<property name="id" displayName="ID" dataType="BS000010000100001051" length="20"/>
+			<property name="billno" displayName="单据号" dataType="BS000010000100001001" length="40"/>
+			<property name="billdata" displayName="单据日期" dataType="BS000010000100001033" length="19"/>
+			<property name="billorg" displayName="所属组织" dataType="8395eeab-e301-413e-a3fb-367aa308c172" length="20"/>
+			<property name="billtype" displayName="单据类型" dataType="b0fa41cd-a649-4309-b685-d341a5d1b0ed" length="20"/>
+			<property name="billstatus" displayName="单据状态" dataType="2ed33012-890c-4e5f-82a0-40ef0eeb4b45" length="20"/>
+			<property name="creator" displayName="创建人" dataType="59b035c6-b215-4989-9190-ebe3d592fafc" length="20" refModelName="操作员" />
+			<property name="createdate" displayName="创建日期" dataType="BS000010000100001034" length="19" />
+			<property name="modifier" displayName="修改人" dataType="59b035c6-b215-4989-9190-ebe3d592fafc" length="50" />
+			<property name="modifydate" displayName="修改日期" dataType="BS000010000100001034" length="19" />
+			<property name="approver" displayName="审核人" dataType="59b035c6-b215-4989-9190-ebe3d592fafc" length="50" />
+			<property name="approvedate" displayName="审核日期" dataType="BS000010000100001034" length="19" />
+			<property name="item" displayName="明细" dataTypeStyle="ARRAY"/>
+		</propertys>
+	</feature>
+	
+	<feature name="orgAuditInfo" displayName="v6审计信息">
+		<propertys>
+			<property name="mnecode" displayName="助记码" dataType="BS000010000100001001" length="50" />
+			<property name="creator" displayName="创建人" dataType="59b035c6-b215-4989-9190-ebe3d592fafc" length="20" refModelName="操作员" />
+			<property name="creationtime" displayName="创建时间" dataType="BS000010000100001034" length="19" />
+			<property name="modifier" displayName="最后修改人" dataType="59b035c6-b215-4989-9190-ebe3d592fafc" length="20" />
+			<property name="modifiedtime" displayName="最后修改时间" dataType="BS000010000100001034" length="19" />
+			<property name="sealflag" displayName="封存标记" dataType="BS000010000100001032" length="1" defaultvalue="N" isNullable="false" />
+			<property name="usedflag" displayName="启用标记" dataType="BS000010000100001032" length="1" defaultvalue="N" isNullable="false" />
+			
+		</propertys>
+	</feature>
+	
+	<feature name="Innercode" displayName="内部编码">
+		<propertys>
+			<property name="innercode" displayName="内部编码" dataType="BS000010000100001001" length="200" />
+			<property name="seq" displayName="序号" dataType="BS000010000100001001" length="20" />
+		</propertys>
+	</feature>
+
+	<feature name="version" displayName="最新版本标记">
+		<propertys>
+			<property name="islastversion" displayName="是否最新版本" dataType="BS000010000100001032" length="1"/>
+		</propertys>
+	</feature>
+	
+	<feature name="orgDef" displayName="档案自定义项">
+		<propertys>
+			<property name="def1" displayName="自定义项1" dataType="BS000010000100001056" length="500" />
+			<property name="def2" displayName="自定义项2" dataType="BS000010000100001056" length="500" />
+			<property name="def3" displayName="自定义项3" dataType="BS000010000100001056" length="500" />
+			<property name="def4" displayName="自定义项4" dataType="BS000010000100001056" length="500" />
+			<property name="def5" displayName="自定义项5" dataType="BS000010000100001056" length="500" />
+			<property name="def6" displayName="自定义项6" dataType="BS000010000100001056" length="500" />
+			<property name="def7" displayName="自定义项7" dataType="BS000010000100001056" length="500" />
+			<property name="def8" displayName="自定义项8" dataType="BS000010000100001056" length="500" />
+			<property name="def9" displayName="自定义项9" dataType="BS000010000100001056" length="500" />
+			<property name="def10" displayName="自定义项10" dataType="BS000010000100001056" length="500" />
+			<property name="def11" displayName="自定义项11" dataType="BS000010000100001056" length="500" />
+			<property name="def12" displayName="自定义项12" dataType="BS000010000100001056" length="500" />
+			<property name="def13" displayName="自定义项13" dataType="BS000010000100001056" length="500" />
+			<property name="def14" displayName="自定义项14" dataType="BS000010000100001056" length="500" />
+			<property name="def15" displayName="自定义项15" dataType="BS000010000100001056" length="500" />
+			<property name="def16" displayName="自定义项16" dataType="BS000010000100001056" length="500" />
+			<property name="def17" displayName="自定义项17" dataType="BS000010000100001056" length="500" />
+			<property name="def18" displayName="自定义项18" dataType="BS000010000100001056" length="500" />
+			<property name="def19" displayName="自定义项19" dataType="BS000010000100001056" length="500" />
+			<property name="def20" displayName="自定义项20" dataType="BS000010000100001056" length="500" />
+		</propertys>
+	</feature>
+</features>

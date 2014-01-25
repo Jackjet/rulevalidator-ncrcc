@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Scm
+Bundle-SymbolicName: com.yonyou.nc.codevalidator.plugin.domain.scm;singleton:=true
+Bundle-Version: 2.9.0
+Bundle-Activator: com.yonyou.nc.codevalidator.plugin.domain.scm.Activator
+Bundle-Vendor: YONYOU
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.osgi.framework;version="1.3.0"
+Bundle-ActivationPolicy: lazy
+Require-Bundle: com.yonyou.nc.codevalidator.rule-api;bundle-version="2.7.0",
+ com.yonyou.nc.codevalidator.resparser-api;bundle-version="2.7.0",
+ com.yonyou.nc.codevalidator.sdk.common;bundle-version="2.7.0"
+Service-Component: OSGI-INF/script/*.xml, OSGI-INF/i18n/*.xml, OSGI-INF/md/*.xml, OSGI-INF/uif/*.xml

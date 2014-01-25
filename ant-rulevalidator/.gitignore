@@ -1,0 +1,5 @@
+build
+dist\*.jar
+bin
+.class
+

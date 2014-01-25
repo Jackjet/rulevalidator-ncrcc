@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='gb2312'?>
+<dbTypes>
+	<type>char</type> 
+	<type>varchar</type>
+	<type>image</type>
+	<type>decimal</type>
+	<type>text</type>
+</dbTypes>

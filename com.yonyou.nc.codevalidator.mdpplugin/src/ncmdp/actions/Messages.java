@@ -1,0 +1,124 @@
+package ncmdp.actions;
+
+import org.eclipse.osgi.util.NLS;
+
+public class Messages extends NLS {
+	private static final String BUNDLE_NAME = "ncmdp.actions.messages"; //$NON-NLS-1$
+	public static String AddBusiItfAttrAction_0;
+	public static String AddBusiItfAttrAction_1;
+	public static String AddCanzhaoAction_0;
+	public static String AddCanzhaoAction_1;
+	public static String AddCanzhaoAction_2;
+	public static String AddCellPropAction_0;
+	public static String AddCellPropAction_1;
+	public static String AddEnumItemAction_0;
+	public static String AddEnumItemAction_3;
+	public static String AddOperationAction_0;
+	public static String AddOperationAction_1;
+	public static String AddOperationAction_2;
+	public static String AddOperationAction_3;
+	public static String AddParameterAction_0;
+	public static String AddParameterAction_1;
+	public static String AttrMoveButtomAction_0;
+	public static String AttrMoveButtomAction_1;
+	public static String AttrMoveDownAction_0;
+	public static String AttrMoveDownAction_1;
+	public static String AttrMoveTopAction_0;
+	public static String AttrMoveTopAction_1;
+	public static String AttrMoveUpAction_0;
+	public static String AttrMoveUpAction_1;
+	public static String AttrCopyAction_0;
+	public static String AttrPasteAction_0;
+	public static String BusinessInterfaceAttrsUpOrDownAction_0;
+	public static String BusinessInterfaceAttrsUpOrDownAction_1;
+	public static String BusinessInterfaceAttrsUpOrDownAction_2;
+	public static String BusinessInterfaceAttrsUpOrDownAction_3;
+	public static String DelBusiItfAttrAction_0;
+	public static String DelBusiItfAttrAction_1;
+	public static String DelCellPropAction_0;
+	public static String DelCellPropAction_1;
+	public static String DelCellPropAction_2;
+	public static String DelCellPropAction_3;
+	public static String DelEnumItemAction_0;
+	public static String DelEnumItemAction_1;
+	public static String DelEnumItemAction_2;
+	public static String DeleteComponentAndTablesAction_0;
+	public static String DeleteComponentAndTablesAction_1;
+	public static String DeleteComponentAndTablesAction_2;
+	public static String DeletePublishedMetaDataAction_0;
+	public static String DeletePublishedMetaDataAction_1;
+	public static String DeletePublishedMetaDataAction_2;
+	public static String DelOperationAction_0;
+	public static String DelOperationAction_1;
+	public static String DelOperationAction_2;
+	public static String DelOperationPropertyAction_0;
+	public static String DelParameterAction_0;
+	public static String EnumItemMoveUpOrDownAction_0;
+	public static String EnumItemMoveUpOrDownAction_1;
+	public static String EnumItemMoveUpOrDownAction_2;
+	public static String EnumItemMoveUpOrDownAction_3;
+	public static String ExportToCodeAction_0;
+	public static String ExportToCodeAction_5;
+	public static String ExportToCodeAction_6;
+	public static String ExportToImageAction_0;
+	public static String ExportToImageAction_1;
+	public static String ExportToImageAction_2;
+	public static String ExportToPdmFileAction_0;
+	public static String ExportToPdmFileActionAndOpen_0;
+	public static String ExportToXSDFileAction_0;
+	public static String ExportToXSDFileAction_2;
+	public static String ExportToXSDFileAction_3;
+	public static String FeatureAction_2;
+	public static String FeatureAction_3;
+	public static String GenModuleFileAction_0;
+	public static String GenModuleFileAction_1;
+	public static String GenModuleFileAction_2;
+	public static String GenModuleFileAction_4;
+	public static String GenModuleFileAction_5;
+	public static String GenModuleFileAction_6;
+	public static String GenSqlAction_0;
+	public static String GenSqlAction_1;
+	public static String GenWSDLAction_0;
+	public static String GenWSDLAction_2;
+	public static String GenWSDLAction_3;
+	public static String ImportAttrToCellAction_0;
+	public static String ImportAttrToCellAction_1;
+	public static String ImportAttrToCellAction_2;
+	public static String ImportAttrToCellAction_3;
+	public static String ImportAttrToCellAction_4;
+	public static String ImportInterfaceAction_0;
+	public static String ImportInterfaceAction_1;
+	public static String ImportInterfaceAction_10;
+	public static String ImportInterfaceAction_2;
+	public static String ImportInterfaceAction_3;
+	public static String ImportInterfaceAction_4;
+	public static String ImportInterfaceAction_6;
+	public static String ImportInterfaceAction_7;
+	public static String ParameterMoveDownAction_0;
+	public static String ParameterMoveDownAction_1;
+	public static String ParameterMoveUpAction_0;
+	public static String ParameterMoveUpAction_1;
+	public static String PublishMetaDataAction_0;
+	public static String PublishMetaDataAction_1;
+	public static String PublishMetaDataAction_2;
+	public static String PublishMetaDataAction_3;
+	public static String PublishMetaDataAction_4;
+	public static String PublishMetaDataAction_5;
+	public static String PublishMetaDataAction_6;
+	public static String PublishMetaDataAction_7;
+	public static String PublishMetaDataAction_8;
+	public static String SetCaozhaoFromDBAction_0;
+	public static String SetCaozhaoFromDBAction_1;
+	public static String SetCellPropTableColAction_0;
+	public static String SetCellPropTableColAction_1;
+	public static String exportToFeatureAction;
+	public static String exportToMappingAction;
+	public static String exportMulitiLanAction;
+	static {
+		// initialize resource bundle
+//		NLS.initializeMessages(BUNDLE_NAME, Messages.class);
+	}
+
+	private Messages() {
+	}
+}

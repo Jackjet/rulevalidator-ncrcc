@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Config
+Bundle-SymbolicName: com.yonyou.nc.codevalidator.config;singleton:=true
+Bundle-Version: 2.9.0
+Bundle-Vendor: YONYOU
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: com.yonyou.nc.codevalidator.rule-api
+Export-Package: com.yonyou.nc.codevalidator.config
+Bundle-ActivationPolicy: lazy

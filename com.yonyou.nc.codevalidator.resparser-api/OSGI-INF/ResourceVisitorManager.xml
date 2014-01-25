@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="com.yonyou.nc.codevalidator.resparser-api">
+   <implementation class="com.yonyou.nc.codevalidator.resparser.ResourceVisitorManagerProxy"/>
+   <reference bind="setResourceVisitorManager" cardinality="1..1" interface="com.yonyou.nc.codevalidator.resparser.IResourceVisitorManager" name="IResourceVisitorManager" policy="static"/>
+</scr:component>

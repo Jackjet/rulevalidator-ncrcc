@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="com.yonyou.nc.codevalidator.runtime.core.RuleValidatorExecutorImpl">
+   <implementation class="com.yonyou.nc.codevalidator.runtime.core.RuleValidatorExecutorImpl"/>
+   <service>
+      <provide interface="com.yonyou.nc.codevalidator.rule.executor.IRuleValidatorExecutor"/>
+   </service>
+   <reference bind="setRuleExportStrategy" cardinality="1..1" interface="com.yonyou.nc.codevalidator.export.IRuleExportStrategy" name="IRuleExportStrategy" policy="static" unbind="removeRuleExportStrategy"/>
+   <reference bind="setRuleExecutorFactory" cardinality="1..1" interface="com.yonyou.nc.codevalidator.rule.executor.IRuleExecutorFactory" name="IRuleExecutorFactory" policy="static" unbind="removeRuleExecutorFactory"/>
+   <reference bind="setRuleConfig" cardinality="1..1" interface="com.yonyou.nc.codevalidator.config.IRuleConfig" name="IRuleConfig" policy="static" unbind="removeRuleConfig"/>
+   <reference bind="setRecordExecutePersistence" cardinality="0..1" interface="com.yonyou.nc.codevalidator.export.api.IRecordExecutePersistence" name="IRecordExecutePersistence" policy="static" unbind="removeRecordExecutePersistence"/>
+</scr:component>

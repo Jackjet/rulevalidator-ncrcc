@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Runtime
+Bundle-SymbolicName: com.yonyou.nc.codevalidator.runtime;singleton:=true
+Bundle-Version: 2.9.0
+Bundle-Vendor: YONYOU
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.osgi.framework
+Bundle-Activator: com.yonyou.nc.codevalidator.runtime.RuntimeActivator
+Require-Bundle: com.yonyou.nc.codevalidator.rule-api,
+ com.yonyou.nc.codevalidator.runtime.core,
+ com.yonyou.nc.codevalidator.resparser-api,
+ com.yonyou.nc.codevalidator.sdk.common,
+ com.yonyou.nc.codevalidator.config
+Bundle-ActivationPolicy: lazy
+Export-Package: com.yonyou.nc.codevalidator.runtime

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='gb2312'?>
+<dbprops>
+	<dbprop>
+		<url>jdbc:oracle:thin:@localhost:1521:oracledb</url>
+		<driverClassName>oracle.jdbc.OracleDriver</driverClassName>
+		<databaseType>ORACLE</databaseType>
+	</dbprop>
+	<dbprop>
+		<url>jdbc:sqlserver://localhost:1433;database=dbName;sendStringParametersAsUnicode=false</url>
+		<user>sa</user>
+		<driverClassName>com.microsoft.sqlserver.jdbc.SQLServerDriver</driverClassName>
+		<databaseType>SQLSERVER</databaseType>
+	</dbprop>
+</dbprops>

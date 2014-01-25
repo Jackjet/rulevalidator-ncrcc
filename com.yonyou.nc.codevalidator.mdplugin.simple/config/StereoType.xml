@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='gb2312'?>
+<root>
+	<accessorTemplates>
+		<accessor>
+			<name>pojo</name>
+			<displayName>POJO</displayName>
+			<classFullname>nc.md.model.access.javamap.POJOStyle</classFullname>
+			<properties>
+			</properties>
+		</accessor>
+		<accessor>
+			<name>NCVO</name>
+			<displayName>NCVO</displayName>
+			<classFullname>nc.md.model.access.javamap.NCBeanStyle</classFullname>
+			<properties>
+			</properties>
+		</accessor>
+		<accessor>
+			<name>AggVO</name>
+			<displayName>AggVO</displayName>
+			<classFullname>nc.md.model.access.javamap.AggVOStyle</classFullname>
+			<properties>
+				<property name="wrapclsname" displayName="包装类名" />
+			</properties>
+		</accessor>
+	</accessorTemplates>
+	<accessorStereoType>
+	<StereoType name="viewEntity" displayName="显示类" >
+			<accessor name="AggVO" >
+			        <properties>
+					</properties>
+			</accessor> 
+			<accessor name="pojo" >
+			        <properties>
+					</properties>
+			</accessor> 
+			<accessor name="NCVO" >
+			        <properties>
+					</properties>
+			</accessor> 
+			</StereoType>
+		<StereoType name="baseDataEntity" displayName="基础数据" > 
+			<accessor name="AggVO" >
+			        <properties>
+					</properties>
+			</accessor> 
+			<accessor name="pojo" >
+			        <properties>
+					</properties>
+			</accessor> 
+			<accessor name="NCVO" >
+			        <properties>
+					</properties>
+			</accessor> 
+		</StereoType>
+		</accessorStereoType>
+</root>
