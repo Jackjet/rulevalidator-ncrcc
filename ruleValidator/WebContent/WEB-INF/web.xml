@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+
+<web-app 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="ruleValidator" 
+	version="2.5">
+
+	<display-name>ruleValidator</display-name>
+
+	<!-- spring -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/config/spring.xml</param-value>
+	</context-param>
+
+	<!--log4j日志 -->
+ 	<context-param>
+	<!--把web目录的路径压入一个叫webapp.root的系统变量   -->
+        <param-name>webAppRootKey</param-name>
+        <param-value>webapp.root</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>/WEB-INF/config/log4j.properties</param-value>
+    </context-param>
+
+	<!-- 开一条watchdog线程每60秒扫描一下配置文件的变化; -->
+    <context-param>
+        <param-name>log4jRefreshInterval</param-name>
+        <param-value>60000</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener>
+
+	<!-- spring etag -->
+	<filter>
+		<filter-name>spring-etag</filter-name>
+		<filter-class>org.springframework.web.filter.ShallowEtagHeaderFilter</filter-class>
+	</filter>
+
+	<filter>
+		<filter-name>utf8-encoding</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>utf8-encoding</filter-name>
+		<url-pattern>*.htm</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>utf8-encoding</filter-name>
+		<url-pattern>*.json</url-pattern>
+	</filter-mapping>
+
+	<!-- spring rest -->
+	<filter>
+		<filter-name>spring-rest</filter-name>
+		<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>spring-rest</filter-name>
+		<url-pattern>*.json</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>session-filter</filter-name>
+		<filter-class> com.web.pub.fw.filter.SessionFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>session-filter</filter-name>
+		<url-pattern>*.json</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>session-filter</filter-name>
+		<url-pattern>*.htm</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>hibernateFilter</filter-name>
+		<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+		<init-param>
+			<param-name>sessionFactoryBeanName</param-name>
+			<param-value>sessionFactory</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>hibernateFilter</filter-name>
+		<url-pattern>*.json</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>hibernateFilter</filter-name>
+		<url-pattern>*.htm</url-pattern>
+	</filter-mapping>
+
+
+	<!-- spring -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+
+	<!-- spring mvc -->
+	<servlet>
+		<servlet-name>spring-mvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/config/springmvc.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>spring-mvc</servlet-name>
+		<url-pattern>*.json</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>spring-mvc</servlet-name>
+		<url-pattern>*.htm</url-pattern>
+	</servlet-mapping>
+	<!-- config mime -->
+	<mime-mapping>
+		<extension>shtml</extension>
+		<mime-type>text/HTML</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>cur</extension>
+		<mime-type>application/octet-stream</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>tpl</extension>
+		<mime-type>text/HTML</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>json</extension>
+		<mime-type>text/json</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>cab</extension>
+		<mime-type>application/octet-stream</mime-type>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>png</extension>
+		<mime-type>image/png</mime-type>
+	</mime-mapping>
+
+	<!-- session 30min -->
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+
+	<!-- error page -->
+	<error-page>
+		<error-code>500</error-code>
+		<location>/esfw/pub/error.htm</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/html/error/notfound.html</location>
+	</error-page>
+
+	<!-- welcome page -->
+	<welcome-file-list id="welcome">
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!--@EJBREF@ -->
+</web-app>

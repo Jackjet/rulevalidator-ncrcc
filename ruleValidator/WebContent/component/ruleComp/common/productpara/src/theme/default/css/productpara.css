@@ -1,0 +1,36 @@
+.ui-productpara{
+	width: 100%;
+	border: 1px solid gray;
+}
+
+.ui-productpara-title{
+	height: 30px;
+	background-color: #C9DEEE;
+	text-align: center;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.ui-productpara-content{
+	width: 100%;
+}
+
+.ui-productpara-content-item{
+	height: 30px;
+	line-height: 30px;
+	border-top: 1px solid gray;
+}
+.ui-productpara-content-param{
+	text-align: right;
+	border-right: 1px solid gray;
+	float: left;
+	display: block;
+	width: 200px;
+	padding-right: 30px;
+}
+
+.ui-productpara-content-value{
+	float: left;
+	display: block;
+	padding-left: 30px;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ecp栏目组件测试</title>
+<script type="text/javascript" src="/web/component/webpub/core/seajs2/dist/sea-debug.js" 
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/tools/codemirror/src/codehelper.js"></script>
+<style type="text/css">
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<div class="content">
+		<h1>ecpgrid 翻页组件</h1>
+		<ol>
+			<li>
+				<h2>界面</h2>
+				<div id="orderGrid" style="float: left; width: 100%"></div>
+				<script type="text/javascript">
+					seajs.use('ecppagelist',function(EcpPageGrid) {
+						var ecpGrid = new EcpPageGrid(
+								{
+									attrs : {
+										isPagination : true,
+										url : "data.txt",
+										columns : [ {
+											key : "vtitle",
+											format : function(
+													value, row) {
+												var ret = '<a target="_blank" href="/ecp//bulletin/detail?bulletinId='
+														+ row.cbulletinid
+														+ '">'
+														+ value
+														+ '</a>';
+												return ret;
+											}
+										}, {
+											key : "_teffectivedate",
+											format : function(
+													value, row) {
+												return "("+value+")";
+											}
+										} ],
+									},
+									
+									renderTo : "orderGrid",
+									autoRender : false
+								});
+
+						ecpGrid.query();
+					});
+				</script>
+			</li>
+			<li>
+				<h2>代码示例</h2>
+				<div>
+					<textarea class="js">
+						var ecpGrid = new EcpPageGrid(
+								{
+									attrs : {
+										isPagination : true,
+										url : "/ecp/bulletin/validBulletin",
+										columns : [ {
+											key : "vtitle",
+											format : function(
+													value, row) {
+												var ret = '<a target="_blank" href="/ecp//bulletin/detail?bulletinId='
+														+ row.cbulletinid
+														+ '">'
+														+ value
+														+ '</a>';
+												return ret;
+											}
+										}, {
+											key : "_teffectivedate",
+											format : function(
+													value, row) {
+												return "("+value+")";
+											}
+										} ],
+									},
+									
+									renderTo : "orderGrid",
+									autoRender : false
+								});
+
+						ecpGrid.query();
+					</textarea>
+				</div></li>
+			<li>
+				<h2>数据模型</h2>
+				<div>
+					<textarea class="js">
+						{
+							"total":"6",
+							"records":[{
+								"name":"商品3",
+								"code":"123",
+								"num":"123",
+								"state":"状态很好",
+								"price":"2342",
+								"date":"2012-11-07"
+							},{
+								"name":"商品3",
+								"code":"123",
+								"num":"123",
+								"state":"状态很好",
+								"price":"2342",
+								"date":"2012-11-07"
+							}]
+						}
+					</textarea>
+				</div></li>
+
+			<li>
+				<h2>待增加功能</h2>
+				<h3>1：翻页过渡效果</h3>
+			</li>
+		</ol>
+	</div>
+</body>
+</html>

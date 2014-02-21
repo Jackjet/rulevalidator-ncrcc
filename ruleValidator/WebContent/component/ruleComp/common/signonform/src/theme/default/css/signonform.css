@@ -1,0 +1,93 @@
+.signon_error_notice span {
+  line-height: 16px;
+}
+.signon_form {
+  width: 232px;
+}
+.signon_error_notice {
+  float: left;
+  height: 16px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.signon_error_notice .icon {
+  background: url("../img/icons.png") no-repeat scroll -2px -180px transparent;
+  float: left;
+  height: 16px;
+  margin: 0 2px;
+  width: 17px;
+}
+.signon_error_notice span {
+  line-height: 16px;
+}
+label.signon_input, label.signon_validate {
+  background: url("../img/bg_input_signon.png") no-repeat scroll 0 0 transparent;
+  display: inline;
+  float: left;
+  height: 31px;
+  line-height: 31px;
+  margin-bottom: 14px;
+  padding: 0 10px;
+  width: 232px;
+}
+.signon_input input {
+  float: left;
+  width: 200px;
+}
+.signon_input input, .signon_validate input {
+  border: 0 none;
+  color: #191919;
+  display: inline;
+  height: 21px;
+  line-height: 21px;
+  margin: 5px 0;
+  padding: 0 5px;
+}
+.signon_input input.password {
+  background: url("../img/bg_signon_input_origi.jpg") no-repeat scroll 5px -21px transparent;
+}
+label.signon_validate {
+  position: relative;
+}
+.signon_validate input.validate {
+  background: url("../img/bg_signon_input_origi.jpg") no-repeat scroll 5px -42px transparent;
+}
+label.signon_input, label.signon_validate {
+  line-height: 31px;
+}
+.signon_validate img {
+  border: 0 none;
+  display: inline;
+  float: right;
+  margin: 3px 15px 0 0;
+}
+ 
+.floatleft {
+  float: left;
+}
+label.signon_remember_pwd {
+  color: #666666;
+  float: left;
+  height: 20px;
+  line-height: 20px;
+  width: 96px;
+}
+a.signon_forget_pwd {
+  color: #7F7F7F;
+  float: left;
+  height: 20px;
+  line-height: 20px;
+}
+.signon_button_wrapper {
+  float: left;
+  height: 55px;
+  margin-top: 33px;
+  width: 97px;
+}
+.font_yahei {
+  font-family: Microsoft YaHei,serif;
+}
+.signon_validate input {
+  float: left;
+  width: 130px;
+}

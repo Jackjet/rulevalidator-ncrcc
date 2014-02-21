@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ecp栏目组件测试</title>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript"
+	src="/ecp/component/ecp/core/config.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/tools/codemirror/src/codehelper.js"></script>
+<style type="text/css">
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<div class="content">
+		<h1>ecpgrid 翻页组件</h1>
+		<ol>
+			<li>
+				<h2>界面</h2>
+				<div id="orderGrid" style="float: left; width: 100%"></div><script
+					type="text/javascript">
+					seajs
+							.use(
+									'/ecp/component/ecp/common/ecppagegrid/src/js/ecppagegrid',
+									function(EcpPageGrid) {
+										var ecpGrid = new EcpPageGrid(
+												{
+													attrs : {
+														isPagination : true,
+														url : "/ecp/order/ajaxQryOrderListByCond",
+														columns : [
+																{
+																	label : "订单编号",
+																	key : "vbillcode",
+																	format : function(
+																			value,
+																			row) {
+																		var ret = '<a target="_blank" href="/ecp/order/orderDetail?orderid='
+																				+ row.ccustomerpoid
+																				+ '">'
+																				+ row.vbillcode
+																				+ '</a>';
+																		return ret;
+																	},
+																	width : 120,
+																	align : "left"
+																},
+																{
+																	label : "订单商品",
+																	key : "ccustomerpoid",
+																	format : "ORDER_PRODUCT",
+																	width : 190,
+																	align : "left"
+																},
+																{
+																	label : "订单数量",
+																	key : "ntotalnum",
+																	width : 90,
+																	align : "left"
+																},
+																{
+																	label : "订单金额",
+																	key : "nheadsummny",
+																	format : "ORDER_SUMMY",
+																	width : 90,
+																	align : "left"
+																},
+																{
+																	label : "订单状态",
+																	key : "fstatusflag",
+																	format : "ORDER_STATUS",
+																	width : 90,
+																	align : "left"
+																},
+																{
+																	label : "订单日期",
+																	key : "dbilldate",
+																	format : "DATE",
+																	width : 90,
+																	align : "left"
+																} ]
+													},
+													renderTo : "orderGrid",
+													autoRender : false
+												});
+
+										ecpGrid.query();
+
+									});
+				</script>
+			</li>
+			<li>
+				<br/>
+				<h2>代码示例</h2>
+				<div>
+					<textarea class="js">
+						<script type="text/javascript">
+							seajs
+									.use(
+											'/ecp/component/ecp/common/ecpgrid/src/js/ecpgrid',
+											function(EcpGrid) {
+												var ecpGrid = new EcpGrid(
+														{
+															attrs : {
+																url : G.API.ORDER_LIST,
+																columns : [
+																		{
+																			label : "订单编号",
+																			key : "vbillcode",
+																			format : function(
+																					value,
+																					row) {
+																				var ret = '<a target="_blank" href="/ecp/order/orderDetail?orderid='
+																						+ row.ccustomerpoid
+																						+ '">'
+																						+ row.vbillcode
+																						+ '</a>';
+																				return ret;
+																			},
+																			width : 120,
+																			align : "left"
+																		},
+																		{
+																			label : "订单商品",
+																			key : "ccustomerpoid",
+																			format : "ORDER_PRODUCT",
+																			width : 190,
+																			align : "left"
+																		},
+																		{
+																			label : "订单数量",
+																			key : "ntotalnum",
+																			width : 90,
+																			align : "left"
+																		},
+																		{
+																			label : "订单金额",
+																			key : "nheadsummny",
+																			format : "ORDER_SUMMY",
+																			width : 90,
+																			align : "left"
+																		},
+																		{
+																			label : "订单状态",
+																			key : "fstatusflag",
+																			format : "ORDER_STATUS",
+																			width : 90,
+																			align : "left"
+																		},
+																		{
+																			label : "订单日期",
+																			key : "dbilldate",
+																			format : "DATE",
+																			width : 90,
+																			align : "left"
+																		} ]
+															},
+															renderTo : "orderGrid"
+														});
+											});
+						</script>
+					</textarea>
+				</div>
+			</li>
+			<li>
+				<h2>数据模型</h2>
+				<div>
+					<textarea class="js">
+						{
+							"total":"6",
+							"records":[{
+								"name":"商品3",
+								"code":"123",
+								"num":"123",
+								"state":"状态很好",
+								"price":"2342",
+								"date":"2012-11-07"
+							},{
+								"name":"商品3",
+								"code":"123",
+								"num":"123",
+								"state":"状态很好",
+								"price":"2342",
+								"date":"2012-11-07"
+							}]
+						}
+					</textarea>
+				</div>
+			</li>
+
+			<li>
+				<h2>待增加功能</h2>
+				<h3>1：翻页过渡效果</h3></li>
+		</ol>
+	</div>
+</body>
+</html>

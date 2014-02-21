@@ -1,0 +1,237 @@
+/**公用**/
+.ui-deligrid{
+	width: 100%;
+}
+.ui-deligrid table{
+	border-collapse: collapse;
+	border: 0;
+	width: 100%;
+	height: 100%;
+}
+.ui-deligrid td{
+	text-align: center;
+    border-left: 1px solid #929292;
+    padding: 0;
+}
+.left-content input,.right-content input{
+	border: 0 none;
+	color: black;
+	background: none;
+	width: 210px;
+}
+.ui-deligrid .width_70{
+	width: 70%;
+}
+.ui-deligrid .border_yellow{
+	border: 2px solid #E5BA6F;
+}
+/**左上样式**/
+.ui-deligrid .left-top{
+	float: left;
+	position: fixed;
+	z-index: 600;
+	height: 5px;
+	width: 440px;
+}
+.ui-deligrid .left-top td{
+	height: 50px;
+	font-weight: bold;
+	font-size: 14px;
+	border-bottom: 1px solid #929292;
+	background: #E4E4E4;
+}
+.ui-deligrid .left-top span{
+	display: block;
+}
+.ui-deligrid .left-top span.baseinfo-text{
+	margin-top: 10px;
+	float: left;
+}
+.ui-deligrid .left-top span.autocomplete{
+	margin-top: 7px;
+	float: right;
+	margin-right: 10px;
+	position: relative;
+}
+.ui-deligrid td.baseinfo{
+	width: 348px;
+	text-align: left;
+}
+.ui-deligrid td.series{
+	width: 84px;
+	border-right: 1px solid #929292;
+}
+.ui-deligrid a.add-icon{
+	float: right;
+	width: 19px;
+	height: 19px;
+	background: url(../img/icons.png) no-repeat;
+	background-position: -43px -44px;
+	margin: 18px 7px 13px 0;
+}
+.baseinfo span{
+	padding-left: 7px;
+}
+/**右上样式**/
+.ui-deligrid .right-top{
+	float: left;
+	margin-left: 440px;
+	position: fixed;
+	z-index: 500;
+	height: 50px;
+}
+.ui-deligrid .area{
+	color: white;
+	font-weight: bold;
+	border-right: 1px solid #929292;
+	border-bottom: 1px solid #929292;
+}
+.ui-deligrid .orderplan_confirm_area{
+	background: #D06060;
+}
+.ui-deligrid .orderplan_confirm_area_second{
+	background: #E7DFDF;
+	color: black;
+}
+.ui-deligrid .orderplan_plan_area{
+	background: #D98039;
+}
+.ui-deligrid .orderplan_plan_area_second{
+	background: #E7DFCF;
+	color: black;
+}
+.ui-deligrid .orderplan_forecast_area{
+	background: #72899A;
+}
+.ui-deligrid .orderplan_forecast_area_second{
+	background: #D1D9DD;
+	color: black;
+}
+.ui-deligrid .right-top-1st{
+}
+.ui-deligrid .right-top-1st td{
+	height: 22px;
+}
+.ui-deligrid .right-top-2tr{
+}
+.ui-deligrid .right-top-2tr td{
+	height: 27px;
+}
+/**左边内容**/
+.ui-deligrid .left-content{
+	float: left;
+	margin-top: 50px;
+	position: fixed;
+	z-index: 400;
+	width: 440px;
+}
+
+.ui-deligrid .left-content tr{
+	border-bottom: 1px solid #929292;
+}
+.ui-deligrid .left-content td{
+	background: #F4F4F4;
+	white-space: nowrap;
+}
+
+.ui-deligrid .left-content .baseinfo .baseinfo_left{
+	margin-left: 20px;
+	float: left;
+	width: 280px;
+	padding: 0;
+}
+.ui-deligrid .left-content .baseinfo .baseinfo_right{
+	float: left;
+	width: 10px;
+	margin-left: 10px;
+}
+.ui-deligrid .left-content .baseinfo label{
+	display: inline-block;
+	text-align: left;
+	height: 26px;
+	line-height: 26px;
+}
+.ui-deligrid .left-content .baseinfo span{
+	display: inline-block;
+	text-align: left;
+	height: 26px;
+	line-height: 26px;
+}
+.ui-deligrid .series-td-item{
+	width: 100%;
+	padding: 0;
+}
+.ui-deligrid .series-td-item.even{
+	background: #F4F4F4;
+}
+.ui-deligrid .series-td-item.odd{
+	background: #E4E4E4;
+}
+.ui-deligrid .right-td-item{
+	line-height: 30px;
+	min-width: 100px;
+}
+.ui-deligrid .del-icon{
+	width: 25px;
+	height: 25px;
+	margin-left:90%; 
+}
+
+.ui-deligrid .del-icon a{
+	float: left;
+	width: 15px;
+	height: 15px;
+	background: url(../img/icons.png) no-repeat;
+	background-position: -72px -62px;
+}
+/**右边内容**/
+.ui-deligrid .right-content{
+	float: left;
+	margin-top: 50px;
+	position: fixed;
+	margin-left: 440px;
+	z-index: 300;
+}
+.ui-deligrid .right-content tr{
+	border-bottom: 1px solid #929292;
+}
+
+.ui-deligrid .series-td-item input,.right-td-item input{
+	text-align: center;
+	width: 90%;
+}
+.ui-deligrid .confirm_area .right-td-item.even,.ui-deligrid .area_1 .right-td-item.even{
+	background: #FFF6F6;
+}
+.ui-deligrid .confirm_area .right-td-item.odd,.ui-deligrid .area_1 .right-td-item.odd{
+	background: #E7DFDF;
+}
+.ui-deligrid .plan_area .right-td-item.even,.ui-deligrid .area_2 .right-td-item.even{
+	background: #FFFDE8;
+}
+.ui-deligrid .plan_area .right-td-item.odd,.ui-deligrid .area_2 .right-td-item.odd{
+	background: #E7DFCF;
+}
+.ui-deligrid .forecast_area .right-td-item.even,.ui-deligrid .area_3 .right-td-item.even{
+	background: #ECF4FA;
+}
+.ui-deligrid .forecast_area .right-td-item.odd,.ui-deligrid .area_3 .right-td-item.odd{
+	background: #D1D9DD;
+}
+
+.J-nprice{
+	width: 68px !important;
+}
+.J-castunitid{
+	width: 43px !important;
+}
+
+.J-cproductid,.J-cmaterialvid,.J-cbrandid{
+	width: 260px !important;
+}
+.J-vcustorderno{
+	width: 248px !important;
+}
+
+
+

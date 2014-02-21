@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/config.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/tools/codemirror/src/codehelper.js"></script>
+<style type="text/css">
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<div class="content">
+		<h1>slide组件</h1>
+		<ol>
+			<li>
+				<h2>界面</h2>
+				<div class="slideshow"></div> <script type="text/javascript">
+					seajs
+							.use(
+									'/web/component/webpub/common/slide/src/js/slide',
+									function(Slide) {
+										var slide = new Slide({
+											url:"http://mengzha/ecp/side/advert"
+										});
+									});
+				</script>
+			<li>
+				<h2>代码示例</h2>
+				<div>
+					<textarea class="js">
+						<div class="slideshow"></div> <script type="text/javascript">
+					seajs
+							.use(
+									'/web/component/webpub/common/slide/src/js/slide',
+									function(Slide) {
+										var slide = new Slide({
+											url:"/ecp/side/advert"
+										});
+									});
+				</script>
+					</textarea>
+				</div></li>
+			<li>
+				<h2>数据模型</h2>
+				<div>
+					<textarea class="js">
+						var slideShowData = [
+												{
+													"imageUrl" : "/ecp/products/resources/design/1001ZF10000000003DX3 /ec_f24374dba0b0a2901ba1ab394b44a5ce.jpg",
+													"imageAlt" : "产品线 1-01",
+													"thumbUrl" : "/ecp/products/resources/design/1001ZF10000000003DX3 /ec_f24374dba0b0a2901ba1ab394b44a5ce.jpg",
+													"thumbTitle" : "产品线 1-01",
+													"thumbDesc" : "产品线1-01",
+													"thumbAlt" : "产品线 1-01",
+													"imgLink" : "javascript:viewProductDetail('1001ZF100000000006MR', 'ecp/products/resources/design/1001ZF100000000006MR /ec_81bbfd84ae57d3f2679075c5ce39adb8.shtml')"
+												},
+												{
+													"imageUrl" : "/ecp/products/resources/design/1001ZF10000000003DX3 /ec_ec5a85455c13763d389fdd2685970.jpg",
+													"imageAlt" : "产品线 1-03",
+													"thumbUrl" : "/ecp/products/resources/design/1001ZF10000000003DX3 /ec_ec5a85455c13763d389fdd2685970.jpg",
+													"thumbTitle" : "产品线 1-03",
+													"thumbDesc" : "产品线1-03",
+													"thumbAlt" : "产品线 1-03",
+													"imgLink" : "javascript:viewProductDetail('1001ZF100000000006O0', 'ecp/products/resources/design/1001ZF100000000006O0 /ec_4fb0cd101db8159c2e8bd26ecc0e4f1.shtml')"
+												},
+												{
+													"imageUrl" : "/ecp/products /resources/design/1001ZF10000000003H09 /ec_b85c4286279afd6db91c6cac7b6569d.jpg",
+													"imageAlt" : "产品线 1-02",
+													"thumbUrl" : "/ecp/products /resources/design/1001ZF10000000003H09 /ec_b85c4286279afd6db91c6cac7b6569d.jpg",
+													"thumbTitle" : "产品线 1-02",
+													"thumbDesc" : "产品线1-02",
+													"thumbAlt" : "产品线 1-02",
+													"imgLink" : "javascript:viewProductDetail('1001ZF100000000006NZ', 'ecp/products/resources/design/1001ZF100000000006NZ /ec_c660847bad98d98e8d977176abafd8.shtml')"
+												},
+												{
+													"imageUrl" : "/ecp/products /resources/design/1001ZF10000000003H0A /ec_6d86eba576a3ec6f49b54e4d8388933.jpg",
+													"imageAlt" : "产品线1-04（无货可下单）",
+													"thumbUrl" : "/ecp/products /resources/design/1001ZF10000000003H0A /ec_6d86eba576a3ec6f49b54e4d8388933.jpg",
+													"thumbTitle" : "产品线1-04（无货可下单）",
+													"thumbDesc" : "产品线1-04（无货可下单）",
+													"thumbAlt" : "产品线1-04（无货可下单）",
+													"imgLink" : "javascript:viewProductDetail('1001ZF100000000006P9', 'ecp/products/resources/design/1001ZF100000000006P9 /ec_3ee075b211132e474be4cded7dd17e0.shtml')"
+												},
+												{
+													"imageUrl" : "/ecp/products /resources/design/1001ZF10000000003H0B /ec_4f78ca236da3b4f72eeb1fb83a86592.jpg",
+													"imageAlt" : "产品线 2-01",
+													"thumbUrl" : "/ecp/products /resources/design/1001ZF10000000003H0B /ec_4f78ca236da3b4f72eeb1fb83a86592.jpg",
+													"thumbTitle" : "产品线 2-01",
+													"thumbDesc" : "产品线2-01",
+													"thumbAlt" : "产品线 2-01",
+													"imgLink" : "javascript:viewProductDetail('1001ZF100000000006N0', 'ecp/products/resources/design/1001ZF100000000006N0/ec_fe8c8d3c7cef35913c39c7b18f20be.shtml')"
+												} ];
+					</textarea>
+				</div></li>
+			
+		</ol>
+	</div>
+</body>
+</html>

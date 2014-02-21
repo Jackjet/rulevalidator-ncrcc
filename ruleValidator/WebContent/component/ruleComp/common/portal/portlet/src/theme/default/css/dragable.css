@@ -1,0 +1,11 @@
+/*dragable*/
+.ui-dragable-dragbackground{
+	padding:10px;
+}
+.ui-dragable-dragbackground a{
+	text-align:center;
+	border:1px #222 dashed;
+	height:112px;
+	padding-top:88px;
+	display:block;
+}

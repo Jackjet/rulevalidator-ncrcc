@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+.ui-notice {
+	position: absolute;
+	text-align: center;
+	border: 1px #9ABBD5 dotted;
+	border-radius: 6px;
+	background-color: rgba(132, 181, 219, 0.5);
+	box-shadow: 2px 2px 10px gray;
+	width: 200px;
+	line-height: 26px;
+	display: none;
+}

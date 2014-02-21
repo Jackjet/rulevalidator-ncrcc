@@ -1,0 +1,201 @@
+.ui-floor {
+	width: 100%;
+	/*background: url(../img/bg_channel_title.png) no-repeat;*/
+	margin-top: 8px;
+}
+
+.ui-floor-btm {
+	float: left;
+	width: 100%;
+	/* padding-bottom: 10px; */
+	/*background: url(../img/bg_channel_btm.png) center 100% no-repeat;*/
+}
+
+.ui-floor-title {
+	float: left;
+	width: 100%;
+	height: 25px;
+}
+
+.ui-floor-title-text{
+	float: left;
+	line-height: 25px;
+	margin-left: 17px;
+	color: #1a7ec3;
+}
+
+.ui-floor-title-more{
+	 color: #777777;
+	 display: inline;
+	 float: right;
+	 font-weight: bold;
+	 height: 18px;
+	 line-height: 18px;
+	 padding-right: 7px;
+	 text-decoration: none;
+	 width: 40px;
+	 margin-right: 32px;
+}
+
+.ui-floor .font_arial {
+  font-family: Arial,serif;
+}
+
+.ui-floor .floatleft {
+  float: left;
+}
+
+.ui-floor .icon_more_arrow {
+  background: url("../img/icons.png") no-repeat scroll -13px -65px transparent;
+  float: right;
+  height: 7px;
+  margin-top: 6px;
+  width: 7px;
+}
+
+.ui-floor-list{
+	float: left;
+	width: 100%;
+	margin: 0;
+	display: inline;
+	min-height:245px;
+}
+
+.ui-floor .ui-floor-list>div {
+	width:24.8%;
+}
+
+.ui-floor-item {
+	float: left;
+	padding-top: 15px;
+	border-right: 1px solid #dcdcdc;
+	background: white;
+	/* margin-left: 2px; */
+	height:263px;
+}
+
+.ui-floor-item.border_bottom {
+	border-bottom: 1px solid #dcdcdc;
+	height: 230px;
+}
+
+.ui-floor .floor_icon{
+	float: left;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	z-index: 2;
+}
+
+.ui-floor .ontop {
+	margin: -17px 0 0 85px;
+}
+
+.ui-floor .product_name {
+	float: left;
+	height: 40px;
+	line-height: 20px;
+	color: #5f5f5f;
+	text-align: center;
+	font-weight: bold;
+	/* ��Ʒ��Ƴ����Զ����� */
+	overflow: hidden;
+	width: 150px;
+}
+
+.ui-floor .product_name.labeled {
+	width: 80%;
+}
+
+.ui-floor-item a.product_thumb {
+	float: left;
+	width: 100%;
+	overflow: hidden;
+	height:130px;
+	text-align: center;
+	
+}
+
+.ui-floor-item a.product_thumb img {
+	border: 0;
+	position: relative;
+	width: 130px;
+	height: 130px;
+}
+
+.ui-floor-item .floor {
+	float: left;
+	width: 96%;
+	line-height: 18px;
+	/* margin: 0 0 15px 4%; */
+	/* �޸�Ϊ18px���±�margin��ʹ��Ӱ��ú��µױ��غ� */
+	margin: 0 0 16px 4%;
+	display: inline;
+}
+
+.ui-floor-item .floor div{
+	text-align: center;
+	width: 100%;
+}
+
+.ui-floor-item .floor .nabnum{
+	float: left;
+	margin-left: 15%;
+}
+
+.ui-floor-item .floor .nabnum span{
+	float: left;
+	display: block;
+}
+
+.ui-floor-item .floor .nc-product-num{
+	width: 35px;
+	overflow: hidden;
+}
+
+.nabnum_unit {
+	height: 18px;
+}
+
+.ui-floor-item .floor a{
+	background: url("../img/icons.png");
+	float: right;
+	height: 18px;
+	width: 18px;
+	margin-right: 10px;
+}
+
+.ui-floor-item .floor a.add_to_cart {
+
+	background-position: -86px -44px;
+}
+
+.ui-floor-item .floor a.add_to_cart:active {
+	background-position: -108px -44px;
+}
+
+.ui-floor-item .floor a.added {
+	background-position: -65px -44px;
+}
+
+.ui-floor a.noprice {
+	background: url("../img/noshopping_item.png") !important;
+	float: right;
+	height: 18px;
+	width: 18px;
+	margin-right: 10px;
+	cursor: not-allowed;
+}
+
+.ui-floor a.nonabnum{
+	background: url("../img/noshopping_item.png") !important;
+	float: right;
+	height: 18px;
+	width: 18px;
+	margin-right: 10px;
+	cursor: not-allowed;
+}
+
+.priceloaded,.nabnumloaded{
+	display: none;
+}

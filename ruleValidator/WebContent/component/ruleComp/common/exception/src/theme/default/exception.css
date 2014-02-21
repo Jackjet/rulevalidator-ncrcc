@@ -1,0 +1,55 @@
+@CHARSET "utf-8";
+
+.ui-exception {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.ui-exception .message {
+	width: 100%;
+	font-weight: bold;
+	font-size: 14px;
+	color: red;
+	min-height: 26px;
+	line-height: 16px;
+	text-align: center;
+}
+
+.ui-exception .returnBtn {
+	width: 152px;
+	height: 45px;
+}
+
+.ui-exception .returnToMain {
+	width:152px;
+	height:80px;
+	margin:0 auto;
+	background:  url(toMain.png) center no-repeat;
+	display: block;
+}
+
+.ui-exception .sorry {
+	width:454px;
+	height:184px;
+	margin:0 auto;
+	background:  url(sorry.png) center no-repeat;
+}
+
+.ui-exception .detail {
+	padding: 5px;
+	width: 100%;
+	min-height: 500px;
+	overflow: scroll;
+	text-align: left;
+	background-color: graytext;
+	background: none repeat scroll 0 0 black;
+	border: 1px solid black;
+	color: white;
+	font-size: 14px;
+	left: 0px;
+}
+
+.hidden {
+	display: none;
+}

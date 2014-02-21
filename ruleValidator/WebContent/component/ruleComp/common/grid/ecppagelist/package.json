@@ -1,0 +1,8 @@
+{
+	"name" : "ecppagelist",
+	"javaclass" : "com.yonyou.ec.webpub.comp.category.Category",
+	"theme" : "grace",
+	"author":"孟志昂",
+	"enable":false
+}
+

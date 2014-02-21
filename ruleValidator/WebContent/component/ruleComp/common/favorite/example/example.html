@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>quotegrid测试</title>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript"
+	src="/ecp/component/ecp/core/config.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/tools/codemirror/src/codehelper.js"></script>
+<style type="text/css">
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<div class="content">
+		<h1>extendgrid组件</h1>
+		<ol>
+			<li>
+				<h2>界面</h2>
+				<div id="button_big"></div>
+				<div id="button_small"></div>
+				<div id="button_small2"></div>
+				<div>
+					
+				</div>
+				<div id='container' style="float: left; width: 100%; width: 960px; margin: 0 auto;"></div>
+				<script type="text/javascript">
+					seajs.use(['/ecp/component/ecp/common/favorite/src/js/FavoriteButton.js', 
+					           '/ecp/component/ecp/common/favorite/src/js/FavoriteGrid.js'], 
+							function(FavoriteButton, FavoriteGrid) {
+								new FavoriteButton({
+									productId:'1001ZF10000000000D2L',
+									renderTo:'button_big',
+									type:'big'
+								});
+								
+								new FavoriteButton({
+									productId:'1001ZF10000000000D2L',
+									renderTo:'button_small'
+								});
+								
+								new FavoriteButton({
+									productId:'1001ZF10000000000D2K',
+									renderTo:'button_small2'
+								});
+								
+								var grid = new FavoriteGrid({
+									attrs : {
+										isPagination:true,
+										isDesc:true,
+										url : '/ecp/favorite/queryPage'
+									},
+									renderTo : 'container',
+									autoRender:false
+								});
+								grid.query();
+							});
+				</script>
+			<li>
+				<h2>代码示例</h2>
+				<div>
+					<textarea class="js">
+						<script type="text/javascript">
+						seajs.use('/ecp/component/ecp/common/favorite/src/js/FavoriteDialog.js',
+								function(favoriteDialog) {
+									favoriteDialog.init({
+										url:'/ecp/favorite/insert',
+										productId:'1001ZF10000000000D2K'
+									});
+								});
+						</script>
+					</textarea>
+				</div>
+			</li>
+			<li>
+				<h2>数据模型</h2>
+				<div>
+					<textarea class="js">
+						['生活常识', '情感生活', '时尚', '给未来宝宝准备的', '文艺青年', '厚黑', '时间管理', '苦逼码农的悲惨生活', '历史剧',
+		'四阿哥很忙']
+					</textarea>
+				</div>
+			</li>
+		</ol>
+	</div>
+</body>
+</html>

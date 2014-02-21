@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>quotegrid测试</title>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript"
+	src="/ecp/component/ecp/core/config.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/tools/codemirror/src/codehelper.js"></script>
+<style type="text/css">
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<div class="content">
+		<h1>extendgrid组件</h1>
+		<ol>
+			<li>
+				<h2>界面</h2>
+				<div id="grid" style="width: 520px;"></div>
+				<script type="text/javascript">
+				seajs.use('/web/component/webpub/common/extendgrid/src/js/ExtendGrid',
+					function(ExtendGrid) {
+						var extendgrid = new ExtendGrid({
+							attrs : {
+								url : 'data.json',
+								columns : [
+									{label : "商品名称",key : "name"},
+									{label : "商品编码",key : "code"},
+								 	{label : "商品价格",key : "price"}
+								],
+								subcolumns:[
+									{subkey : "name"},
+									{subkey : "num"},
+									{subkey : "time"},
+									{subkey : "state"},
+									{subkey : "id"}
+								],
+								extendName:"bodys"
+							},
+							renderTo : "grid"
+						});
+					});
+			</script>
+			<li>
+				<h2>代码示例</h2>
+				<div>
+					<textarea class="js">
+						<script type="text/javascript">
+							seajs.use('/web/component/webpub/common/extendgrid/src/js/ExtendGrid',
+								function(ExtendGrid) {
+									var extendgrid = new ExtendGrid({
+										attrs : {
+											url : 'data.json',
+											columns : [
+												{label : "商品名称",key : "name"},
+												{label : "商品编码",key : "code"},
+											 	{label : "商品价格",key : "price"}
+											],
+											subcolumns:[
+												{subkey : "name"},
+												{subkey : "num"},
+												{subkey : "time"},
+												{subkey : "state"},
+												{subkey : "id"}
+											]
+										},
+										renderTo : "grid"
+									});
+						});
+						</script>
+					</textarea>
+				</div>
+			</li>
+			<li>
+				<h2>数据模型</h2>
+				<div>
+					<textarea class="js">
+						{"total":"2",
+							"records":[{
+									"name":"商品1",
+									"code":"123",
+									"price":"12.33",
+									"extendcontent":[{
+										"name":"Thinkpadx600" ,
+										"num":"600.00台",
+										"time":"计划到货",
+										"state":"采购",
+										"id":"cklfaskldaslk"
+									 },{
+									 	"name":"Thinkpadx600" ,
+										"num":"600.00台",
+										"time":"计划到货",
+										"state":"采购",
+										"id":"cklfaskldaslk"
+									 },{
+									 	"name":"Thinkpadx600" ,
+										"num":"600.00台",
+										"time":"计划到货",
+										"state":"采购",
+										"id":"cklfaskldaslk"
+									 },{
+									 	"name":"Thinkpadx600" ,
+										"num":"600.00台",
+										"time":"计划到货",
+										"state":"采购",
+										"id":"cklfaskldaslk"
+									 }]
+								},{
+									"name":"商品1",
+									"code":"123",
+									"price":"12.33",
+									"extendcontent":[{
+										"name":"Thinkpadx600" ,
+										"num":"600.00台",
+										"time":"计划到货",
+										"state":"采购",
+										"id":"cklfaskldaslk"
+									 },{
+									 	"name":"Thinkpadx600" ,
+										"num":"600.00台",
+										"time":"计划到货",
+										"state":"采购",
+										"id":"cklfaskldaslk"
+									 },{
+									 	"name":"Thinkpadx600" ,
+										"num":"600.00台",
+										"time":"计划到货",
+										"state":"采购",
+										"id":"cklfaskldaslk"
+									 },{
+									 	"name":"Thinkpadx600" ,
+										"num":"600.00台",
+										"time":"计划到货",
+										"state":"采购",
+										"id":"cklfaskldaslk"
+									 }]
+								},{
+									"name":"商品1",
+									"code":"123",
+									"price":"12.33",
+									"extendcontent":[{
+										"name":"Thinkpadx600" ,
+										"num":"600.00台",
+										"time":"计划到货",
+										"state":"采购",
+										"id":"cklfaskldaslk"
+									 },{
+									 	"name":"Thinkpadx600" ,
+										"num":"600.00台",
+										"time":"计划到货",
+										"state":"采购",
+										"id":"cklfaskldaslk"
+									 },{
+									 	"name":"Thinkpadx600" ,
+										"num":"600.00台",
+										"time":"计划到货",
+										"state":"采购",
+										"id":"cklfaskldaslk"
+									 },{
+									 	"name":"Thinkpadx600" ,
+										"num":"600.00台",
+										"time":"计划到货",
+										"state":"采购",
+										"id":"cklfaskldaslk"
+									 }]
+								},{
+									"name":"商品1",
+									"code":"123",
+									"price":"12.33",
+									"extendcontent":[{
+										"name":"Thinkpadx600" ,
+										"num":"600.00台",
+										"time":"计划到货",
+										"state":"采购",
+										"id":"cklfaskldaslk"
+									 },{
+									 	"name":"Thinkpadx600" ,
+										"num":"600.00台",
+										"time":"计划到货",
+										"state":"采购",
+										"id":"cklfaskldaslk"
+									 },{
+									 	"name":"Thinkpadx600" ,
+										"num":"600.00台",
+										"time":"计划到货",
+										"state":"采购",
+										"id":"cklfaskldaslk"
+									 },{
+									 	"name":"Thinkpadx600" ,
+										"num":"600.00台",
+										"time":"计划到货",
+										"state":"采购",
+										"id":"cklfaskldaslk"
+									 }]
+								}]}
+					</textarea>
+				</div>
+			</li>
+			<li>
+				<h2>待解决问题</h2>
+				<h3>(1) 单元格format功能（李晓晨）</h3>
+			</li>
+		</ol>
+	</div>
+</body>
+</html>

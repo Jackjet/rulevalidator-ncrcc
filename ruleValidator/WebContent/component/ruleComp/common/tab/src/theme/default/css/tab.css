@@ -1,0 +1,157 @@
+.tab_labels {
+    background: url("../img/list_img_dot_gray.gif") repeat-x scroll 0 100% transparent;
+    width: 100%;
+    float: left;
+}
+.tab_labels .label_wapper {
+  float: left;
+  height: 26px;
+  width: 85px;
+}
+.tab_labels .label_amount_mrg_70 {
+  margin: -15px 0 0 70px;
+}
+.tab_labels .label_regular {
+  height: 19px;
+  overflow-y: hidden;
+}
+.tab_labels .label_amount_tabgreen, .label_amount_orange {
+  float: left;
+  position: absolute;
+  width: 40px;
+  z-index: 20;
+
+}
+.tab_labels .label_amount_tabgreen .left, .label_amount_orange .left {
+  background-position: 0 0;
+  width: 10px;
+}
+.tab_labels .label_amount_tabgreen .left,.label_amount_tabgreen .right{
+  background: url("../img/label_splite_border_green.png") no-repeat scroll 0 0 transparent;
+  float: left;
+  height: 34px;
+}
+
+.tab_labels .label_amount_tabgreen .right, .label_amount_orange .right {
+  background-position: -10px 0;
+  overflow-x: hidden;
+  width: 5px;
+}
+
+.tab_labels .font_arial {
+  font-family: Arial,serif;
+}
+.tab_labels .label_amount_tabgreen .number, .label_amount_orange .number {
+  color: white;
+  display: inline;
+  float: left;
+  font-size: 11px;
+  font-weight: bold;
+  height: 34px;
+  line-height: 18px;
+  padding: 0 1px;
+}
+.tab_labels .label_amount_tabgreen .number {
+  background: url("../img/label_splite_bg_green.png") repeat-x scroll 0 0 transparent;
+}
+
+.tab_labels .label_wapper .label_normal {
+  background: url("../img/label_cart_list_normal.png") no-repeat scroll 0 0 transparent;
+}
+
+.tab_labels .label_wapper a {
+  float: left;
+  height: 26px;
+  margin-left: 10px;
+  position: absolute;
+  text-decoration: none;
+  width: 95px;
+}
+.tab_labels .label_wapper .label_normal .label_text, .label_wapper .label_nom2nd .label_text {
+  color: #5F5F5F;
+}
+.tab_labels .label_wapper .label_text {
+
+  float: left;
+  line-height: 26px;
+  text-align: center;
+  width: 100%;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+.tab_labels .label_wapper .label_normal {
+  background: url("../img/label_cart_list_normal.png") no-repeat scroll 0 0 transparent;
+
+
+
+
+
+
+
+}
+.tab_labels .label_wapper .label_active .label_text {
+  color: black;
+}
+.tab_labels .label_wapper .label_active {
+  background: url("../img/label_cart_list_active.png") no-repeat scroll 0 0 transparent;
+
+
+
+
+
+}
+.hidden{
+	display: none;
+}
+
+.labels_content{
+	width: 100%;
+}
+
+.labels_content .content {
+  padding-top: 14px;
+  width: 100%;
+   float: left;
+}
+.page_config .pannel_edit{
+	position: absolute;
+	width: 100px;
+	height: 20px;
+	margin-top: -20px;
+} 
+.pannel_edit{
+	display:none;
+}
+.pannel_edit span{
+	cursor:pointer;
+}
+.pannel_edit span:hover{
+	color:blue;
+}
+.pannel_left{
+	float:left;
+}
+.pannel_center{
+	margin-left:15px;
+}
+.pannel_right{
+	float:right;
+}
+.disabled{
+	display:none;
+}
+.page_config .disabled{
+	float:right;
+	display:block;	
+}
+.disabled .pannel_left,.disabled .pannel_right{
+	display:none;
+}
+.disabled .pannel_center{
+	margin-left:38px;
+}
+ .tab_labels .label_wapper.disabled .label_active .label_text,.tab_labels .label_wapper.disabled .label_normal .label_text{
+	color:lightgray;
+	
+}

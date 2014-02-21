@@ -16,7 +16,9 @@ public final class RuleConstants {
 	public static final String GLOBAL_LOG_FILEPATH = "logFilePath";
 	public static final String GLOBAL_LOG_LEVEL = "logLevel";
 	public static final String EXECUTE_LEVEL = "executeLevel";
+	public static final String RUN_IN_NC_5X = "runInNc5x";
 	public static final String CURRENT_SERVER_FOLDER = "currentEquinoxFolder";
+	
 	
 	public static final String LOG_FILENAME = "ruleexecute.log";
 	

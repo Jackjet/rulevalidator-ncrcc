@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+
+
+.ui-select {
+	width: 100px;
+}
+
+.ui-select option {
+	display: none;
+}
+
+.ui-options {
+	display: none;
+	margin: 2px 0 0 0;
+	padding: 3px 0 0 0;
+	list-style: none;
+	/* border: 1px #9ABBD5 dotted; */
+	background-color: white;
+	box-shadow: 3px 3px 10px gray;
+}
+
+.ui-options .ui-option {
+	width: 100px;
+	/* padding-left:2px; */
+}
+
+.ui-options .active {
+	margin: -1px 0 0 -1px;
+	box-shadow: 3px 3px 10px gray;
+}
+
+.ui-progress-column {
+	display: inline-block;
+	line-height: 10px;
+	border-radius: 10px;
+}

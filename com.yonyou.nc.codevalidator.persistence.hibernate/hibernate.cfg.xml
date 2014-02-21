@@ -4,19 +4,22 @@
 
 <hibernate-configuration>
 	<session-factory>
-
-		<property name="connection.driver.class">org.postgresql.Driver</property>
-		<!-- JDBC URL -->
-		<property name="connection.url">jdbc:postgresql://127.0.0.1:5432/ncrcc</property>
-		<!-- 数据库用户名 -->
-		<property name="connection.username">postgres</property>
-		<!-- 数据库密码 -->
-		<property name="connection.password">postgres</property>
-
-		<!-- 显示实际操作数据库时的SQL -->
+		<!-- Oracle -->
+		<property name="connection.driver.class">oracle.jdbc.OracleDriver</property>
+		<property name="connection.url">jdbc:oracle:thin:@20.10.80.215:1521:ORCL</property>
+		<property name="connection.username">ncrcc</property>
+		<property name="connection.password">ncrcc</property>
 		<property name="show_sql">true</property>
-		<!-- SQL方言，这边设定的是MySQL -->
+		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
+		
+		<!-- Postgres 
+		<property name="connection.driver.class">org.postgresql.Driver</property>
+		<property name="connection.url">jdbc:postgresql://20.1.83.74:5432/ncrcc</property>
+		<property name="connection.username">postgres</property>
+		<property name="connection.password">postgres</property>
 		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		-->
+		<property name="show_sql">true</property>
 		<property name="hibernate.hbm2ddl.auto">update</property>
 		
 		<!--连接池配置，c3p0连接池是Hibernate推荐使用的连接池-->

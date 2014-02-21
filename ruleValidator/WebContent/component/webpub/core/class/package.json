@@ -1,0 +1,13 @@
+{
+    "name": "class",
+    "version": "1.0.0",
+    "root":"ecwebpub",
+    "spmConfig":{
+    	"*":{
+    		"idRule":"{{moduleName}}"
+    	}
+    },
+    "output": {
+        "class.js": "."
+    }
+}

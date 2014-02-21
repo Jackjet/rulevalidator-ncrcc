@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NC规则校验查询系统</title>
+<script type="text/javascript" 
+	src="/ruleValidator/component/webpub/core/seajs2/dist/sea.js" 
+	data-config="/ruleValidator/html/global.js" 
+	data-main="/ruleValidator/html/main.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body class="bg_white">
+	<div data-page="orderList">
+		<div data-widget="subnav"></div>
+		<div id="form" style="margin-top: 10px;"></div>
+		<div id="ruleGrid" style="float: left; width: 100%"></div>
+	</div>
+	<script type="text/javascript">
+		seajs.use(['$', 'form', 'ecppagegrid', "order_orderImport", "request", 'order_store' ],
+			function($, Form, EcpPageGrid, OrderImport, request, OrderStore) {
+				$(parent.document).find(".module_nav").show();
+				
+				// 改为从localstore中获取 
+				//var orderCode = request.getParameter("orderCodes") || '';
+				var orderCode = OrderStore.getCurrentOrderCode();
+				OrderStore.setCurrentOrderCode('');
+				
+				orderCode = decodeURI(orderCode || "");
+				var form = new Form({
+					attrs : {
+						id : "orderListGrid",
+						items : [{
+							label : "规则执行记录",
+							name : "recordID",
+							type : "select",
+							options : "CODENAME_RULE_RECORD",
+							required:true
+						},{
+							label : "执行结果状态",
+							name : "ruleStatus",
+							type : "select",
+							options : "CODENAME_RULE_STATUS"
+						} ,{
+							label : "产品",
+							name : "product",
+							type : "select",
+							options : "CODENAME_RULE_PROD"
+						} 
+// 						{
+// 							label : "规则执行时间",
+// 							type : "daterange",
+// 							beginName : "ruleCheckDateStart",
+// 							endName : "ruleCheckDateEnd"
+// 						},
+						 ],
+						buttons : [{
+							text : "查询",
+							id : "submit",
+							handler : function() {
+								orderEcpGrid.query($("#orderListGrid"));
+								return false;
+							}
+						}, {
+							text : "重置",
+							type : "reset"
+						} ]
+					},
+					renderTo : 'form'
+				});
+
+				var orderEcpGrid = new EcpPageGrid({
+					attrs : {
+						url : G.API.RULE_RECORD_DETAIL,
+						columns : [ {
+							label : "执行规则",
+							key : "ruleDefinition.descDetails",
+							width:260,
+							format:"RULE_JIRA_LINK",
+							align:"left"
+						}, {
+							label : "执行单元",
+							key : "executeUnit.moduleCode",
+							format:"RULE_UNIT_LINK",
+							width:100,
+							align:"left"
+						}, {
+							label : "特殊参数",
+							key : "specParams",
+							width:100,
+							align:"left"
+						} , {
+							label : "是否通过",
+							key : "passFlag",
+							width:80,
+							align:"left"
+						} ,{
+							label : "查看明细",
+							key : "resultDetail",
+							format:"RULE_EXE_DETAIL",
+							width:80,
+							align:"left"
+						} ]
+					},
+					renderTo : "ruleGrid",
+					autoRender:false
+				});
+				
+				// 其它页面跳转过来时执行查询
+				$(function() {
+// 					orderEcpGrid.query($("#ruleListGrid"));
+				});
+			});
+	</script>
+</body>
+</html>

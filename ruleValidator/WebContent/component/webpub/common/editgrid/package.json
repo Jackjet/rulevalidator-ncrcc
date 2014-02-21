@@ -1,0 +1,8 @@
+{
+	"name" : "editgrid",
+	"javaclass" : "com.yonyou.ec.webpub.comp.editgrid.EditGrid",
+	"theme" : [],
+	"author":"lixcha",
+	"enable":true
+}
+

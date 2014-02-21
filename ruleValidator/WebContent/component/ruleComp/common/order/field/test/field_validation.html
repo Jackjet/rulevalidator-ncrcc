@@ -1,0 +1,119 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;IE=9" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>域校验</title>
+<style type="text/css">
+.ui-field {
+	font-size: 12px;
+	display: block;
+	margin-bottom: 10px;
+	height: 16px;
+	display: block;
+}
+
+.ui-field input {
+	border-color: #ABADB3 #DBDFE5 #E3E9EF #E2E3EA;
+	border-style: solid;
+	border-width: 1px;
+	display: inline;
+	height: 16px;
+	line-height: 16px;
+	padding: 2px;
+	width: 90px;
+}
+
+.ui-label {
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+	width: 100px;
+}
+</style>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs2/dist/sea-debug.js"
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<script type="text/javascript">
+	seajs.use([ '$', 'validation', 'field_validation' ], function($, Validation, FieldValidation) {
+		$(function() {
+
+			$('button:eq(0)').click(function() {
+				FieldValidation.validate([ {
+					renderTo : $('input:eq(0)'),
+					rules : Validation.RULES.NOT_EMPTY,
+					errorMsg : '不能为空',
+					value : $('input:eq(0)').val()
+				}, {
+					renderTo : $('input:eq(1)'),
+					rules : [ Validation.RULES.NUMBER, {
+						rule : Validation.RULES.MAX,
+						data : 10
+					} ],
+					errorMsg : '不能大于10',
+					value : $('input:eq(1)').val()
+				}, {
+					renderTo : $('input:eq(2)'),
+					rules : Validation.RULES.INT,
+					//errorMsg : '请填写正数',
+					value : function() {
+						return $('input:eq(2)').val();
+					}
+				}, {
+					renderTo : $('input:eq(3)'),
+					rules : Validation.RULES.CHINESE,
+					//errorMsg : '请填写汉字',
+					value : function() {
+						return $('input:eq(3)').val();
+					}
+				}, {
+					renderTo : $('input:eq(4)'),
+					rules : Validation.RULES.URL,
+					//errorMsg : '请填写正确的URL',
+					value : function() {
+						return $('input:eq(4)').val();
+					}
+				} ]);
+			});
+
+			$('button:eq(1)').click(function() {
+				FieldValidation.remove('.ui-field:eq(0)');
+			});
+
+			$('button:eq(2)').click(function() {
+				FieldValidation.removeAll();
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="ui-main ui-main-width bar_content">
+		<div class="ui-field">
+			<label class="ui-label">不能为空：</label>
+			<input class="number" value="">
+		</div>
+		<div class="ui-field">
+			<label class="ui-label">不能大于10</label>
+			<input class="float" value="11">
+		</div>
+		<div class="ui-field">
+			<label class="ui-label">int</label>
+			<input class="int" value="A">
+		</div>
+		<div class="ui-field">
+			<label class="ui-label">汉字</label>
+			<input class="string" value="aaa">
+		</div>
+		<div class="ui-field">
+			<label class="ui-label">URL</label>
+			<input class="allowBlack" value="aa">
+		</div>
+		<div>
+			<button>校验</button>
+			<button>清除第一个控件的提示</button>
+			<button>清除所有提示</button>
+		</div>
+	</div>
+</body>
+</html>

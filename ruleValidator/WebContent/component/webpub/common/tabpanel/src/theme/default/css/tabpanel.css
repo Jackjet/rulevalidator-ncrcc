@@ -1,0 +1,44 @@
+.ui-tab{
+	border: 2px solid gray;
+	height: 300px;
+}
+
+.ui-tab-triggers{
+	border-bottom: 2px solid gray;
+	background-color: #F0F0F0;
+	height: 30px;
+}
+
+.ui-tab-triggers ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ui-tab-trigger-cell{
+	float:left;
+	border-right: solid 1px black;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	width: 100px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.ui-tab-trigger-cell-current{
+	background-color: white;
+}
+
+.ui-tab-containers{
+	
+}
+
+.ui-tab-container-cell{
+	display: none;
+}
+
+.ui-tab-container-cell-current{
+	display: block;
+}
+

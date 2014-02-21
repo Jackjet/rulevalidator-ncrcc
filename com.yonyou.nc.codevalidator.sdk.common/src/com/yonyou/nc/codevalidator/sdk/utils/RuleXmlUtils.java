@@ -3,6 +3,7 @@ package com.yonyou.nc.codevalidator.sdk.utils;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
@@ -20,11 +21,11 @@ import com.yonyou.nc.codevalidator.rule.IRuleExecuteResult;
 import com.yonyou.nc.codevalidator.rule.annotation.RuleDefinitionAnnotationVO;
 import com.yonyou.nc.codevalidator.rule.annotation.RuleDefinitionsReader;
 import com.yonyou.nc.codevalidator.rule.except.RuleBaseException;
-import com.yonyou.nc.codevalidator.rule.vo.RuleCheckConfigurationImpl;
 import com.yonyou.nc.codevalidator.rule.vo.CommonParamConfiguration;
 import com.yonyou.nc.codevalidator.rule.vo.IRuleCheckConfiguration;
 import com.yonyou.nc.codevalidator.rule.vo.ParamConfiguration;
 import com.yonyou.nc.codevalidator.rule.vo.PrivateParamConfiguration;
+import com.yonyou.nc.codevalidator.rule.vo.RuleCheckConfigurationImpl;
 import com.yonyou.nc.codevalidator.rule.vo.RuleExecuteLevel;
 import com.yonyou.nc.codevalidator.rule.vo.RuleItemConfigVO;
 import com.yonyou.nc.codevalidator.sdk.log.Logger;
@@ -107,7 +108,7 @@ public final class RuleXmlUtils {
 		}
 	}
 
-	public static void writeRuleExecuteResult(OutputStream os, List<IRuleExecuteResult> ruleExecuteResultList)
+	public static void writeRuleExecuteResult(OutputStreamWriter os, List<IRuleExecuteResult> ruleExecuteResultList)
 			throws RuleBaseException {
 		Document document = DocumentHelper.createDocument();
 		document.addProcessingInstruction("xml-stylesheet",

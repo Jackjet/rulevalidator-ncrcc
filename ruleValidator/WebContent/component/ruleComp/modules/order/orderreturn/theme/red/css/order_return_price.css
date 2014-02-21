@@ -1,0 +1,43 @@
+@CHARSET "utf-8";
+
+/* 价格合计ui */
+.ui-order-total-price {
+	font-family: Microsoft YaHei, serif;
+}
+
+
+.ui-order-total-price-label {
+	color:gray;
+}
+
+.ui-order-price-return-currency-sign{
+	color:red;
+}
+
+.ui-order-price-exchange-currency-sign {
+	color:chocolate;
+}
+
+.ui-order-price-return-number {
+	color:red;
+}
+
+.ui-order-price-return-symbol {
+	color:red;
+}
+
+.ui-order-price-exchange-number {
+	color:chocolate;
+}
+
+.ui-order-price-exchange-symbol {
+	color:chocolate;
+}
+
+.ui-order-price-currency-sign {
+	color:red;
+}
+
+.ui-order-price-number {
+	color:red;
+}

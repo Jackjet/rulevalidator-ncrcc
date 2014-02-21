@@ -46,61 +46,48 @@ public final class RuleDefinitionsReader {
 	}
 
 	private IRuleExecutorFactory getRuleExecutorFactory() {
-		ServiceReference<IRuleExecutorFactory> serviceReference = Activator
-				.getBundleContext().getServiceReference(
-						IRuleExecutorFactory.class);
+		ServiceReference<IRuleExecutorFactory> serviceReference = Activator.getBundleContext().getServiceReference(
+				IRuleExecutorFactory.class);
 		return Activator.getBundleContext().getService(serviceReference);
 	}
 
 	private RuleDefinitionsReader() {
 		IRuleExecutorFactory ruleExecutorFactory = getRuleExecutorFactory();
-		Map<String, IRuleDefinition> ruleDefMap = ruleExecutorFactory
-				.getIdentifierToDefinitionMap();
-		for (Iterator<IRuleDefinition> iterator = ruleDefMap.values()
-				.iterator(); iterator.hasNext();) {
+		Map<String, IRuleDefinition> ruleDefMap = ruleExecutorFactory.getIdentifierToDefinitionMap();
+		for (Iterator<IRuleDefinition> iterator = ruleDefMap.values().iterator(); iterator.hasNext();) {
 			IRuleDefinition ruleConfigDefinition = iterator.next();
-			Class<? extends IRuleDefinition> ruleDefinitionClass = ruleConfigDefinition
-					.getClass();
+			Class<? extends IRuleDefinition> ruleDefinitionClass = ruleConfigDefinition.getClass();
 			if (ruleDefinitionClass.isAnnotationPresent(RuleDefinition.class)) {
 				RuleDefinitionAnnotationVO ruleDefinitionVo = loadRuleDefinitionVo(ruleDefinitionClass);
 				ruleDefinitionList.add(ruleDefinitionVo);
-				ruleIdToDefMap.put(ruleDefinitionClass.getName(),
-						ruleDefinitionVo);
+				ruleIdToDefMap.put(ruleDefinitionClass.getName(), ruleDefinitionVo);
 			}
 		}
 	}
 
-	private RuleDefinitionAnnotationVO loadRuleDefinitionVo(
-			Class<? extends IRuleDefinition> ruleDefinitionClass) {
-		RuleDefinitionAnnotationVO ruleDefinitionVO = new RuleDefinitionAnnotationVO(
-				ruleDefinitionClass.getName());
-		RuleDefinition ruleDefinitionAnnotation = ruleDefinitionClass
-				.getAnnotation(RuleDefinition.class);
+	private RuleDefinitionAnnotationVO loadRuleDefinitionVo(Class<? extends IRuleDefinition> ruleDefinitionClass) {
+		RuleDefinitionAnnotationVO ruleDefinitionVO = new RuleDefinitionAnnotationVO(ruleDefinitionClass.getName());
+		RuleDefinition ruleDefinitionAnnotation = ruleDefinitionClass.getAnnotation(RuleDefinition.class);
 		ruleDefinitionVO.setCatalog(ruleDefinitionAnnotation.catalog());
 		ruleDefinitionVO.setSubCatalog(ruleDefinitionAnnotation.subCatalog());
 		ruleDefinitionVO.setCheckRole(ruleDefinitionAnnotation.checkRole());
 		ruleDefinitionVO.setCoder(ruleDefinitionAnnotation.coder());
-		ruleDefinitionVO.setDescription(ruleDefinitionAnnotation.description());
+		ruleDefinitionVO.setDescription(String.format("[%s] %s", ruleDefinitionAnnotation.coder(),
+				ruleDefinitionAnnotation.description()));
 		ruleDefinitionVO.setMemo(ruleDefinitionAnnotation.memo());
 		ruleDefinitionVO.setScope(ruleDefinitionAnnotation.scope());
-		ruleDefinitionVO
-				.setPrivateParamConfiguration(getPrivateParamConfiguration(ruleDefinitionAnnotation
-						.specialParamDefine()));
+		ruleDefinitionVO.setPrivateParamConfiguration(getPrivateParamConfiguration(ruleDefinitionAnnotation
+				.specialParamDefine()));
 		ruleDefinitionVO.setSolution(ruleDefinitionAnnotation.solution());
 		ruleDefinitionVO.setRepairLevel(ruleDefinitionAnnotation.repairLevel());
-		ruleDefinitionVO.setRelatedIssueId(ruleDefinitionAnnotation
-				.relatedIssueId());
-		ruleDefinitionVO.setExecuteLayer(ruleDefinitionAnnotation
-				.executeLayer());
-		ruleDefinitionVO.setExecutePeriod(ruleDefinitionAnnotation
-				.executePeriod());
-		ruleDefinitionVO
-				.setCommonParamConfiguration(getCommonParamConfiguration(ruleDefinitionClass));
+		ruleDefinitionVO.setRelatedIssueId(ruleDefinitionAnnotation.relatedIssueId());
+		ruleDefinitionVO.setExecuteLayer(ruleDefinitionAnnotation.executeLayer());
+		ruleDefinitionVO.setExecutePeriod(ruleDefinitionAnnotation.executePeriod());
+		ruleDefinitionVO.setCommonParamConfiguration(getCommonParamConfiguration(ruleDefinitionClass));
 		return ruleDefinitionVO;
 	}
 
-	private CommonParamConfiguration getCommonParamConfiguration(
-			Class<? extends IRuleDefinition> ruleDefinitionClass) {
+	private CommonParamConfiguration getCommonParamConfiguration(Class<? extends IRuleDefinition> ruleDefinitionClass) {
 		if (classToCommonParamMap.get(ruleDefinitionClass) != null) {
 			return classToCommonParamMap.get(ruleDefinitionClass);
 		}
@@ -109,8 +96,7 @@ public final class RuleDefinitionsReader {
 		// 暂不支持参数父子类之间的覆盖（需要反向处理）
 		while (itemClass != null && itemClass != Object.class) {
 			if (itemClass.isAnnotationPresent(PublicRuleDefinitionParam.class)) {
-				PublicRuleDefinitionParam pubParamAnnotation = itemClass
-						.getAnnotation(PublicRuleDefinitionParam.class);
+				PublicRuleDefinitionParam pubParamAnnotation = itemClass.getAnnotation(PublicRuleDefinitionParam.class);
 				List<ParamConfiguration> processParamConfigurations = processParamConfigurations(pubParamAnnotation
 						.params());
 				for (ParamConfiguration paramConfiguration : processParamConfigurations) {
@@ -119,8 +105,7 @@ public final class RuleDefinitionsReader {
 			}
 			itemClass = itemClass.getSuperclass();
 		}
-		classToCommonParamMap
-				.put(itemClass.getName(), commonParamConfiguration);
+		classToCommonParamMap.put(itemClass.getName(), commonParamConfiguration);
 		return commonParamConfiguration;
 	}
 
@@ -136,8 +121,7 @@ public final class RuleDefinitionsReader {
 		return result;
 	}
 
-	private PrivateParamConfiguration getPrivateParamConfiguration(
-			String[] specialParamDefine) {
+	private PrivateParamConfiguration getPrivateParamConfiguration(String[] specialParamDefine) {
 		List<ParamConfiguration> processParamConfigurations = processParamConfigurations(specialParamDefine);
 		PrivateParamConfiguration privateParamConfiguration = new PrivateParamConfiguration();
 		for (ParamConfiguration paramConfiguration : processParamConfigurations) {
@@ -168,8 +152,7 @@ public final class RuleDefinitionsReader {
 	 * @param clz
 	 * @return
 	 */
-	public RuleDefinitionAnnotationVO getRuleDefinitionVO(
-			Class<IRuleDefinition> clz) {
+	public RuleDefinitionAnnotationVO getRuleDefinitionVO(Class<IRuleDefinition> clz) {
 		return getRuleDefinitionVO(clz.getName());
 	}
 
@@ -191,10 +174,8 @@ public final class RuleDefinitionsReader {
 	 */
 	public String[] getPublicParam() {
 		Set<String> result = new HashSet<String>();
-		for (CommonParamConfiguration commonParams : classToCommonParamMap
-				.values()) {
-			for (ParamConfiguration paramConfiguration : commonParams
-					.getParamConfigurationList()) {
+		for (CommonParamConfiguration commonParams : classToCommonParamMap.values()) {
+			for (ParamConfiguration paramConfiguration : commonParams.getParamConfigurationList()) {
 				result.add(paramConfiguration.getParamName());
 			}
 		}
@@ -214,8 +195,7 @@ public final class RuleDefinitionsReader {
 				ruleDefinitionClassNameList.add(clz.getName());
 			}
 		}
-		return getPublicParamByRule(ruleDefinitionClassNameList
-				.toArray(new String[0]));
+		return getPublicParamByRule(ruleDefinitionClassNameList.toArray(new String[0]));
 	}
 
 	/**
@@ -230,10 +210,8 @@ public final class RuleDefinitionsReader {
 		}
 		Set<String> result = new HashSet<String>();
 		for (String clzName : clzNames) {
-			CommonParamConfiguration commonParamConfiguration = classToCommonParamMap
-					.get(clzName);
-			for (ParamConfiguration paramConfiguration : commonParamConfiguration
-					.getParamConfigurationList()) {
+			CommonParamConfiguration commonParamConfiguration = classToCommonParamMap.get(clzName);
+			for (ParamConfiguration paramConfiguration : commonParamConfiguration.getParamConfigurationList()) {
 				result.add(paramConfiguration.getParamName());
 			}
 		}

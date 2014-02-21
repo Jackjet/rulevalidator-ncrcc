@@ -1,0 +1,23 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;IE=9" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="/web/component/webpub/core/seajs2/dist/sea-debug.js" data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+		<title>ecpproductgrid组件设计</title>
+	</head>
+	<body>
+		<div id="container" style="float: left;"></div>
+		<script type="text/javascript">
+			seajs.use('ecpproductgrid', function(EcpProductGrid) {
+				var productGrid = new EcpProductGrid({
+					attrs : {
+						isPagination : true
+					},
+					renderTo : "container",
+					autoRender : false
+				});
+			});
+		</script>
+	</body>
+</html>

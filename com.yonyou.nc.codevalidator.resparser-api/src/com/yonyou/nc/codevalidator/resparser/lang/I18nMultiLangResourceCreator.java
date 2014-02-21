@@ -54,7 +54,6 @@ public class I18nMultiLangResourceCreator extends AbstractTempTableResourceCreat
 //		};
 //	};
 
-	@SuppressWarnings("unchecked")
 	public void createTempResources(Connection connection) throws RuleBaseException {
 //		if(CLIENT_CONTEXT_TL.get().isInit()){
 //			return;

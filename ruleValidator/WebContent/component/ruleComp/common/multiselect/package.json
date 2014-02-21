@@ -1,0 +1,8 @@
+{
+	'name' : 'multiselect',
+	'javaclass' : '',
+	'theme' : ['default'],
+	'author':'lixln',
+	'enable':false
+}
+

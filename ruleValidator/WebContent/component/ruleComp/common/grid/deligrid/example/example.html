@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow:hidden;">  
+	<head>   
+		<title> test window resize </title>  
+		<script type="text/javascript" src="/web/component/webpub/core/seajs2/dist/sea-debug.js" 
+			data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+		<script type="text/javascript" src="/web/component/webpub/core/jquery/src/jquery-1.7.2.js"></script> 
+		<script type="text/javascript" src="../src/js/jquery.resize.js"></script>   
+		<script type="text/javascript"> 
+			seajs.use(["$","/ecp/component/ecp/common/grid/deligrid/src/js/jquery.resize"],function($,resize){
+				$=resize($);
+				function content_resize(){
+					var w = $( window );         
+					var H = w.height();        
+					var W = w.width();         
+					$("#content").css({
+						width: W-20, 
+						height: H-20
+					});
+					/*$(window).wresize(content_resize);  */  
+					/*content_resize();*/  
+				}
+				$(window).resize(function(){
+					seajs.log("a");
+					content_resize();
+				});
+			});
+		</script>   
+	</head>   
+	<body>   
+		<div id="content" style="border: 1px dashed silver; position:absolute; overflow:auto;"> 
+			test test test test test test test test test test test test test test test test test test test test test 
+			test test test test test test test test test test test test test test test test test test test test test 
+			test test test test test test test test test test test test test test test test test test test test test 
+			test test test test test test test test test test test test test test test test test test test test test 
+			test test test test test test test test test test test  
+		</div>   
+	</body> 
+</html>

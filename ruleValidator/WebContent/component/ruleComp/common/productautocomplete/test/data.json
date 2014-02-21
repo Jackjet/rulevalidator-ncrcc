@@ -1,0 +1,52 @@
+[{
+			"id" : "1001ZF10000000000BMY",
+			"url" : null,
+			"children" : [{
+						"id" : "1001ZF10000000000BN7",
+						"url" : null,
+						"children" : [{
+							"id" : "1001ZF10000000000BN7",
+							"url" : null,
+							"children" : [{
+								"id" : "1001ZF10000000000BN7",
+								"url" : null,
+								"children" : [],
+								"vname" : "商品分类1-1-1-1",
+								"vcode" : "00102",
+								"leaf" : false
+							}],
+							"vname" : "商品分类1-1-1",
+							"vcode" : "00102",
+							"leaf" : false
+						}],
+						"vname" : "商品分类1-1",
+						"vcode" : "00102",
+						"leaf" : false
+					}, {
+						"id" : "1001ZF100000000029SK",
+						"url" : null,
+						"children" : [],
+						"vname" : "商品分类1-2",
+						"vcode" : "222222",
+						"leaf" : false
+					}, {
+						"id" : "1001ZF10000000000BN4",
+						"url" : null,
+						"children" : [],
+						"vname" : "商品分类1-3",
+						"vcode" : "00101",
+						"leaf" : false
+					}],
+			"vname" : "商品分类1",
+			"vcode" : "001",
+			"leaf" : false,
+			"index":"1"
+		}, {
+			"id" : "1001ZF10000000000BN1",
+			"url" : null,
+			"children" : [],
+			"vname" : "商品分类2",
+			"vcode" : "002",
+			"leaf" : false,
+			"index":"2"
+		}]

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>右键菜单</title>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs2/dist/sea-debug.js"
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<link rel="stylesheet" type="text/css" href="./contextmenu.css">
+<style type="text/css">
+.body {
+	font-size: 12px;
+}
+</style>
+</head>
+<script type="text/javascript">
+	function test() {
+		console.log('ok');
+		return false;
+	}
+	seajs.use([ '$', './ContextMenu.js' ], function($, ContextMenu) {
+
+		var simpleMenu = [ {
+			name : 'menu-0',
+			iconCls : 'ui-icon-add',
+			handler : function() {
+				console.log('menu-0');
+			}
+		}, {
+			name : 'menu-1',
+			iconCls : 'ui-icon-delete',
+			handler : function() {
+				console.log('menu-1');
+			}
+		} ];
+		var multipleMenu = [ {
+			name : 'menu-0',
+			iconCls : 'ui-icon-add',
+			handler : function() {
+				console.log('menu-0');
+			},
+			children : [ {
+				name : 'menu-0-0',
+				iconCls : 'ui-icon-add',
+				handler : function() {
+					console.log('menu-0-0');
+				}
+			}, {
+				name : 'menu-0-1',
+				iconCls : 'ui-icon-add',
+				handler : function() {
+					console.log('menu-0-1');
+				}
+			} ]
+		}, {
+			name : 'menu-1',
+			iconCls : 'ui-icon-delete',
+			handler : function() {
+				console.log('menu-1');
+			},
+			children : [ {
+				name : 'menu-1-0',
+				iconCls : 'ui-icon-add',
+				handler : function() {
+					console.log('menu-1-0');
+				}
+			}, {
+				name : 'menu-1-1',
+				iconCls : 'ui-icon-add',
+				handler : function() {
+					console.log('menu-1-1');
+				}
+			} ]
+		} ];
+
+		var cm = ContextMenu.create({
+			selector : 'body',
+			data : simpleMenu
+		});
+	})
+</script>
+<body>
+
+	<button id="target" style="margin-top: 1500px;">target</button>
+</body>
+</html>

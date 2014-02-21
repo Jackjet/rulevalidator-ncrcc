@@ -1,0 +1,62 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;IE=9" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>文本域</title>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs2/dist/sea-debug.js"
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<script type="text/javascript">
+	seajs.use([ '$', 'validation', 'field_text' ], function($, Validation, TextField) {
+		$(function() {
+			
+			// 详细配置用例
+			new TextField({
+				renderTo : $('.ui-main'),
+				model : {
+					/* 控件配置 */
+					id : 'id',
+					cls : 'cls',
+					/* 标签配置 */
+					labelId : 'labelId',
+					label : '标签一',
+					labelCls : 'labelCls',
+					isLabelHidden : false,
+					isHidden : true,
+					separator : '：',
+					/* 域配置 */
+					name : 'name2',
+					value : '',
+					fieldId : 'fieldId',
+					fieldCls : 'fieldCls',
+					filedStyle : 'filedStyle',
+					placeholder : '不能为空',
+					validator : {
+						rules : Validation.RULES.NOT_EMPTY,
+						errorMsg : '不能为空'
+					}
+				}
+			});
+			
+			// 简化配置用例
+			new TextField({
+				renderTo : $('.ui-main'),
+				model : {
+					label : '标签二',
+					name : 'name1',
+					placeholder : '请填写汉字',
+					isHidden : false,
+					validator : {
+						rules : Validation.RULES.CHINESE
+					}
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="ui-main ui-main-width bar_content"></div>
+</body>
+</html>

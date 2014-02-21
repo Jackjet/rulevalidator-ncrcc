@@ -23,7 +23,7 @@ import com.yonyou.nc.codevalidator.rule.except.RuleBaseException;
  * @since V1.0
  */
 public class MetaDataResourceQueryFactory implements IMetaDataResourceQueryFactory {
-
+	
 	@Override
 	public ResourceType getType() {
 		return ResourceType.METADATA;

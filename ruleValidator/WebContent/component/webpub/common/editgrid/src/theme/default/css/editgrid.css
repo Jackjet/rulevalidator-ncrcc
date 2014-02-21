@@ -1,0 +1,278 @@
+.ui-ecpeditgrid{
+	width:100%;
+	float: left;
+	margin-top: 10px;
+}
+.ui-ecpeditgrid  table{
+	border: 0;
+	width: 100%;
+	line-height: 26px;
+	border-collapse: collapse;
+}
+
+.ui-ecpeditgrid thead tr {
+	background-color:#D3E5F1;
+	border: 1px solid #9ABBD5;
+	color: #191919;
+	height: 26px;
+	padding-left: 10px;
+}
+
+.ui-ecpeditgrid td {
+	padding: 0px;
+	text-align: center;
+}
+
+.ui-ecpeditgrid thead tr td {
+	border: 1px solid #9ABBD5;
+}
+
+.ui-ecpeditgrid  a {
+	color: #35719A;
+	text-decoration: none;
+}
+
+.ui-ecpeditgrid tbody td {
+	border: 1px solid #e5e5e5;
+}
+
+.ui-ecpeditgrid tbody td input{
+	width: 60px;
+}
+
+.ui-ecpeditgrid tbody td select{
+	width: 90%;
+}
+
+.ui-ecpeditgrid td.left_align {
+	text-align: left;
+}
+
+.ui-ecpeditgrid td.center_align {
+	text-align: center;
+}
+
+.ui-ecpeditgrid td.right_align {
+	text-align: right;
+}
+
+.ui-ecpeditgrid .edit {
+	display: none;
+}
+
+.ui-ecpeditgrid tr.editing .edit {
+	display: inline;
+	margin: 0;
+}
+
+.ui-ecpeditgrid .editing .view {
+	display: none;
+}
+
+.ui-ecpeditgrid  li {
+	list-style: none;
+}
+
+.ui-ecpeditgrid  a {
+	margin-right: 5px;
+}
+
+.ui-ecpeditgrid  td div {
+}
+.ui-form{
+	margin-top: 30px;
+}
+
+.ui-form .bar_corner{
+	float: left;
+    height: 5px;
+    overflow: hidden;
+    width: 5px;
+	background: url(../img/rounded_gray_gradient_corner.png) no-repeat;
+}
+
+.ui-form .bar_corner.lt {
+	background-position: 0 0;
+	clear: both;
+}
+
+.ui-form .bar_border {
+	background: url(../img/rounded_gray_gradient_border_ver.png) repeat-x;
+	float: left;
+    height: 5px;
+    overflow: hidden;
+}
+
+.bar_border.top {
+	background-position: 0 0;
+}
+
+.ui-form .bar_corner.rt {
+	background-position: -5px 0;
+}
+
+.ui-form .bar_content {
+	float: left;
+	margin: 0 1px;
+	display: inline;
+	border: 1px solid #b4bbc2;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.ui-form .bar_content.query_form_width {
+	background: url(../img/rounded_lightgray_gradient_bg_fill.png) 0
+		-100px repeat-x white;
+}
+
+.ui-form .bar_content.query_form_width.short {
+	width: 596px;
+}
+
+.ui-form .return_query_form {
+	float: left;
+}
+
+.ui-form .return_query_form.short {
+	margin: 0;
+}
+
+.ui-form .form_content {
+	float: left;
+	width: 590px;
+	overflow-y: hidden;
+	height:100%;
+}
+
+.ui-form .return_query_form .form_filed {
+	float: left;
+	margin-right: 3px;
+	padding: 6px 0;
+	display: inline;
+}
+
+.ui-form .return_query_form .form_filed .form_item{
+	float: left;
+	margin-left: 50px;
+	margin-top: 20px;
+	width: 40%;
+}
+
+.ui-form .return_query_form .form_filed .hidden_item{
+	display: none;
+}
+
+.ui-form .nc-form-label {
+	width: 50%;
+	margin: 0px 10px;
+}
+
+.ui-form .nc-form-textfield {
+	-moz-border-bottom-colors: none;
+	-moz-border-image: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: #ABADB3 #DBDFE5 #E3E9EF #E2E3EA;
+	border-style: solid;
+	border-width: 1px;
+	display: inline;
+	height: 16px;
+	line-height: 16px;
+	width: 50%;
+}
+
+.ui-form .nc-form-select{
+	width: 50%;
+}
+
+.ui-form .return_query_form .button_filed {
+	float: right;
+	margin-right: 3px;
+	padding: 3px 0 0 0;
+	display: inline;
+}
+
+.ui-form .button_filed .button_wrapper {
+	float: right;
+	margin-right: 20px;
+	display: inline;
+}
+
+.ui-form .button_filed .button_wrapper a {
+	float: left;
+	width: 69px;
+	height: 26px;
+	line-height: 26px;
+	margin-left: 10px;
+	display: inline;
+	text-align: center;
+	text-decoration: none;
+	background: url(../img/buttons.png) no-repeat;
+}
+
+.ui-form .clear{
+	clear: both;
+}
+
+.ui-form .bar_corner.lb {
+	background-position: 0 -5px;
+	clear: both;
+}
+
+.ui-form .bar_corner.rb {
+	background-position: -5px -5px;
+}
+
+.ui-form .bar_border.query_form_width.short {
+	width: 590px;
+}
+
+.ui-form .bar_border.top {
+	background-position: 0 0;
+}
+
+.ui-form .bar_border.btm {
+	background-position: 0 -5px;
+}
+
+.ui-form .button_wrapper a.button_main {
+	color: white;
+	background-position: -699px 0;
+}
+
+.ui-form .button_wrapper a.button_main:hover {
+	background-position: -699px -26px;
+}
+
+.ui-form .button_wrapper a.button_main:active {
+	background-position: -699px -52px;
+}
+
+.ui-form .button_wrapper a.button_normal {
+	color: black;
+	background-position: -768px 0;
+}
+
+.ui-form .button_wrapper a.button_normal:hover {
+	background-position: -768px -26px;
+}
+
+.ui-form .button_wrapper a.button_normal:active {
+	background-position: -768px -52px;
+}
+.textfield{
+	border-color: #ABADB3 #DBDFE5 #E3E9EF #E2E3EA;
+    border-style: solid;
+    border-width: 1px;
+    display: inline;
+    height: 16px;
+    line-height: 16px;
+    padding: 2px;
+    width: 130px;
+    text-align: right;
+}
+
+.hidden{
+	display: none;
+}

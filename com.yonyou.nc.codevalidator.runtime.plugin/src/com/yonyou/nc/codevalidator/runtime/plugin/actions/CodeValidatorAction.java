@@ -57,6 +57,8 @@ public class CodeValidatorAction extends Action implements IObjectActionDelegate
 				: ExecutePeriod.getExecutePeriod(executeLevel);
 		SystemRuntimeContext systemRuntimeContext = new SystemRuntimeContext(globalConfigFilePath,
 				globalExportFilePath, globalLogFilePath, globalLogLevel, executePeriod);
+		boolean runInNc5x = preferenceStore.getBoolean(RuleConstants.RUN_IN_NC_5X);
+		systemRuntimeContext.setExecuteLevelIn5x(runInNc5x);
 
 		PluginRuntimeContext runtimeContext = new PluginRuntimeContext(businessComponent, systemRuntimeContext,
 				mdeProjectName);

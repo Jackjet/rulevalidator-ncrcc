@@ -11,6 +11,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.CCombo;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
@@ -35,6 +36,8 @@ public class NCRuleConfigPreferencePage extends PreferencePage implements IWorkb
 	private CCombo ruleLevelCombo;
 
 	private CCombo logLevelCombo;
+
+	private Button runInNc5xBtn;
 
 	public NCRuleConfigPreferencePage() {
 	}
@@ -121,6 +124,12 @@ public class NCRuleConfigPreferencePage extends PreferencePage implements IWorkb
 		String ruleLevel = StringUtils.isBlank(preferenceStore.getString(RuleConstants.EXECUTE_LEVEL)) ? ExecutePeriod.DEPLOY
 				.getName() : preferenceStore.getString(RuleConstants.EXECUTE_LEVEL);
 		ruleLevelCombo.select(allExecutePeriods.indexOf(ruleLevel));
+		
+		runInNc5xBtn = new Button(subComp, SWT.CHECK);
+		runInNc5xBtn.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, false, false, 2, 1));
+		runInNc5xBtn.setText("支持V5X环境执行(业务组件规则可在模块级别执行)");
+		boolean runInNc5x = preferenceStore.getBoolean(RuleConstants.RUN_IN_NC_5X);
+		runInNc5xBtn.setSelection(runInNc5x);
 	}
 	
 	@Override
@@ -136,6 +145,7 @@ public class NCRuleConfigPreferencePage extends PreferencePage implements IWorkb
 		preferenceStore.setValue(RuleConstants.GLOBAL_LOG_FILEPATH, globalLogFilePathField.getStringValue());
 		preferenceStore.setValue(RuleConstants.GLOBAL_LOG_LEVEL, logLevelCombo.getText());
 		preferenceStore.setValue(RuleConstants.EXECUTE_LEVEL, ruleLevelCombo.getText());
+		preferenceStore.setValue(RuleConstants.RUN_IN_NC_5X, runInNc5xBtn.getSelection());
 		return super.performOk();
 	}
 	

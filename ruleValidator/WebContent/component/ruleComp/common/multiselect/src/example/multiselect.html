@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>多选下拉框</title>
+<script type="text/javascript" src="/web/component/webpub/core/seajs2/dist/sea-debug.js" data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<script type="text/javascript" src="/web/component/webpub/core/seajs2/src/config.js"></script>
+<script type="text/javascript" src="/web/component/webpub/tools/codemirror/src/codehelper.js"></script>
+<style type="text/css">
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<div class="content">
+		<div>
+		fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+		</div>
+		<div id="ms" style="width: 500px;"></div>
+		<div style="clear:both;"></div>
+		<div>
+			<input>
+		</div>
+		<select>
+			<option>1</option>
+			<option>3</option>
+			<option>2</option>
+			<option>4</option>
+			<option>5</option>
+		</select>
+		<div>
+		ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+		</div>
+		<script type="text/javascript">
+			seajs.use(['../js/multiselect.js'], function(MultiSelect){
+				new MultiSelect({
+					attrs:{
+						// 整体控件宽度
+						width : 400,
+						// 标签宽度
+						labelWidth : 100,
+						// 标签水平对齐方向
+						labelAlign : 'right',
+						// 输入域宽度
+						fieldWidth : 300,
+						// 输入域名称（提交参数名）
+						name : 'multiSelect',
+						// 候选项数据
+						optionsData : {
+							// 本地数据
+							/*
+							local : {
+								// 直接数据（字符串）
+								string : 'key_5:value_5; key_6:value_6',
+								// 直接数据（数组）
+								json : [{
+											key : 'key_3',
+											value : 'value_3'
+										}, {
+											key : 'key_4',
+											value : 'value_4'
+										}]
+							},
+							*/
+							// 远程数据
+							remote : {
+								url : '/ecp/favorite/tags',
+								data : {},
+								format : function(data) {
+									var array = [];
+									for (var attrName in data) {
+										array.push({
+											key:attrName,
+											value:attrName
+										})
+									}
+									return array;
+								}
+							}
+						}
+					},
+		    		renderTo:'ms'
+				})
+		    });
+		</script>
+	</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* 错误日志 */
+.syse_message {
+    background: none repeat scroll 0 0 black;
+    border: 1px solid black;
+    color: white;
+    font-size: 16px;
+    left: 0px;
+    overflow: scroll;
+    position: absolute;
+    top: 0px;
+    width: 800px;
+    display:none;
+    height:500px;
+    z-index: 999;
+}
+
+/* 控制台日志附着器 */
+.nc-log-console {
+    background: none repeat scroll 0 0 black;
+    border: 1px solid black;
+    color: white;
+    font-size: 16px;
+    left: 0px;
+    overflow: scroll;
+    position: absolute;
+    width: 800px;
+    display:none;
+    height:500px;
+    top:0px;
+    z-index: 998;
+}
+
+
+/* error.jsp页面日志错误 */
+.error_message {
+	background: none repeat scroll 0 0 black;
+    border: 1px solid black;
+    color: white;
+    font-size: 16px;
+    left: 0px;
+    overflow: scroll;
+    position: absolute;
+    top: 0px;
+    width: 800px;
+    display:none;
+    height:500px;
+    z-index: 1000;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>list测试</title>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/config.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/tools/codemirror/src/codehelper.js"></script>
+<style type="text/css">
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<div class="content">
+		<h1>list组件</h1>
+		<ol>
+			<li>
+				<h2>界面</h2>
+				<div id="list" style="display: inline-table;">
+				<script type="text/javascript">
+					seajs.use(['common/list/src/js/list'],
+						function(List) {
+							var option = {
+								attrs:{
+									url:'/web/component/webpub/common/list/test/data.json'
+								},
+								renderTo:"list",
+								autoRender:true
+							};
+							var list= new List(option);
+						});
+				</script>
+			</li>
+			<li>
+				<h2>代码示例</h2>
+				<div>
+					<textarea class="js">
+						<script type="text/javascript">
+							seajs.use(['common/list/src/js/list'],
+								function(List) {
+									var option = {
+										attrs:{
+											url:'/web/component/webpub/common/list/test/data.json'
+										},
+										renderTo:"list",
+										autoRender:true
+									};
+									var list= new List(option);
+								});
+						</script>
+					</textarea>
+				</div>
+			</li>
+			<li>
+				<h2>数据模型</h2>
+				<div>
+					<textarea class="js">
+						[
+							{
+								"id" : "1",
+								"name" : "name",
+								"url" : "http://www.baidu.com",
+								"picurl" : "../src/theme/default/img/defaultimg.jpg",
+								"content" : "not premit use name1"
+							}, 
+							{
+								"id" : "2",
+								"name" : "name",
+								"url" : "http://www.baidu.com",
+								"picurl" : "../src/theme/default/img/defaultimg.jpg",
+								"content" : "not premit use name2"
+							}, 
+							{
+								"id" : "3",
+								"name" : "name",
+								"url" : "http://www.baidu.com",
+								"picurl" : "../src/theme/default/img/defaultimg.jpg",
+								"content" : "not premit use name3"
+							}, 
+							{
+								"id" : "4",
+								"name" : "name",
+								"url" : "http://www.baidu.com",
+								"picurl" : "../src/theme/default/img/defaultimg.jpg",
+								"content" : "not premit use name4"
+							}
+						]
+					</textarea>
+				</div>
+			</li>
+			<li>
+				<h2>测试用例</h2>
+				<a href="../test/runner.html" type="_blank">测试</a>
+			</li>
+		</ol>
+	</div>
+</body>
+</html>

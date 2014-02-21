@@ -1,0 +1,7 @@
+{
+	"name" : "tendergrid",
+	"javaclass" : "com.yonyou.ec.webpub.comp.grid.Grid",
+	"theme" : ["default","red"],
+	"author":"孟志昂",
+	"enable":false
+}

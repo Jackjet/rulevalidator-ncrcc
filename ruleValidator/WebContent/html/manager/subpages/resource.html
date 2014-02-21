@@ -1,0 +1,139 @@
+<!DOCTYPE html >
+<html>
+<head>
+<title>NC规则校验系统－系统管理</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" 
+	src="/ruleValidator/component/webpub/core/seajs2/dist/sea.js" 
+	data-config="/ruleValidator/html/global.js" 
+	data-main="/ruleValidator/html/main.js"></script>
+<script type="text/javascript">
+	seajs.use(["$","store"],function($,store){
+		$(function() {
+			//设置默认值
+			var userid = store.get("user").userId;
+			var dreceivedate = store.get("dreceivedate") || {};
+			if (dreceivedate[userid]) {
+				$("#dreceivedate").val(dreceivedate[userid]);
+			}
+			// 有效性检验
+			$("#dreceivedate").blur(function() {
+				var numstr = $(this).val();
+				if (parseInt(numstr)!= null && parseInt(numstr) >= 0) {
+					number = parseInt(numstr);				
+					$("#savedate")[0].disabled = false;
+					$(".msg").empty();
+					if(number > 365){
+						number = 365;
+					}
+					$("#dreceivedate").val(number);
+				} else {
+					$("#savedate")[0].disabled = true;
+					$(".msg").empty().append(' 输入的值必须是非负整数');
+				}
+			});
+			
+			//保存设置
+			$("#savedate").live("click",function(){
+				dreceivedate[userid] = $("#dreceivedate").val()
+				store.set("dreceivedate",dreceivedate);
+				alert("保存成功");
+			})
+		});
+	});
+</script>
+</head>
+
+<body class="bg_white">
+	<div data-widget="subnav"></div>
+	<div data-page="addressManager">
+		<!-- 查询条件表单 -->
+		<div id="container_form" style="margin-top: 10px;"></div>
+		<!-- 展现网格 -->
+		<div id="container_grid" style="float: left; width: 100%"></div>
+	</div>
+	<script type="text/javascript">
+		seajs.use(['$', 'form', 'ecppagegrid','resource'],
+			function($, Form, EcpPageGrid, Resource) {
+				var form = new Form({
+					attrs : {
+						id : "form",
+						items : [{
+							label : "URL",
+							name : 'resCode'
+						},{
+							label : "资源名称",
+							name : "resName"
+						}],
+						buttons : [{
+							text : "查询",
+							id : "submit",
+							handler : function() {
+								grid.query($("#form"));
+								return false;
+							}
+						}, {
+							text : "添加",
+							type : "button",
+							id: "address",
+							handler: function(){
+								Resource.addResource(grid);
+							}
+						} ]
+					},
+					renderTo : 'container_form'
+				});
+				
+				var grid = new EcpPageGrid({
+					attrs : {
+						url : G.API.RESOURCE_QUERY,
+						columns : [{
+							label : "资源名称",
+							key : "resourceName",
+							width : "20%",
+							align : "left"
+						} ,{
+							label : "URL",
+							key : "url",
+							width : "40%",
+							align : "left"
+						}, {
+							label : "模块",
+							key : "moduleId",
+							width : "12%",
+							align : "left"
+						}  ,{
+							label : "序号",
+							key : "seq",
+							width : "8%",
+							align : "left"
+						},{
+							label : "操作",
+							key : "caozuo",
+							width : "20%",
+							format:function(value, data) {
+								return '<a id="button_address_update" class="J-address-update ecpgrid_btn">编辑</a>  '
+								      +'<a id="button_address_delete" class="J-address-delete ecpgrid_btn">删除</a>';
+							},
+							align : "center"
+						} ]
+					},
+					renderTo : "container_grid",
+					autoRender : true,
+				});
+				//修改用户
+				$('.J-address-update').live('click', function() {
+					var index=$(this).parent().parent().find(".gridIndex").text();
+					var record = grid.get("model").records[index - 1]
+					Resource.updateResource(record,grid);
+				});
+				//删除用户
+				$('.J-address-delete').live('click', function() {
+					var index=$(this).parent().parent().find(".gridIndex").text();
+					var record = grid.get("model").records[index - 1]
+					Resource.delResource(record,grid);
+				});
+			});
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+.ui-validate-error {
+	/* border: 1px black solid;
+	background-color: yellow; */
+	display: inline;
+	font-size: 12px;
+	/* float: left; */
+}
+
+.ui-validate-error .symbol {
+	/* border: 1px black solid;
+	background-color: red; */
+	display: inline-block;
+	width: 16px;
+	height: 15px;
+	background: url(../img/icons.png) -201px -45px no-repeat;
+}
+
+.ui-validate-error .msg {
+	height: 16px;
+	line-height: 16px;
+	color: red;
+}

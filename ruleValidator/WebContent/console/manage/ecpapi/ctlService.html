@@ -1,0 +1,344 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;IE=9" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs2/dist/sea-debug.js"
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/tools/ca/ca.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/tools/formatJson/c.js"></script>
+<link href="/web/component/webpub/tools/formatJson/s.css"
+	type="text/css" rel="stylesheet"></link>
+<title></title>
+<style>
+#apilist {
+	margin: 100px;
+	width: 500px;
+}
+
+.result {
+	display: none;
+	position: absolute;
+}
+
+.J-params {
+	width: 300px;
+	white-space: pre-line;
+}
+.result_display{
+	margin-left: 100px;
+	margin-top: 20px;
+	width: 1000px;
+	font-size:14px;
+}
+.test_success{
+	color: green;
+}
+.test_error{
+	color: red;
+}
+.detailInfo{
+	margin-left: 10px;
+}
+input{
+border: 1px solid rgb(228, 225, 225);
+width: 80px;
+}
+h1{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	line-height: 1.1;
+	font-size: 24px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 100px;
+}
+</style>
+</head>
+<body class="">
+
+	<h1>经销商门户服务管理</h1>
+	<div class="result_display">
+		<div id="tab"></div>
+	</div>
+	
+	<script type="text/javascript">
+		seajs.use([ "$", 'extendgrid','tab' ], function($, ExtendGrid,Tab) {
+			var tab = new Tab({
+				attrs : {
+					items : [{
+								id : "noParams",
+								title : '无参服务',
+								active : true
+							}, {
+								id : "hasParams",
+								title : '有参服务'
+							}],
+					trigger:"click"
+				},
+				renderTo : "tab"
+			});
+			
+			var ecpNoParamGrid = new ExtendGrid({
+				attrs : {
+					url : G.API.SERVICE_CONTROLLER_NOPARAM,
+					isSubTitle : true,
+					extendName : "methods",
+					isExtend : true,
+					extendAll : true,
+					columns : [ {
+						label : "url",
+						key : "url"
+					}, {
+						label : "服务名称",
+						key : "handler"
+					}, {
+						label : "服务名称",
+						key : "handler",
+						format : function(value, row) {
+							return "<td class='J-rowCount'>" + row.methods.length + "</td>";
+						}
+					} ],
+					subcolumns : [ {
+						sublabel : "测试",
+						subkey : "params",
+						format : function(value, row) {
+							return "<td  width='100px'><a href='#' class='J-test'>测试</a></td>";
+						}
+					}, {
+						sublabel : "返回结果",
+						subkey : "params",
+						format : function(value, row) {
+							return "<td class='J-testResult' width='100px'>"+
+										"<a href='#' class='J-result J-showResult'></a>"+
+										"<a href='#' class='detailInfo J-showResult'>详情</a>"+
+										"<div class='J-Canvas Canvas result'></div>"
+									"</td>";
+						}
+					}, {
+						sublabel : "url",
+						subkey : "url",
+						width : "20%"
+					}, {
+						sublabel : "服务类型",
+						subkey : "method"
+					}, {
+						sublabel : "返回参数",
+						subkey : "returnType"
+					}, {
+						sublabel : "入参",
+						subkey : "params"
+					} ]
+				},
+				renderTo : "noParams",
+				autoRender : true
+			});
+			
+			var ecpHasParamgrid = new ExtendGrid({
+				attrs : {
+					url : G.API.SERVICE_CONTROLLER_HASPARAM,
+					isSubTitle : true,
+					extendName : "methods",
+					isExtend : true,
+					extendAll : true,
+					columns : [ {
+						label : "url",
+						key : "url"
+					}, {
+						label : "服务名称",
+						key : "handler"
+					}, {
+						label : "服务名称",
+						key : "handler",
+						format : function(value, row) {
+							return "<td class='J-rowCount'>" + row.methods.length + "</td>";
+						}
+					} ],
+					subcolumns : [ {
+						sublabel : "测试",
+						subkey : "params",
+						format : function(value, row) {
+							return "<td  width='100px'><a href='#' class='J-test'>测试</a></td>";
+						}
+					}, {
+						sublabel : "返回结果",
+						subkey : "params",
+						format : function(value, row) {
+							return "<td class='J-testResult' width='100px'>"+
+										"<a href='#' class='J-result J-showResult'></a>"+
+										"<a href='#' class='detailInfo J-showResult'>详情</a>"+
+										"<div class='J-Canvas Canvas result'></div>"
+									"</td>";
+						}
+					}, {
+						sublabel : "url",
+						subkey : "url",
+						width : "20%"
+					}, {
+						sublabel : "服务类型",
+						subkey : "method"
+					}, {
+						sublabel : "返回参数",
+						subkey : "returnType"
+					}, {
+						sublabel : "入参",
+						subkey : "params",
+						format : function(value, row) {
+							var result = "<td width='300px'>"
+							if(value.length>0){
+								for(var i=0;i<value.length;i++){
+									result+="<div>" +value[i]+"<input type='text'/></div>"
+								}
+							}
+							result +="</td>"
+							return result;
+						}
+					} ]
+				},
+				renderTo : "hasParams",
+				autoRender : true
+			});
+			$(".J-test").live("click", function() {
+				var prevTr = $(this).parents("tr.detail").prev();
+				var parentTr = $(this).parents("tr.bdbtm");
+				var url ="";
+				if(parentTr.find(".J-url").html() !=""){
+					url = G.ecp + "/" + prevTr.find(".J-url").html() + "/" + parentTr.find(".J-url").html();
+				}else{
+					url= G.ecp + "/" + prevTr.find(".J-url").html();
+				}
+				if(parentTr.find(".J-url").html() =="logout.json" ||parentTr.find(".J-url").html() =="login.json" ){
+					parentTr.find(".J-result").html("跳过");
+					seajs.emit("jump");
+					return;
+				}
+				var method = parentTr.find(".J-method").html();
+				parentTr.find(".J-result").html("测试中...");
+				$.ajax({
+					type : method,
+					url : url,
+					success : function(msg, status, response) {
+						if(msg.detail ==null){
+							parentTr.find(".J-result").html("<span class='test_success'>成功</span>");
+							seajs.emit("success");
+						}else{
+							parentTr.find(".J-result").html("<span class='test_error'>失败</span>");
+							seajs.emit("error");
+						}
+						var html = ProcessObject(msg, 0, false, false, false)
+						parentTr.find(".J-Canvas").html("<PRE class='CodeContainer'>" + html + "</PRE>");
+						console.log(url);
+						console.log(msg);
+					}
+				});
+				return false;
+			})
+			$(".J-showResult").live("click", function() {
+				$(this).removeClass("J-showResult").addClass("J-hideResult");
+				$(this).next(".J-Canvas").show();
+				return false;
+			});
+			$(".J-hideResult").live("click", function() {
+				$(this).removeClass("J-hideResult").addClass("J-showResult");
+				$(this).next(".J-Canvas").hide();
+				return false;
+			});
+			
+			var noparamtotal = 0;
+			ecpNoParamGrid.after('afterRender', function() {
+				$("#noParams .ui-extendgrid tbody tr:not(.bdbtm,.detail)").each(function() {
+					var methodCount = parseInt($(this).find("td.J-rowCount").html());
+					noparamtotal = noparamtotal + methodCount;
+				})
+				var html = '<span>无参服务数量：</span> <span id="totalMethod"></span> '+noparamtotal+'<span>个</span>'+
+				'<button value="测试所有服务" id="testAll">测试所有无参服务</button>'+
+				'<div>'+
+					'<div class=""><label>已完成：</label><span class="finish">0</span></div>'+
+					'<div class=""><label>跳过</label><span class="jump">0</span></div>'+
+					'<div class="test_success"><label>成功：</label><span class="success">0</span></div>'+
+					'<div class="test_error"><label >失败：</label><span class="error">0</span></div>'+
+				'</div>';
+				$("#noParams").children().prepend(html);
+			})
+			var hasparamtotal = 0;
+			ecpHasParamgrid.after('afterRender', function() {
+				$("#hasParams .ui-extendgrid tbody tr:not(.bdbtm,.detail)").each(function() {
+					var methodCount = parseInt($(this).find("td.J-rowCount").html());
+					hasparamtotal = hasparamtotal + methodCount;
+				})
+				var html = '<span>有参服务数量：</span> <span id="totalMethod"></span> '+hasparamtotal+'<span>个</span>'+
+				'<button value="测试所有服务" id="testAllHasParam">测试所有有参服务</button>'+
+				'<div>'+
+					'<div class=""><label>已完成：</label><span class="finish">0</span></div>'+
+					'<div class=""><label>跳过</label><span class="jump">0</span></div>'+
+					'<div class="test_success"><label>成功：</label><span class="success">0</span></div>'+
+					'<div class="test_error"><label >失败：</label><span class="error">0</span></div>'+
+				'</div>';
+				$("#hasParams").children().prepend(html);
+			})
+			
+			var success = 0;
+			var error = 0;
+			var jump =0;
+			$("#testAll").live("click",function(){
+				$(this).html("测试中...").attr("disabled",true);
+				seajs.on("success",function(){
+					success = success+1;
+					$("#noParams .success").html(success);
+					$("#noParams .finish").html(success+error+jump);
+					if(success+error+jump == noparamtotal){
+						$("#testAll").html("测试所有无参服务").attr("disabled",false);
+					}
+				});
+				seajs.on("error",function(){
+					error = error+1;
+					$("#noParams .error").html(error);
+					$("#noParams .finish").html(success+error+jump);
+					if(success+error+jump == noparamtotal){
+						$("#testAll").html("测试所有无参服务").attr("disabled",false);
+					}
+				});
+				seajs.on("jump",function(){
+					jump = jump+1;
+					$("#noParams .jump").html(jump);
+					if(success+error+jump == noparamtotal){
+						$("#testAll").html("测试所有无参服务").attr("disabled",false);
+					}
+				});
+				$("#noParams .J-test").trigger("click");
+			});
+		
+		$("#testAllHasParam").live("click",function(){
+			$(this).html("测试中...").attr("disabled",true);
+			seajs.off("success").on("success",function(){
+				success = success+1;
+				$("#hasParams .success").html(success);
+				$("#hasParams .finish").html(success+error+jump);
+				if(success+error+jump == hasparamtotal){
+					$("#testAllHasParam").html("测试所有无参服务").attr("disabled",false);
+				}
+			});
+			seajs.off("error").on("error",function(){
+				error = error+1;
+				$("#hasParams .error").html(error);
+				$("#hasParams .finish").html(success+error+jump);
+				if(success+error+jump == hasparamtotal){
+					$("#testAllHasParam").html("测试所有无参服务").attr("disabled",false);
+				}
+			});
+			seajs.off("jump").on("jump",function(){
+				jump = jump+1;
+				$("#hasParams .jump").html(jump);
+				if(success+error+jump == hasparamtotal){
+					$("#testAllHasParam").html("测试所有无参服务").attr("disabled",false);
+				}
+			});
+			$("#hasParams .J-test").trigger("click");
+		});
+	});
+	</script>
+</body>
+</html>

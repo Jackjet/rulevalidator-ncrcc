@@ -1,0 +1,118 @@
+{"total":"2",
+"records":[{
+		"name":"商品1",
+		"code":"123",
+		"price":"12.33",
+		"bodys":[{
+			"name":"Thinkpadx600" ,
+			"num":"600.00台",
+			"time":"计划到货",
+			"state":"采购",
+			"id":"cklfaskldaslk"
+		 },{
+		 	"name":"Thinkpadx600" ,
+			"num":"600.00台",
+			"time":"计划到货",
+			"state":"采购",
+			"id":"cklfaskldaslk"
+		 },{
+		 	"name":"Thinkpadx600" ,
+			"num":"600.00台",
+			"time":"计划到货",
+			"state":"采购",
+			"id":"cklfaskldaslk"
+		 },{
+		 	"name":"Thinkpadx600" ,
+			"num":"600.00台",
+			"time":"计划到货",
+			"state":"采购",
+			"id":"cklfaskldaslk"
+		 }]
+	},{
+		"name":"商品1",
+		"code":"123",
+		"price":"12.33",
+		"bodys":[{
+			"name":"Thinkpadx600" ,
+			"num":"600.00台",
+			"time":"计划到货",
+			"state":"采购",
+			"id":"cklfaskldaslkfsdfsdfsdfjhfgvwejhfvgwejvfwejbvfwfzbvfjhsfjadhgfjs"
+		 },{
+		 	"name":"Thinkpadx600" ,
+			"num":"600.00台",
+			"time":"计划到货",
+			"state":"采购",
+			"id":"cklfaskldaslk"
+		 },{
+		 	"name":"Thinkpadx600" ,
+			"num":"600.00台",
+			"time":"计划到货",
+			"state":"采购",
+			"id":"cklfaskldaslk"
+		 },{
+		 	"name":"Thinkpadx600" ,
+			"num":"600.00台",
+			"time":"计划到货",
+			"state":"采购",
+			"id":"cklfaskldaslk"
+		 }]
+	},{
+		"name":"商品1",
+		"code":"123",
+		"price":"12.33",
+		"bodys":[{
+			"name":"Thinkpadx600" ,
+			"num":"600.00台",
+			"time":"计划到货",
+			"state":"采购",
+			"id":"cklfaskldaslk"
+		 },{
+		 	"name":"Thinkpadx600" ,
+			"num":"600.00台",
+			"time":"计划到货",
+			"state":"采购",
+			"id":"cklfaskldaslk"
+		 },{
+		 	"name":"Thinkpadx600" ,
+			"num":"600.00台",
+			"time":"计划到货",
+			"state":"采购",
+			"id":"cklfaskldaslk"
+		 },{
+		 	"name":"Thinkpadx600" ,
+			"num":"600.00台",
+			"time":"计划到货",
+			"state":"采购",
+			"id":"cklfaskldaslk"
+		 }]
+	},{
+		"name":"商品1",
+		"code":"123",
+		"price":"12.33",
+		"bodys":[{
+			"name":"Thinkpadx600" ,
+			"num":"600.00台",
+			"time":"计划到货",
+			"state":"采购",
+			"id":"cklfaskldaslk"
+		 },{
+		 	"name":"Thinkpadx600" ,
+			"num":"600.00台",
+			"time":"计划到货",
+			"state":"采购",
+			"id":"cklfaskldaslk"
+		 },{
+		 	"name":"Thinkpadx600" ,
+			"num":"600.00台",
+			"time":"计划到货",
+			"state":"采购",
+			"id":"cklfaskldaslk"
+		 },{
+		 	"name":"Thinkpadx600" ,
+			"num":"600.00台",
+			"time":"计划到货",
+			"state":"采购",
+			"id":"cklfaskldaslk"
+		 }]
+	}]}

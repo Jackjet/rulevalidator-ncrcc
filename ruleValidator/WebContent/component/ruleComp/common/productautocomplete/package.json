@@ -1,0 +1,7 @@
+{
+	"name" : "category",
+	"javaclass" : "com.yonyou.ec.webpub.comp.category.Category",
+	"theme" : [],
+	"author":"mengzha",
+	"enable":false
+}

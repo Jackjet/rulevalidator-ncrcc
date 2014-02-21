@@ -40,13 +40,13 @@ public class TestCase00511 extends AbstractMetadataResourceRuleDefinition {
 			List<IEntity> entitys = metadataFile.getAllEntities();
 			for (IEntity entity : entitys) { // 遍历实体
 				StringBuilder noteBuilder = new StringBuilder();
-				if (StringUtils.isAllChineseCharacter(entity.getDisplayName())) { // 实体显示名称汉字的判断
+				if (!StringUtils.isAllChineseCharacter(entity.getDisplayName())) { // 实体显示名称汉字的判断
 					noteBuilder.append(entity.getDisplayName() + "实体的显示名称中含有不是中文汉字的其他字符！");
 				}
 				List<IAttribute> entityattlist = entity.getAttributes(); // 实体属性集
 				for (IAttribute attribute : entityattlist) {
 					String attdisplayname = attribute.getDisplayName(); // 实体属性显示名字
-					if (StringUtils.containsChineseCharacter(attdisplayname)) { // 包含中文
+					if (!StringUtils.isAllChineseCharacter(attdisplayname)) { // 包含中文
 						noteBuilder.append(entity.getDisplayName() + "实体中的").append(attdisplayname)
 								.append("字段显示名称没有中文汉字！");
 					}

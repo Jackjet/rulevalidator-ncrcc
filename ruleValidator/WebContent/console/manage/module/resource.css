@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+.ui-main {
+	margin: 100px;
+	min-height: 600px;
+}
+
+.ui-module-tree {
+	width:40%;
+	border: 1px blue solid;
+	background: yellow;
+	/* float: left; */
+}
+
+.ui-module-maintain {
+	width:60px;
+	border: 1px red solid;
+	background: blue;
+	/* float: left; */
+}

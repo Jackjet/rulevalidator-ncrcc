@@ -1,0 +1,72 @@
+/*colorBule*/
+.ui-portlet-colorBlue .ui-portlet-top{
+	background: -moz-linear-gradient(top,#8FCBF3,#269);
+	background: -webkit-linear-gradient(top,#8FCBF3,#269);
+	filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr="#8FCBF3",endColorStr="#226699",gradientType="0");
+}
+.ui-portlet-colorBlue .ui-portlet{
+	background-color:#269;
+}
+.ui-portlet-colorBlue .ui-portlet-top span.title{
+	color:#FFF;
+}
+.ui-portlet-colorBlue .ui-portlet-bottom a.more{
+	color:#FFF;
+}
+/*colorBule*/
+
+/*colorOrange*/
+.ui-portlet-colorPink .ui-portlet-top{
+	background: -moz-linear-gradient(top,#F5A0B8,#DF1B5A);
+	background: -webkit-linear-gradient(top,#F5A0B8,#DF1B5A);
+	filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr="#F5A0B8",endColorStr="#DF1B5A",gradientType="0");
+}
+.ui-portlet-colorPink .ui-portlet{
+	background-color:#DF1B5A;
+}
+.ui-portlet-colorPink .ui-portlet-top span.title{
+	color:#FFF;
+}
+.ui-portlet-colorPink .ui-portlet-bottom a.more{
+	color:#FFF;
+}
+/*colorOrange*/
+/*color dark icollapse hover*/
+.ui-portlet-colorBlue .ui-portlet-top-hover .i-collapse,.ui-portlet-colorPink .ui-portlet-top-hover .i-collapse {
+	background-position:-13px 0px;
+}
+.ui-portlet-colorBlue .ui-portlet-top-hover .i-collapse:hover,.ui-portlet-colorPink .ui-portlet-top-hover .i-collapse:hover {
+	background-position:-26px -0px;
+}
+.ui-portlet-colorBlue .ui-portlet-top-hover .i-move,.ui-portlet-colorPink .ui-portlet-top-hover .i-move {
+	background-position:0px 0px;
+}
+
+/*color dark icollapse hover*/
+/*.ui-portlet �༭*/
+.ui-portlet-editpanel{
+	padding-top:20px;
+}
+.ui-portlet-edit{
+	padding-left:40px;
+}
+.ui-portlet-edit span{
+	width: 80px;
+	display: block;
+	float: left;
+	padding-top: 5px;
+	color:#5F5F5F;
+	font-weight: bold;
+}
+.ui-portlet-edit input{
+	width: 70%;
+}
+.ui-portlet-submit{
+	text-align: center;
+	margin: 10px 10px 0 10px;
+	padding-top: 5px;
+	border-top: 1px solid #DDD;
+}
+.J-portlet-dragable .ui-portlet-top{
+	cursor:move;
+}

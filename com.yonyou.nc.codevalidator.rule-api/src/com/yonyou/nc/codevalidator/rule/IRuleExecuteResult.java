@@ -7,11 +7,7 @@ package com.yonyou.nc.codevalidator.rule;
  * <li>规则标识符</li>
  * <li>规则执行上下文</li>
  * @author mazhqa
- * @since V1.O
- */
-/**
- * @author mazhqa
- *
+ * @since V1.0
  */
 public interface IRuleExecuteResult {
 	

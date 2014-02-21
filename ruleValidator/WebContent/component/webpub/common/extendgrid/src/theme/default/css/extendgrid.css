@@ -1,0 +1,85 @@
+.ui-extendgrid{
+	border: 0;
+	width: 100%;
+	line-height: 26px;
+	border-collapse: collapse;
+	font-size:12px;
+	
+}
+
+.ui-extendgrid thead tr{
+	background-color:#D3E5F1;
+    border: 1px solid #9ABBD5;
+    color: #191919;
+    height: 26px;
+}
+
+
+.ui-extendgrid thead tr td{
+	border: 1px solid #9ABBD5;
+	text-align: center;
+}
+.ui-extendgrid  a{
+    color: #35719A;
+    text-decoration: none;
+}
+.ui-extendgrid tbody td{
+	border: 1px solid #e5e5e5;
+	text-align: center;
+}
+
+.ui-extendgrid td.left_align{
+	text-align: left;
+}
+
+.ui-ecpgrid td.center_align{
+	text-align: center;
+}
+
+.ui-extendgrid td.right_align{
+	text-align: right;
+}
+
+.ui-extendgrid-status{
+	color: red;
+	text-align: center;
+}
+
+.ui-extendgrid tbody tr.detail {
+	display: none;
+}
+
+.ui-extendgrid tr.detail .extendcontent {
+	float: left;
+	background: #e9f2f8;
+	width: 100%;
+}
+
+.ui-extendgrid tr.detail .extendcontent table{
+	border-collapse: collapse;
+	width: 100%;
+	border: 0 none;
+}
+.ui-extendgrid .hidden{
+	display: none;
+}
+
+.ui-status{
+	text-align: center;
+}
+
+.ui-extendgrid a.noprice {
+	background: url("../img/noshopping_item.png")!important;
+	height: 18px;
+	width: 18px;
+	cursor: not-allowed;
+	margin-left: 6px;
+}
+
+.ui-extendgrid a.nonabnum{
+	background: url("../img/noshopping_item.png")!important;
+	height: 18px;
+	width: 18px;
+	cursor: not-allowed;
+	margin-left: 6px;
+}

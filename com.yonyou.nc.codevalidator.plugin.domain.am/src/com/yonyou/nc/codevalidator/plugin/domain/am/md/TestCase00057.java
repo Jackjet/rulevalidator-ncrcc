@@ -45,10 +45,6 @@ public class TestCase00057 extends AbstractMetadataResourceRuleDefinition {
 				List<IEntity> entitylist = metadataFile.getAllEntities();// 获得所有实体
 				for (IEntity entity : entitylist) {
 					List<IAttribute> attributeList = entity.getAttributes(); // 获得单个实体所有属性
-					List<String> attributeNameList = new ArrayList<String>();
-					for (IAttribute attribute : attributeList) {
-						attributeNameList.add(attribute.getName());
-					}
 					List<String> violateAttributeNames = new ArrayList<String>();
 					for (IAttribute attribute : attributeList) {
 						if (attribute.getTypeStyle().equals(MDRuleConstants.TYPE_STYLE_SINGLE)
@@ -57,9 +53,9 @@ public class TestCase00057 extends AbstractMetadataResourceRuleDefinition {
 							violateAttributeNames.add(attribute.getDisplayName());
 						}
 					}
-					if (!attributeNameList.isEmpty()) {
+					if (!violateAttributeNames.isEmpty()) {
 						noteBuilder.append(String.format("实体:%s 的 名称为:%s 的字段（枚举）类型不是int，请检测!\n",
-								entity.getDisplayName(), attributeNameList.toString()));
+								entity.getDisplayName(), violateAttributeNames.toString()));
 					}
 				}
 				if (StringUtils.isNotBlank(noteBuilder.toString())) {

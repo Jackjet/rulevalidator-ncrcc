@@ -1,0 +1,28 @@
+/* UI Plugin Drop List Menu */
+.ui-menu { position: absolute; z-index: 2; float: left; margin-top: 10px; }
+
+.ui-menu_arrow { position: absolute; z-index: 3; background: url(../img/menu_arrow.png) no-repeat; }
+.ui-menu_arrow.up { width: 21px; height: 10px; margin: -7px 0 0 50px; }
+
+.ui-menu_corner { float: left; width: 5px; height: 4px; overflow: hidden; background: url(../img/menu_corner.png) no-repeat; }
+.ui-menu_corner.lt { background-position: 0 0; }
+.ui-menu_corner.rt { background-position: -5px 0; }
+.ui-menu_corner.lb { background-position: 0 -4px; }
+.ui-menu_corner.rb { background-position: -5px -4px; }
+
+.ui-menu_border_horizon { float: left; height: 4px; overflow-y: hidden; background: url(../img/menu_border_horizon.png) repeat-x; }
+.ui-menu_border_horizon.top { background-position: 0 0; }
+.ui-menu_border_horizon.btm { background-position: 0 -3px; }
+
+.ui-menu_border_vertical { float: left; width: 4px; overflow-x: hidden; background: url(../img/menu_border_vertical.png) repeat-y; }
+.ui-menu_border_vertical.lft { background-position: 0 0; }
+.ui-menu_border_vertical.rit { background-position: -5px 0; }
+
+.ui-menu_list { float: left; padding: 7px 0; background: url(../img/menu_bg_fill.png); }
+.ui-menu_list a {
+    float: left; height: 26px; line-height: 26px; margin: 0 !important; padding: 0 !important;
+    text-indent: 13px; text-align: left !important; text-decoration: none;
+    font-size: 12px !important; font-weight: normal !important;
+    border: 1px solid white; border-top: 0; border-bottom: 0; color: #575858 !important;
+}
+.ui-menu_list a:hover { border-color: #336a99 !important; color: white !important; background: #336a99 !important; }

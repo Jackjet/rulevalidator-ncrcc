@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>右键菜单</title>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs2/dist/sea-debug.js"
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<link rel="stylesheet" type="text/css" href="./contextmenu.css">
+</head>
+<script type="text/javascript">
+
+seajs.use(['$'], function($){
+	$(function() {
+		$('.ui-contextmenu .menu-item').live('mouseenter', function() {
+			console.log('enter li')
+		})
+		
+		$('.ui-contextmenu .menu-item').live('mouseleave', function() {
+			console.log('leave li')
+		})
+		
+		$('.ui-contextmenu .menu-item .ui-icons').live('mouseenter', function() {
+			console.log('enter icon')
+		})
+		
+		$('.ui-contextmenu .menu-item .ui-icons').live('mouseleave', function() {
+			console.log('leave icon')
+		})
+		
+		$('.ui-contextmenu .menu-item .menu-text').live('mouseenter', function() {
+			console.log('enter text')
+		})
+		
+		$('.ui-contextmenu .menu-item menu-text').live('mouseleave', function() {
+			console.log('leave text')
+		})
+	});
+});
+</script>
+<body>
+	<div class="ui-contextmenu" style="display: block;">
+		<ul class="menus">
+			<li class="menu-item">
+				<a class="menu-thumb" href="#">
+					<span class="ui-icons ui-icon-add"></span>
+					<span class="menu-text">menu-0</span>
+				</a>
+			</li>
+			<li class="menu-item">
+				<a class="menu-thumb" href="#">
+					<span class="ui-icons ui-icon-delete"></span>
+					<span class="menu-text">menu-1</span>
+				</a>
+			</li>
+			<li class="menu-item">
+				<a class="menu-thumb" href="#">
+					<span class="ui-icons ui-icon-user"></span>
+					<span class="menu-text">menu-2</span>
+				</a>
+			</li>
+			<li class="menu-item">
+				<a class="menu-thumb" href="#">
+					<span class="ui-icons ui-icon-user"></span>
+					<span class="menu-text">menu-3</span>
+				</a>
+			</li>
+			<li class="menu-item">
+				<a class="menu-thumb" href="#">
+					<span class="ui-icons ui-icon-user"></span>
+					<span class="menu-text">menu-4</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

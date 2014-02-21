@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>quotegrid测试</title>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/config.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/tools/codemirror/src/codehelper.js"></script>
+<style type="text/css">
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<div class="content">
+		<h1>tendergrid组件</h1>
+		<ol>
+			<li>
+				<h2>界面</h2>
+				<div id="grid" style="width: 768px;display: inline-block;"></div>
+				<script type="text/javascript">
+					seajs.use('/web/component/webpub/common/tendergrid/src/js/tendergrid',
+						function(TenderGrid) {
+							var tendergrid = new TenderGrid({
+								attrs : {
+									url : 'data.json',
+									columns:[
+										{label:"项目编号",key:"code"},
+										{label:"项目名称",key:"name"},
+										{label:"项目类型",key:"type"},
+										{label:"当前环节",key:"state"},
+										{label:"当前环节截止",key:"endtime"},
+										{label:"发起日期",key:"starttime"}
+									],
+									progress:{
+										items:[
+								            {
+								                'itemId': "flowStep01",
+								                'itemName': "邀请公告应答",
+								                'itemUrl': "."
+								            },
+								            {
+								                'itemId': "flowStep02",
+								                'itemName': "采购文件应答",
+								                'itemUrl': "."
+								            },
+								            {
+								                'itemId': "flowStep03",
+								                'itemName': "发布文件应答",
+								                'itemUrl': "."
+								            },
+								            {
+								                'itemId': "flowStep04",
+								                'itemName': "确认开标登记表",
+								                'itemUrl': "."
+								            },
+								            {
+								                'itemId': "flowStep05",
+								                'itemName': "中标结果确认",
+								                'itemUrl': "."
+								            }
+							        	],
+							        	'itemCurrent': 1,
+							        	'activeArrow': true,
+							        	'arrowUp': true
+									}
+								},
+								renderTo : "grid"
+							});
+					});				
+				</script>
+			</li>
+			<li>
+				<h2>代码示例</h2>
+				<div>
+					<textarea class="js">
+						<script type="text/javascript">
+						seajs.use('/web/component/webpub/common/tendergrid/src/js/tendergrid',
+							function(TenderGrid) {
+								var tendergrid = new TenderGrid({
+									attrs : {
+										url : 'data.json',
+										columns:[
+											{label:"项目编号",key:"code"},
+											{label:"项目名称",key:"name"},
+											{label:"项目类型",key:"type"},
+											{label:"当前环节",key:"state"},
+											{label:"当前环节截止",key:"endtime"},
+											{label:"发起日期",key:"starttime"}
+										],
+										progress:{
+											items:[
+									            {
+									                'itemId': "flowStep01",
+									                'itemName': "邀请公告应答",
+									                'itemUrl': "."
+									            },
+									            {
+									                'itemId': "flowStep02",
+									                'itemName': "采购文件应答",
+									                'itemUrl': "."
+									            },
+									            {
+									                'itemId': "flowStep03",
+									                'itemName': "发布文件应答",
+									                'itemUrl': "."
+									            },
+									            {
+									                'itemId': "flowStep04",
+									                'itemName': "确认开标登记表",
+									                'itemUrl': "."
+									            },
+									            {
+									                'itemId': "flowStep05",
+									                'itemName': "中标结果确认",
+									                'itemUrl': "."
+									            }
+								        	],
+								        	'itemCurrent': 1,
+								        	'activeArrow': true,
+								        	'arrowUp': true
+										}
+									},
+									renderTo : "grid"
+								});
+						});				
+					</script>
+					</textarea>
+				</div>
+			</li>
+			<li>
+				<h2>数据模型</h2>
+				<div>
+					<textarea class="js">
+						{"total":"3",
+						"records":[{
+								"code":"20120820",
+								"name":"网络建设招标项目",
+								"type":"中标确认",
+								"state":"采购文件应答",
+								"endtime":"2012-05-10",
+								"starttime":"2012-05-10"
+							},{
+								"code":"20120820",
+								"name":"网络建设招标项目",
+								"type":"中标确认",
+								"state":"采购文件应答",
+								"endtime":"2012-05-10",
+								"starttime":"2012-05-10"
+							},{
+								"code":"20120820",
+								"name":"网络建设招标项目",
+								"type":"中标确认",
+								"state":"采购文件应答",
+								"endtime":"2012-05-10",
+								"starttime":"2012-05-10"
+							}]}
+					</textarea>
+				</div>
+			</li>
+		</ol>
+	</div>
+</body>
+</html>

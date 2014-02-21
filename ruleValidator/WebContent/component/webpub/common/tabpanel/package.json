@@ -1,0 +1,7 @@
+{
+	"name":"多页签",
+	"javaclass":"com.yonyou.ec.webpub.comp.tabpanel.TabPanel",
+	"theme":["default","red"],
+	"author":"李晓晨",
+	"enable":false
+}

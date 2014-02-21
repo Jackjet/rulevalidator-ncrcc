@@ -1,0 +1,7 @@
+{
+	"name" : "container",
+	"javaclass" : "com.yonyou.ec.web.component.Container",
+	"theme" : [],
+	"author":"孟志昂",
+	"enable":false
+}

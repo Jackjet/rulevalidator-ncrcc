@@ -1,0 +1,90 @@
+.account_info {
+	width: 754px;
+	line-height: 20px;
+	margin-top: 30px;
+	color: black;
+}
+
+.account_info_title {
+	float: left;
+	width: 100%;
+	background: url(../img/title_line_gradient_gray.png) 100% 50% no-repeat;
+}
+
+.account_info_title div {
+	padding-right: 5px;
+	display: inline;
+}
+
+.account_info_detail {
+	float: right;
+	width: 97%;
+	margin: 20px 0;
+}
+
+.nc-font-weight-bold {
+	font-weight: bold;
+}
+
+.font_14 {
+	font-size: 14px;
+}
+
+.floatleft {
+	float: left;
+}
+
+.floatcenter {
+	float: none;
+	margin: 0 auto;
+}
+
+.bg_white {
+	background-color: white;
+}
+
+fieldset.nc-fieldset {
+	border: 0 none;
+}
+
+fieldset.nc-fieldset legend {
+	cursor: pointer;
+}
+
+.active {
+	background-position:-10px -65px !important;
+	/* background: url("../img/icons.png") no-repeat scroll 0 -65px transparent; */
+}
+
+.ui-account-arrow {
+	display: inline;
+	float: left;
+	height: 10px;
+	margin: 6px 5px 0 0;
+	width: 10px;
+	background: url("../img/icons.png") no-repeat scroll 0 -65px transparent;
+}
+
+fieldset div {
+	padding-left: 30px;
+}
+
+.w_100ps {
+	width: 100%;
+}
+
+.nc-field-warning {
+	color: red;
+}
+
+.ui-account-detail-error {
+	color: red;
+}
+
+.nc-fieldset legend.address-title {
+	
+}
+
+.nc-fieldset .address-detail {
+	padding-bottom: 6px;
+}

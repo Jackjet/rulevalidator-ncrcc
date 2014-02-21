@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd">				
+	
+	
+	<!-- 启动注解驱动的spring mvc功能，注册请求url和注解pojo类方法的映射 -->
+	<mvc:annotation-driven />	
+
+	<!-- 启动包扫描功能，以便注册带有@controller,@service,@repository,@component等注解的类为spring的bean -->
+	<context:component-scan base-package="com.web">
+		<context:include-filter expression="org.springframework.stereotype.Controller" type="annotation" />
+		<context:include-filter expression="org.springframework.stereotype.Service" type="annotation" />
+	</context:component-scan>
+		
+<!-- 	<mvc:interceptors> -->
+  		<!-- ecp exception intercepter -->  
+<!-- 		<bean class="nc.web.es.fw.handler.EcpExceptionInterceptor"></bean> -->
+<!-- 	</mvc:interceptors> -->
+	
+	<!-- 对模型视图名称的解析 -->
+	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/html/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<!-- spring upload max 1M -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="1048576"/>
+	</bean>
+	
+	<!--bean启动后执行类，插入预置脚本 -->
+	<bean id="deblocking" class="com.web.pub.task.InitDBSqlTask"></bean>
+	
+	
+	<!-- ecp exception resolver -->
+	<bean class="nc.web.pub.fw.handler.PubExceptionResolver"></bean>
+	<bean class="nc.web.pub.fw.handler.PubAnnotationHandlerMapping"></bean>
+</beans>

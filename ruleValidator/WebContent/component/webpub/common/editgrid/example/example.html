@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/config.js"></script>
+<title>editgrid测试</title>
+</head>
+<body >
+	<div id="id_center_content" style="width: 600px;"></div>
+	<script type="text/javascript">
+		seajs.use(["editgrid","jquery"],function(EditGrid,$){
+			var editgrid=new EditGrid({
+				attrs:{
+					id:"pk_beginbill_b",
+					url:"/ecp/channel/chnlbegin",
+					event:[
+					       {
+						       key:"cmaterialid_name",
+							   trigger:"change",
+							   handler:function(){
+							   		var index=editgrid.index($(this));
+							   		var value=editgrid.getValue(index,"cmaterialid_name","select");
+							   		if(value!=""){
+								   		//禁用物料分类
+							   			editgrid.disabled("cmarbasclassid_name",true);
+							   			//设置物料字段的值
+								   		editgrid.setValue(index,"cmaterialid",editgrid.getAttr(index,"cmaterialid_name","id","select"),"select");
+								   		//设置单位字段的值
+								   		editgrid.setValue(index,"cunitid",editgrid.getAttr(index,"cmaterialid_name","cunitid","select"));
+								   		editgrid.setValue(index,"cunitid_name",editgrid.getAttr(index,"cmaterialid_name","cunitid_name","select"));
+								   		//禁用单位
+								   		editgrid.disabled("cunitid_name",true);
+							   		}else{
+							   			editgrid.disabled("cmarbasclassid_name",false);
+							   			editgrid.setValue(index,"cmaterialid","");
+							   			editgrid.setValue(index,"cunitid","");
+							   			editgrid.setValue(index,"cunitid_name","");
+							   			editgrid.disabled("cunitid_name",false);
+							   		}
+					       	   }
+						   },
+						   {
+							   key:"cmaterialid_name",
+							   trigger:"focus",
+							   handler:function(){
+							   	   if($(this).find("option").size()==1){
+								   		$.ajax({
+									   		url:"/ecp/channel/ajaxQryMaterial?cchannelnodeid=10013310000000000HL2",
+									   		success:function(data){
+										   		var html="";
+									   			for(var i=0;i<data.length;i++){
+										   			if(data[i].cmaterialid!=null){
+										   				html="<option id='"+data[i].cmaterialid+"' cunitid='"+data[i].cunitid+"' cunitid_name='"+
+										   				data[i].cunitid_name+"'>"+data[i].cmaterialid_name+"</option>";
+									   					$(".J-cmaterialid_name").append(html);
+										   			}
+									   			}
+								   			}
+									   });
+							   	   }
+						   	   }
+						   },
+						   {
+						       key:"cmarbasclassid_name",
+							   trigger:"change",
+							   handler:function(){
+								    var index=editgrid.index($(this));
+							   		var value=editgrid.getValue(index,"cmarbasclassid_name","select");
+							   		if(value!=""){
+								   		//禁用物料
+							   			editgrid.disabled("cmaterialid_name",true);
+							   			//设置物料分类字段的值
+								   		editgrid.setValue(index,"cmarbasclassid",editgrid.getAttr(index,"cmarbasclassid_name","id","select"),"select");
+								   		//设置单位字段的值
+								   		editgrid.setValue(index,"cunitid",editgrid.getAttr(index,"cmarbasclassid_name","cunitid","select"));
+								   		editgrid.setValue(index,"cunitid_name",editgrid.getAttr(index,"cmarbasclassid_name","cunitid_name","select"));
+								   		//禁用单位
+								   		editgrid.disabled("cunitid_name",true);
+							   		}else{
+							   			editgrid.disabled("cmaterialid_name",false);
+							   			editgrid.setValue(index,"cmarbasclassid","");
+							   			editgrid.setValue(index,"cunitid","");
+							   			editgrid.setValue(index,"cunitid_name","");
+							   			editgrid.disabled("cunitid_name",false);
+							   		}
+					       	   }
+						   },
+						   {
+							   key:"cmarbasclassid_name",
+							   trigger:"focus",
+							   handler:function(){
+								   if($(this).find("option").size()==1){
+								   		$.ajax({
+									   		url:"/ecp/channel/ajaxQryMaterial?cchannelnodeid=10013310000000000HL2",
+									   		success:function(data){
+										   		var html="";
+									   			for(var i=0;i<data.length;i++){
+										   			if(data[i].cmarbasclassid!=null){
+										   				html="<option id='"+data[i].cmarbasclassid+"' cunitid='"+data[i].cunitid+"' cunitid_name='"+
+										   				data[i].cunitid_name+"'>"+data[i].cmarbasclassid_name+"</option>";
+										   				$(".J-cmarbasclassid_name").append(html);
+										   			}
+									   			}
+								   			}
+									   });
+							   	   }
+						   	   }
+						   }
+					],
+					columns:[
+					         {
+						         key:"crowno",
+						         label:"行号"
+						     },
+						     {
+							     key:"cmaterialid",
+						         type:'hidden'
+						     },
+						     {
+							     key:"cmaterialid_name",
+						         label:"物料",
+						         type:'select',
+						         edit:true
+						     },
+						     {
+							     key:"cmarbasclassid",
+						         type:'hidden'
+						     },
+						     {
+							     key:"cmarbasclassid_name",
+						         label:"物料分类",
+						         type:'select',
+						         edit:true
+						     },
+						     {
+							     key:"cunitid",
+						         type:"hidden"
+						     },
+						     {
+							     key:"cunitid_name",
+						         label:"单位",
+						         type:"text",
+						         edit:true,
+						         validate:function(){
+						         	var data=editgrid.getValue(editgrid.index($(this)),"cunitid_name"); 
+						         	if(data==""){
+							         	alert("单位不能为空");
+							         	return false;
+						         	}
+						         	return true;
+						     	 }
+						     },
+						     {
+							     key:"nsumnum",
+						         label:"结算数量",
+						         type:'text',
+						         edit:true
+						     }
+					],
+					beforeUpdate:function(data){
+						editgrid.disabled("cunitid_name",true);
+						var cmarbasclassid_name=editgrid.getValue(editgrid.index($(this)),"cmarbasclassid_name","select")
+						if(cmarbasclassid_name!=""){
+							editgrid.disabled("cmaterialid_name",true);
+						}
+						var cmaterialid_name=editgrid.getValue(editgrid.index($(this)),"cmaterialid_name","select")
+						if(cmaterialid_name!=""){
+							editgrid.disabled("cmarbasclassid_name",true);
+						}
+						return true;
+					},
+					buttons:[
+					         {
+						    	 key:"save",
+						    	 name:"保存",
+						         handler:function(){
+						    	 	//表体行不能为空
+							    	var size=editgrid.size();
+							    	if(size==0){
+								    	alert("表体行不能为空");
+								    	return false;
+							    	}
+							    	//表体中不允许出现相同的物料和物料分类
+									/*var cmaterialid_name=data["cmaterialid_name"];
+									for(var i=0;i<editgrid.size();i++){
+										var temp=editgrid.getGridContent(i,1);
+										if(temp==cmaterialid_name){
+											alert("不允许存在相同物料");
+											return false;
+										}
+									}
+									var cmarbasclassid_name=data["cmarbasclassid_name"];
+									for(var i=0;i<editgrid.size();i++){
+										var temp=editgrid.getGridContent(i,2);
+										if(temp==cmarbasclassid_name){
+											alert("不允许存在相同物料分类");
+											return false;
+										}
+									}*/
+					         	 },
+					         	 trigger:"click"
+						     }
+					],
+				},
+				renderTo:'id_center_content'
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;IE=9" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+/*按钮字体fix,title字体fix*/
+button.btn,.dropdown-menu a{
+	font-size:12px;
+}
+/*距离头部高度 ie下不识别nav标签*/
+.iframecontent{
+	margin-top: 51px;
+	margin-top: 0px\9;
+}
+/*头部导航*/
+.collapse{
+	background-image: -webkit-gradient(linear, left 0%, left 100%, from(#fefefe), to(#f0f5f7));
+	background-image: -webkit-linear-gradient(top, #fefefe, 0%, #f0f5f7, 100%);
+	background-image: -moz-linear-gradient(top, #fefefe 0%, #f0f5f7 100%);
+	background-image: linear-gradient(to bottom, #fefefe 0%, #f0f5f7 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#f0f5f7', GradientType=0);
+	border-bottom:solid 1px #cdcccc;
+}
+/*ie下头部左侧背景*/
+.navbar-header{
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#f0f5f7', GradientType=0);
+	border-bottom:solid 1px #cdcccc\9;
+}
+/*“经销商后台门户管理”样式*/
+.navbar-header a.navbar-brand{
+	color:#3486c7;
+	font-size:24px;
+	font-family:"Microsoft YaHei";
+}
+/*导航菜单*/
+.navbar-default .navbar-nav > li.dropdown > a{
+	color:#3486c7;
+}
+.navbar{
+	box-shadow:none !important;
+}
+.navbar-header a.navbar-brand:hover{
+	color: #3486c7;
+}
+/*导航菜单*/
+</style>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs2/dist/sea-debug.js"
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<script>
+	//引入bootstrap
+	seajs.use("bootstrap");
+	seajs.use(["$","api","dialog"],function($,api,dialog){
+		//校验是否集团管理员
+		$.ajax({
+			type : 'GET',
+			url : G.PAGE.MANAGEMENT_MANAGE,
+			success : function(data) {
+				if(data=="false"){
+					window.location.href=G.ctx;
+				}
+				if (window.navigator.userAgent.indexOf("MSIE") >= 1) {
+			            var bb = window.navigator.userAgent.substring(30, 33);
+			            if(bb=="6.0"||bb=="7.0"||bb=="8.0"||bb=="9.0"){
+							alert("您好，您使用的浏览器版本过低，建议您使用chrome、firefox或IE10以上版本浏览器访问本页面");
+						}
+			    }
+			}
+		});
+		//注销按钮事件
+		$("#logout").live("click", function() {
+			$.ajax({
+				type : 'GET',
+				url : G.API.WEB_LOGOUT,
+				success : function(data) {
+				}
+			});
+			$.ajax({
+				type : 'GET',
+				url : G.API.LOGOUT,
+				success : function(data) {
+					if (data.status == "success") {
+						window.location = G.PAGE.LOGIN;
+					}
+
+					store.clear();
+				}
+			});
+			return false;
+		});
+		$(".dropdown-toggle").live("hover",function(){
+			$(".dropdown").removeClass("open");
+			$(this).parent().toggleClass('open')
+	        .trigger('shown.bs.dropdown');
+
+			//$(this).parent().addClass("open");
+		});
+	});
+</script>
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="./component/title.html?id=company" target="iframe">经销商门户后台管理</a>
+		</div>
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle"
+					data-toggle="dropdown">外观 <b class="caret"></b>
+					</a>
+					<ul class="dropdown-menu" role="menu">
+							<li><a href="./component/title.html?id=theme" target="iframe">主题设置</a></li>
+							<li><a href="./component/title.html?id=company" target="iframe">企业信息设置</a></li>
+							<li><a href="./component/title.html?id=indexwidget" target="iframe">首页组件设置</a></li>
+							<li><a href="./component/title.html?id=widgetstyle" target="iframe">组件样式设置</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown">菜单资源管理 <b class="caret"></b> </a>
+					<ul class="dropdown-menu">
+						<li><a href="menu/menu.html" target="iframe">菜单管理</a></li>
+						<li><a href="module/resource.html" target="iframe">资源管理
+						</a></li>
+					</ul>
+				</li>
+				 <li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown">服务管理 <b class="caret"></b> </a>
+					<ul class="dropdown-menu">
+						<li><a href="ecpapi/ctlService.html" target="_blank">经销商门户服务管理
+						</a></li>
+						<li><a href="ecservice/ecservice.html" target="_blank">电子商务平台服务管理</a>
+						</li>
+						<li><a href="ecpapi/apiservice.html" target="_blank">电子商务平台服务调用监控</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown">参数设置 <b class="caret"></b> </a>
+					<ul class="dropdown-menu">
+						<li><a href="./component/systemproperties.html" target="iframe">系统参数设置</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<div class="btn-group navbar-form pull-right">
+				<button id="save" class="btn btn-info" type="button">
+				<span class="glyphicon glyphicon-floppy-disk"></span> 外观保存</button>
+				<button id="logout" class="btn btn-default" type="button">
+				<span class="glyphicon glyphicon-log-out"></span> 注销</button>
+			</div>
+		</div>
+	</nav>
+	<div class="iframecontent">
+		<script type="text/javascript">
+			seajs.use("iframeresize");
+		</script>
+		<iframe src="./component/title.html?id=company" id="iframe"  name="iframe" width="100%" frameborder="0"
+			scrolling="no"></iframe>
+	</div>
+</body>
+
+</html>

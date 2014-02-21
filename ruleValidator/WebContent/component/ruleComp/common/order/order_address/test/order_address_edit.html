@@ -1,0 +1,47 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;IE=9" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>地址块（编辑态）</title>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs2/dist/sea-debug.js"
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<script type="text/javascript" src="../data.js"></script>
+<script type="text/javascript">
+	seajs.use([ '$', 'model_mapper', 'model_convertor', './order_address_edit.js' ], function($, ModelMapper, ModelConvertor, Address) {
+		var product = data[0];
+		var maOrderProduct = ModelConvertor.getModelByCode(product, 'BP>MP');
+		$(function() {
+			new Row({
+				model : maOrderProduct,
+				renderTo : $('tbody')
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="ui-main ui-main-width bar_content">
+		<table border="1" cellpadding="0" cellspacing="0"
+			style="border-collapse: collapse;">
+			<thead class="align_center">
+				<tr>
+					<td>商品编码</td>
+					<td>商品名称</td>
+					<td>物料</td>
+					<td>销售组织</td>
+					<td>价格</td>
+					<td class="w_150px">数量</td>
+					<td>库存</td>
+					<td>金额</td>
+					<td>操作</td>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		<!-- content -->
+	</div>
+</body>
+</html>

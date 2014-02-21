@@ -1,0 +1,51 @@
+.channel_box{
+	font-family: 'Simsun',serif;
+	font-size: 12px; 
+	margin: 13px 1px 0 1px; 
+	border: 1px solid #CACACA;
+}
+.channel_box .channel_title {
+	  width: 100%; 
+	  height: 27px; 
+	  background: url(../img/bg_box_title_gray.png) 0 100% repeat-x; 
+}
+.channel_title a.title_label {
+    float: left; 
+    height: 27px; 
+    line-height: 27px; 
+    padding: 0 8px; 
+    display: inline; 
+    text-decoration: none; 
+    color: #191919;
+}
+.channel_title a.title_label.active {
+	 font-weight: bold; 
+	 background: white; 
+	 border: 1px solid #b1b1b1; 
+	 border-top: 0; 
+	 border-bottom: 0; 
+}
+.channel_title a.title_more {
+    float: right; 
+    height: 26px; 
+    line-height: 26px; 
+    margin-right: 10px; 
+    padding-right: 16px; 
+    display: inline; 
+    text-decoration: none;
+    color: #4f4f4f; 
+    background: url(../img/bg_more_ellipsis.png) 100% 50% no-repeat;
+}
+
+.channel_box .containers{
+}
+
+.channel_box .containers .container{
+	display: none;
+}
+
+.channel_box .containers .container.active{
+	display: block;
+}
+
+

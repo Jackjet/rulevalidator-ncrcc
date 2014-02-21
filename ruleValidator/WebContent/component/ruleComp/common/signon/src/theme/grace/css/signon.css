@@ -1,0 +1,98 @@
+
+body{
+	background: url(../img/bg_signon_map.png) center 84px no-repeat;
+}
+.signon_top_wrapper {
+	width: 100%;
+}
+
+.signon_logo_wrapper {
+	left: -1px;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+}
+
+.signon_doc_wrapper {
+	margin: 0 auto;
+	top: 150px;
+	z-index: 2;
+}
+
+.signon_width {
+	width: 957px;
+}
+
+.floatcenter {
+	float: none;
+	margin: 0 auto;
+}
+
+.floatleft {
+	float: left;
+}
+
+.w_100ps {
+	width: 100%;
+}
+
+.signon_logo {
+	background: url("../img/logo_signon.png") no-repeat scroll center
+		center transparent;
+	float: left;
+	height: 91px;
+}
+
+.signon_doc_bg {
+	background: url("../img/bg_signon_e.png") no-repeat scroll left top
+		transparent;
+	float: left;
+	height: 470px;
+	margin-top:20px;
+	width: 100%;
+}
+
+.signon_form_wrapper {
+	background: url("../img/separator_signon_form.png") no-repeat scroll
+		left center transparent;
+	display: inline;
+	float: right;
+	margin: 0;
+	padding: 44px 0 0 40px;
+	width: 400px;
+}
+
+.account_notice {
+	color: #4D4D4F;
+	margin-top: 20px;
+}
+
+.account_notice div {
+	float: left;
+	line-height: 20px;
+	width: 100%;
+}
+.font_yahei {
+  font-family: Microsoft YaHei,serif;
+}
+.account_notice span.icon_phone {
+  background-position: -2px -2px;
+}
+.account_notice span {
+  background: url("../img/icons.png") no-repeat scroll 0 0 transparent;
+  display: inline;
+  float: left;
+  height: 16px;
+  margin: 2px;
+  width: 16px;
+}
+.font_arial {
+  font-family: Arial,serif;
+}
+.account_notice span.icon_email {
+  background-position: -22px -2px;
+}
+.account_notice a {
+  color: #4D4D4F;
+  text-decoration: none;
+}

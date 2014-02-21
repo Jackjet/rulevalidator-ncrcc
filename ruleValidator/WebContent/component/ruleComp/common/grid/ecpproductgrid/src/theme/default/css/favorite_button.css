@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+/* 按钮 */
+
+.ui-favorite-add-button-small {
+	display:inline-block;
+	height: 18px;
+	width: 18px;
+	 float: right;
+	background: url("../img/favorite-button-small.png") no-repeat scroll 0 0 transparent !important;
+}
+
+.ui-favorite-add-button-small.added {
+	background: url("../img/favoritesuccess.png") no-repeat scroll  transparent !important;
+}

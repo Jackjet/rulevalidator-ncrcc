@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="lib/db2_97/db2jcc_license_cu.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/db2_97/db2jcc.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/gbase/gbase-connector-java-8.3.81.51-build1.0-bin.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/gbase/gbase-connector-java-8.3.82.51_build50.1-bin.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/gbase/gbase-jdbc-8.3.2-bin.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/oracle_10g/ojdbc6.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/oracle_11g/ojdbc6.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/postgresql/postgresql-9.0-801.jdbc4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/sqlserver_2008/sqljdbc4.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/sqlserver_2012/sqljdbc4.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry kind="lib" path="lib/antlr-2.7.7.jar"/>
-	<classpathentry kind="lib" path="lib/c3p0-0.9.1.2-sources.jar"/>
-	<classpathentry kind="lib" path="lib/c3p0-0.9.1.2.jar"/>
-	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate-commons-annotations-4.0.4.Final.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate-core-4.3.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate-entitymanager-4.3.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/jandex-1.1.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/javassist-3.18.1-GA.jar"/>
-	<classpathentry kind="lib" path="lib/jboss-logging-3.1.3.GA.jar"/>
-	<classpathentry kind="lib" path="lib/jboss-logging-annotations-1.2.0.Beta1.jar"/>
-	<classpathentry kind="lib" path="lib/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
-	<classpathentry kind="lib" path="lib/postgresql-9.0-801.jdbc4.jar"/>
-	<classpathentry kind="output" path="bin"/>
+	<classpathentry exported="true" kind="lib" path="lib/antlr-2.7.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/c3p0-0.9.1.2-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/c3p0-0.9.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/dom4j-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/hibernate-commons-annotations-4.0.4.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/hibernate-core-4.3.0.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/hibernate-entitymanager-4.3.0.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jandex-1.1.0.Final.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/javassist-3.18.1-GA.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jboss-logging-3.1.3.GA.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jboss-logging-annotations-1.2.0.Beta1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="src" path="src/"/>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>

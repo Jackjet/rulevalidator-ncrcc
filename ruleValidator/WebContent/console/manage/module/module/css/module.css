@@ -1,0 +1,34 @@
+@CHARSET "UTF-8";
+
+.ui-icon-add {
+	background-image: url("../image/add.png") !important;
+}
+
+
+.hidden {
+	display: none !important;
+}
+
+.ui-tree-search {
+	margin: 0;
+	padding: 0 5px 5px 5px;
+}
+
+.ui-label {
+	
+}
+
+.ui-search {
+	height: 16px;
+	width: 70%;
+}
+
+.ui-cleaner {
+	width: 16px;
+	height: 15px;
+	display: inline-block;
+	position: absolute;
+	margin-left: -20px;
+	margin-top: 3px;
+	background: url('../image/icons.png') -201px -45px no-repeat;
+}

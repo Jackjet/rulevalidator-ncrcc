@@ -28,19 +28,19 @@ public class RuleDefinitionVO implements Serializable, IEntityIdentifier {
 	/**
 	 * 规则应用范围
 	 */
-	@Column(name = "use_scope", length = 20)
+	@Column(name = "use_scope", length = 40)
 	private String ruleScope;
 
 	/**
 	 * 规则类型
 	 */
-	@Column(name = "rule_type", length = 20)
+	@Column(name = "rule_type", length = 80)
 	private String ruleType;
 
 	/**
 	 * 规则子类型
 	 */
-	@Column(name = "ruleCharacter", length = 20)
+	@Column(name = "ruleCharacter", length = 80)
 	private String ruleSubType;
 
 	/**
@@ -52,18 +52,18 @@ public class RuleDefinitionVO implements Serializable, IEntityIdentifier {
 	/**
 	 * 严重性等级
 	 */
-	@Column(name = "level", length = 20)
+	@Column(name = "rule_level", length = 40)
 	private String level;
 	/**
 	 * 开发者
 	 */
-	@Column(name = "developer", length = 20)
+	@Column(name = "developer", length = 40)
 	private String developer;
 
 	/**
 	 * 所需要的特殊参数
 	 */
-	@Column(name = "special_params", length = 50)
+	@Column(name = "special_params", length = 200)
 	private String specialParams;
 	/**
 	 * 备注
@@ -91,7 +91,7 @@ public class RuleDefinitionVO implements Serializable, IEntityIdentifier {
 	/**
 	 * 此规则执行的层级
 	 */
-	@Column(name = "executeLayer", length = 10)
+	@Column(name = "executeLayer", length = 30)
 	private String executeLayer;
 
 	public String getRuleId() {

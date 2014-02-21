@@ -30,7 +30,6 @@ public final class DbCreateResourceCreator extends AbstractTempTableResourceCrea
 	public static final String FIND_DB_TYPE = "ORACLE";
 	public static final String FILE_SUFFIX = "sql";
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public void createTempResources(Connection connection) throws RuleBaseException {
 		Logger.info("开始进行建库脚本初始化...");

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>quotegrid测试</title>
+<script type="text/javascript" src="/web/component/webpub/core/seajs2/dist/sea-debug.js" 
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/tools/codemirror/src/codehelper.js"></script>
+<style type="text/css">
+.content {
+	width: 960px;
+	margin: 0 auto;
+	z-index: 2;
+}
+</style>
+</head>
+<body>
+	<div id="banner"></div>
+	<div class="content">
+		<h1>banner组件</h1>
+		<ol>
+			<li>
+				<h2>界面</h2> 
+				<script type="text/javascript">
+					seajs.use('banner',
+						function(Banner) {
+							var banner = new Banner({
+								renderTo : "banner"
+							});
+						});
+				</script>
+			</li>
+			<li>
+				<h2>代码示例</h2>
+				<div>
+					<textarea class="js" cols="10" rows="3" >
+					<div id="banner"></div>
+						<script type="text/javascript">
+							seajs.use('banner',function(Banner) {
+								var extendgrid = new Banner({
+									renderTo : "banner"
+								});
+							});
+						</script>
+					</textarea>
+				</div>
+			</li>
+		</ol>
+	</div>
+
+</body>
+</html>

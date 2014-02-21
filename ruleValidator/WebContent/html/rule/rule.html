@@ -1,0 +1,77 @@
+
+<!DOCTYPE html >
+<html>
+<head>
+<title>NC规则校验查询系统</title>
+<script type="text/javascript" 
+	src="/ruleValidator/component/webpub/core/seajs2/dist/sea.js" 
+	data-config="/ruleValidator/html/global.js" 
+	data-main="/ruleValidator/html/main.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body class="bg_white">
+		<div data-page="orderCenter">
+			<div data-widget="subnav"></div>
+			<div id="tab"></div>
+		</div>
+		<script type="text/javascript">
+		seajs.use(["$", 'tab','ecppagegrid','ruleEvent','order_orderImport','jsuri', 'stringUtils', 'scale'],function($,Tab, EcpGrid,RuleEvent,OrderImport,Uri, StringUtils, Scale) {
+			$(parent.document).find(".module_nav").show();
+			var index = new Uri(window.parent.document.location.href).getQueryParamValue("index");
+			var tab = new Tab({
+				attrs : {
+					items : [{
+							id :"staticList",
+							title :'规则执行记录',
+							active :true,
+							isShowNum:true
+						} 
+					]
+				},
+				renderTo :"tab"
+			});
+			tab.setActive(index);
+			
+			var orderEcpGrid = new EcpGrid({
+				attrs : {
+					url : G.API.RULE_RECORD,
+					columns : [ {
+						label : "执行单元",
+						key : "executeUnit.prod_code",
+						width:120,
+						format:"RULE_REPORT_LINK",
+						align:"left"
+					}, {
+						label : "执行开始时间",
+						key : "exeBeginTime",
+						width:90,
+						align:"left",
+						format:"LONG_DATE"
+					}, {
+						label : "执行结束时间",
+						key : "exeEndTime",
+						width:90,
+						align:"left",
+						format:"LONG_DATE"
+					} , {
+						label : "操作",
+						key : "exeEndTime",
+						width:90,
+						align:"left",
+						format:"RULE_REPORT_DEL",
+					} ],
+					event:RuleEvent
+				},
+				renderTo : "staticList",
+				autoRender:false
+			});
+			orderEcpGrid.after('afterRender', function() {
+				Scale.init();
+			});
+			$(function() {
+				orderEcpGrid.query();
+			});
+		});
+	</script>
+</body>
+</html>

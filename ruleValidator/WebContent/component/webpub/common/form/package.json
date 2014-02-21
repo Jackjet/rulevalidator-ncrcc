@@ -1,0 +1,8 @@
+{
+	"name" : "form",
+	"javaclass" : "com.yonyou.ec.webpub.comp.form.Form",
+	"theme" : ["default","red"],
+	"author":"孟志昂",
+	"enable":false
+}
+

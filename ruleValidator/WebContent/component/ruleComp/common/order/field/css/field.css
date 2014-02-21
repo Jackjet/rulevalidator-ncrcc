@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+
+.ui-field-datepicker {
+	min-width: 130px;
+}

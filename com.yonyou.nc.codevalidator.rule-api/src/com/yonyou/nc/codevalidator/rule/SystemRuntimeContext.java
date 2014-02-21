@@ -15,8 +15,14 @@ public class SystemRuntimeContext {
 	private final String globalLogFilePath;
 	private final String globalLogLevel;
 	private final ExecutePeriod executePeriod;
-	
-	public SystemRuntimeContext(String globalConfigFilePath, String globalExportFilePath, String globalLogFilePath, String globalLogLevel, ExecutePeriod executePeriod) {
+
+	/**
+	 * 如果该规则系统执行在5x版本下，需要支持模块下能够执行业务组件规则，否则不需要支持
+	 */
+	private boolean executeLevelIn5x = false;
+
+	public SystemRuntimeContext(String globalConfigFilePath, String globalExportFilePath, String globalLogFilePath,
+			String globalLogLevel, ExecutePeriod executePeriod) {
 		super();
 		this.globalConfigFilePath = globalConfigFilePath;
 		this.globalExportFilePath = globalExportFilePath;
@@ -24,7 +30,7 @@ public class SystemRuntimeContext {
 		this.globalLogLevel = globalLogLevel;
 		this.executePeriod = executePeriod;
 	}
-	
+
 	public String getGlobalLogLevel() {
 		return globalLogLevel;
 	}
@@ -36,13 +42,21 @@ public class SystemRuntimeContext {
 	public String getGlobalExportFilePath() {
 		return globalExportFilePath;
 	}
-	
+
 	public String getGlobalLogFilePath() {
 		return globalLogFilePath;
 	}
-	
+
 	public ExecutePeriod getExecutePeriod() {
 		return executePeriod;
+	}
+
+	public boolean isExecuteLevelIn5x() {
+		return executeLevelIn5x;
+	}
+
+	public void setExecuteLevelIn5x(boolean executeLevelIn5x) {
+		this.executeLevelIn5x = executeLevelIn5x;
 	}
 
 }

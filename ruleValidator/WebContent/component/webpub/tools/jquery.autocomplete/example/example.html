@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>search测试</title>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/config.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/tools/codemirror/src/codehelper.js"></script>
+<style type="text/css">
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+</style>
+</head>
+
+<body>
+<div class="content">
+		<h1>search组件</h1>
+		<ol>
+			<li>
+				<h2>界面</h2>
+				<p>请在输入框中输入1</p>
+				<input type="text" id="advanceSearch" style="width: 250px;">
+				<script type="text/javascript">
+					seajs.use(['jquery','tools/jquery.autocomplete/src/js/jquery.autocomplete'],function($,autocomplete){
+						var $ = autocomplete($);
+						$('#advanceSearch').autocomplete("data.json", {
+							max: 10,
+							minChars: 1,
+							width: 250,
+							scrollHeight: 300,
+							matchContains: true,
+							autoFill: false,
+							dataType:"json",
+								 
+							formatItem: function(row, i, max) {
+								return row.name +"/"+ row.to ;
+							},
+							formatMatch: function(row, i, max) {
+								return row.name + row.to;
+							},
+							formatResult: function(row) {
+								return row.to;
+							},
+							parse: function(data) {
+								return $.map(eval(data), function(row) {
+									return {
+										data: row,
+										value: row.name,
+										result: row.name
+									}
+								});
+							}		 
+						}).result(function(event, row, formatted) {
+							alert(row.name);
+					 	});
+					});
+				</script>
+			</li>
+			<li>
+				<h2>代码示例</h2>
+				<div>
+				<textarea class="js">
+				<input type="text" id="advanceSearch" style="width: 250px;">
+				<script type="text/javascript">
+					seajs.use(['jquery','tools/jquery.autocomplete/src/js/jquery.autocomplete'],function($,autocomplete){
+						var $ = autocomplete($);
+						$('#advanceSearch').autocomplete("data.json", {
+							max: 10,
+							minChars: 1,
+							width: 250,
+							scrollHeight: 300,
+							matchContains: true,
+							autoFill: false,
+							dataType:"json",
+								 
+							formatItem: function(row, i, max) {
+								return row.name +"/"+ row.to ;
+							},
+							formatMatch: function(row, i, max) {
+								return row.name + row.to;
+							},
+							formatResult: function(row) {
+								return row.to;
+							},
+							parse: function(data) {
+								return $.map(eval(data), function(row) {
+									return {
+										data: row,
+										value: row.name,
+										result: row.name
+									}
+								});
+							}		 
+						}).result(function(event, row, formatted) {
+							alert(row.name);
+					 	});
+					});
+				</script>
+					</textarea>
+				</div>
+			</li>
+			<li>
+				<h2>数据模型</h2>
+				<div>
+					<textarea class="js">
+					[
+					 {"name":"产品线1","to":"101"},
+					 {"name":"商品1","to":"001"}
+					]
+					</textarea>
+				</div>
+			</li>
+		</ol>
+	</div>
+	
+</body>
+</html>
+
+
+
+
+
+

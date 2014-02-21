@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>StringUtils测试</title>
+<script type="text/javascript" src="/ecwebpub/component/webpub/core/seajs/dist/sea-debug.js"></script>
+<script type="text/javascript" src="/ecwebpub/component/webpub/core/seajs/dist/config.js"></script>
+<script type="text/javascript" src="/ecwebpub/component/webpub/tools/codemirror/src/codehelper.js"></script>
+<style type="text/css">
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<div class="content">
+		<h1>ArrayUtils</h1>
+		<script type="text/javascript">
+			seajs.use([
+			           // 依赖jquery
+			           '/ecwebpub/component/webpub/core/widget/dist/jquery',
+			           // 依赖ArrayUtils
+			           '/ecp/component/ecp/tools/ArrayUtils.js'
+			          ], function($, ArrayUtils) {
+				var array0 = ['0', '1'];
+				var array1 = null;
+				var array2 = [];
+				var array3;
+				var array4 = '';
+				var array5 = 'a';
+				var array6 = [0, 1, '0', '1', 'a', 'b', null];
+				var array7 = [0, 1, 2, 3, 4, 0, 1, 2, 3, 4]
+				$('.container').append('ArrayUtils.merge(array0, array1) = ' + ArrayUtils.merge(array0, array1).toString()).append('</br>');
+				$('.container').append('ArrayUtils.merge(array0, array2) = ' + ArrayUtils.merge(array0, array2).toString()).append('</br>');
+				$('.container').append('ArrayUtils.merge(array0, array3) = ' + ArrayUtils.merge(array0, array3).toString()).append('</br>');
+				$('.container').append('ArrayUtils.merge(array0, array4) = ' + ArrayUtils.merge(array0, array4).toString()).append('</br>');
+				$('.container').append('ArrayUtils.merge(array0, array5) = ' + ArrayUtils.merge(array0, array5).toString()).append('</br>');
+				$('.container').append('ArrayUtils.merge(array0, array6) = ' + ArrayUtils.merge(array0, array6).toString()).append('</br>');
+				$('.container').append('ArrayUtils.merge(array0, array7) = ' + ArrayUtils.merge(array0, array7).toString()).append('</br>');
+				$('.container').append('ArrayUtils.unique(array7) = ' + ArrayUtils.unique(array7).toString()).append('</br>');
+			});
+		</script>
+		<ol>
+			<li>
+				<h2>代码示例</h2>
+				<div>
+					<textarea class="js">
+						<script type="text/javascript">
+							seajs.use([
+							           // 依赖jquery
+							           '/ecwebpub/component/webpub/core/widget/dist/jquery',
+							           // 依赖StringUtils
+							           '/ecp/component/ecp/tools/ArrayUtils.js'
+							          ], function($, ArrayUtils) {
+								var array0 = ['0', '1'];
+								var array1 = null;
+								var array2 = [];
+								var array3;
+								var array4 = '';
+								var array5 = 'a';
+								var array6 = [0, 1, '0', '1', 'a', 'b', null];
+								var array7 = [0, 1, 2, 3, 4, 0, 1, 2, 3, 4]
+								$('.container').append('ArrayUtils.merge(array0, array1) = ' + ArrayUtils.merge(array0, array1).toString()).append('</br>');
+								$('.container').append('ArrayUtils.merge(array0, array2) = ' + ArrayUtils.merge(array0, array2).toString()).append('</br>');
+								$('.container').append('ArrayUtils.merge(array0, array3) = ' + ArrayUtils.merge(array0, array3).toString()).append('</br>');
+								$('.container').append('ArrayUtils.merge(array0, array4) = ' + ArrayUtils.merge(array0, array4).toString()).append('</br>');
+								$('.container').append('ArrayUtils.merge(array0, array5) = ' + ArrayUtils.merge(array0, array5).toString()).append('</br>');
+								$('.container').append('ArrayUtils.merge(array0, array6) = ' + ArrayUtils.merge(array0, array6).toString()).append('</br>');
+								$('.container').append('ArrayUtils.merge(array0, array7) = ' + ArrayUtils.merge(array0, array7).toString()).append('</br>');
+								$('.container').append('ArrayUtils.unique(array7) = ' + ArrayUtils.unique(array7).toString()).append('</br>');
+							});
+						</script>
+					</textarea>
+				</div>
+			</li>
+			<li>
+				<h2>结果</h2>
+				<div class="container"></div>
+			</li>
+		</ol>
+	</div>
+</body>
+</html>

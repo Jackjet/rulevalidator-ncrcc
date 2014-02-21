@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/config.js"></script>
+</head>
+<body>
+<div id="uploader"></div>
+<script type="text/javascript">
+seajs.use(['jquery',"tools/jquery.plupload/src/js/jquery.plupload.queue"],function($, pluploadQueue){
+	var $ = pluploadQueue($);
+	$(document).ready(function() {
+		$("#uploader").pluploadQueue({
+			// General settings
+			runtimes : 'html4',
+			url : '',
+			max_file_size : '2000mb',
+			unique_names : true,
+			multiple_queues:true,
+			// Flash settings
+			flash_swf_url : '${pageContext.request.contextPath}/themes/default/scripts/upload/plupload.flash.swf',
+			// Silverlight settings
+			silverlight_xap_url : '${pageContext.request.contextPath}/themes/default/scripts/upload/plupload.silverlight.xap',
+			// PreInit events, bound before any internal events
+			preinit: {
+				Init: function(up, info) {
+					
+				},
+				UploadFile: function(up, file) {
+					// You can override settings before the file is uploaded
+//	 				 up.settings.url = '/ecp/file/upload';
+					 up.settings.url = '/ecp/upload.upload';
+					 
+					 
+				}
+			},
+
+			// Post init events, bound after the internal events
+			init: {
+				Refresh: function(up) {
+				},
+
+				StateChanged: function(up) {
+				},
+
+				QueueChanged: function(up) {
+				},
+
+				UploadProgress: function(up, file) {
+				},
+
+				FilesAdded: function(up, files) {
+				},
+
+				FilesRemoved: function(up, files) {
+				},
+
+				FileUploaded: function(up, file, info) {
+					
+				},
+
+				ChunkUploaded: function(up, file, info) {
+				},
+
+				Error: function(up, args) {
+					alert(args.message);
+				}
+			}
+		});
+		$('#uploader').pluploadQueue().trigger('Refresh');
+	});
+})
+
+</script>
+</body>
+</html>

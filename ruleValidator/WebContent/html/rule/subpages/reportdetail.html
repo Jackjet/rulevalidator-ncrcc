@@ -1,0 +1,92 @@
+
+<!DOCTYPE html >
+<html>
+<head>
+<title>NC规则校验查询系统</title>
+<script type="text/javascript" 
+	src="/ruleValidator/component/webpub/core/seajs2/dist/sea.js" 
+	data-config="/ruleValidator/html/global.js" 
+	data-main="/ruleValidator/html/main.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript">
+	seajs.use([ "$" ], function( $) { 
+	});
+	
+</script>
+</head>
+<body class="bg_white">
+	 <div data-widget="top"></div>
+	<div data-module="order" class="layout_content">
+		<div data-widget="banner"></div>
+		<div class="top_bar"></div>
+		<div class="side_column">
+			<!--订单中心菜单-->
+			<div class="sidebox">
+				<div data-widget="sidemenu"></div>
+			</div>
+		</div>
+		<div class="subpage_content">
+			<div data-page="orderList">
+				<div data-widget="subnav"></div>
+				<div id="staticList" style="float: left; width: 100%"></div>
+			</div>
+		</div>
+	</div>
+	<div data-widget="footer"></div>
+	
+		<script type="text/javascript">
+		seajs.use(["$", 'form','tab','ecppagegrid','order_orderImport','jsuri', 'stringUtils', 'scale','request'],function($,Tab,Form, EcpGrid,OrderImport,Uri, StringUtils, Scale,Request) {
+			$(parent.document).find(".module_nav").show();
+			var index = new Uri(window.parent.document.location.href).getQueryParamValue("index");
+			var recordID=Request.getParameter("recordID");
+			var orderEcpGrid = new EcpGrid({
+				attrs : {
+					url : G.API.RULE_RECORD_DETAIL,
+					data:{
+						recordID:recordID
+					},
+					columns : [ {
+						label : "执行规则",
+						key : "ruleDefinition.descDetails",
+						width:260,
+						format:"RULE_JIRA_LINK",
+						align:"left"
+					}, {
+						label : "执行单元",
+						key : "executeUnit.moduleCode",
+						format:"RULE_UNIT_LINK",
+						width:130,
+						align:"left"
+					}, {
+						label : "特殊参数",
+						key : "specParams",
+						width:100,
+						align:"left"
+					} , {
+						label : "是否通过",
+						key : "passFlag",
+						width:80,
+						align:"left"
+					} ,{
+						label : "查看明细",
+						key : "resultDetail",
+						format:"RULE_EXE_DETAIL",
+						width:80,
+						align:"left"
+					} ]
+				},
+				renderTo : "staticList",
+				autoRender:false
+			});
+			orderEcpGrid.after('afterRender', function() {
+			});
+			$(function() {
+				orderEcpGrid.query();
+			});
+		});
+	</script>
+<!-- 	</div> -->
+<!-- 	<div data-widget="footer"></div> -->
+</body>
+</html>

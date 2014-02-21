@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript" src="/web/component/webpub/core/seajs/src/config.js"></script>
+
+<title>example测试</title>
+</head>
+<body>
+	<h1>example测试</h1>
+	<br>
+
+	<script type="text/javascript">
+		seajs
+				.use(
+						[ 'common/basic_example/src/js/example' ],
+						function(Example) {
+							var example = new Example();
+							example.say();
+						});
+	</script>
+
+</body>
+</html>

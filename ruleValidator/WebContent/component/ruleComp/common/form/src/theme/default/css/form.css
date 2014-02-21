@@ -1,0 +1,134 @@
+.ui-form{
+	width: 100%;
+	border-radius:7px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border: 1px solid #ABADB3;
+	/*background: url(../img/rounded_lightgray_gradient_bg_fill.png) 0 -100px repeat-x ;*/
+	background-color: #FCFCFC;
+	clear: both;
+}
+
+.ui-form-content{
+	float: left;
+	overflow-y: hidden;
+}
+
+.ui-form-content-filed {
+	float: left;
+	margin-right: 3px;
+	padding: 15px 0 0 0;
+	display: inline;
+}
+
+.ui-form-content-label {
+	float: left;
+	width: 100px;
+	margin: 0px 10px;
+	text-align: right;
+	line-height:20px;
+}
+
+
+.ui-form-content-label-checkbox{
+	width: 100px;
+	text-align: left;
+}
+
+.ui-form .nc-form-textfield {
+	-moz-border-bottom-colors: none;
+	-moz-border-image: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: #ABADB3 #DBDFE5 #E3E9EF #E2E3EA;
+	border-style: solid;
+	border-width: 1px;
+	display: inline;
+	width: 140px;
+}
+
+.ui-form .nc-form-textfield-range {
+	-moz-border-bottom-colors: none;
+	-moz-border-image: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: #ABADB3 #DBDFE5 #E3E9EF #E2E3EA;
+	border-style: solid;
+	border-width: 1px;
+	display: inline;
+	height: 16px;
+	line-height: 16px;
+	width: 45px;
+}
+
+.ui-form select {
+	width: 144px;
+}
+
+.ui-form .datepicker {
+	width: 130px;
+}
+
+.ui-form-button{
+	float: right;
+	margin-right: 3px;
+	padding: 13px 0 0 0;
+	display: inline;
+	margin-bottom: 10px;
+}
+
+.ui-form-button .button_wrapper {
+	float: right;
+	margin-right: 20px;
+	display: inline;
+}
+
+.ui-form-button .button_wrapper a {
+	float: left;
+	width: 69px;
+	height: 26px;
+	line-height: 26px;
+	margin-left: 10px;
+	display: inline;
+	text-align: center;
+	text-decoration: none;
+	/*background: url(../img/buttons.png) no-repeat;*/
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border: 1px solid #ABADB3;
+	background: -moz-linear-gradient(top,#F8F8FF,#D9D9D9);
+	background: -webkit-linear-gradient(top,#F8F8FF,#D9D9D9);
+	color: black;
+	filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr="#F8F8FF",endColorStr="#D9D9D9",gradientType="0");
+}
+@media only screen and (max-width:800px){
+	.ui-form  .ui-form-content-filed:nth-child(1){
+		display: none;
+	}
+}
+@media only screen and (max-width:640px){
+	.ui-form  .ui-form-content-filed:nth-child(1),
+	.ui-form  .ui-form-content-filed:nth-child(2),
+	.ui-form  .ui-form-content-filed:nth-child(3),
+	.ui-form  .ui-form-content-filed:nth-child(4)
+	{
+		display: none;
+	}
+}
+/*
+.ui-form .button_wrapper a.button_normal {
+	color: black;
+	background-position: -768px 0;
+}
+
+.ui-form .button_wrapper a.button_normal:hover {
+	background-position: -768px -26px;
+}
+
+.ui-form .button_wrapper a.button_normal:active {
+	background-position: -768px -52px;
+}
+*/

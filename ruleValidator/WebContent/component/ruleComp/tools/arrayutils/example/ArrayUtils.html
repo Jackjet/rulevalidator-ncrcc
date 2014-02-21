@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>数据工具</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<script type="text/javascript" src="/ecp/themes/default/scripts/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="/ecp/themes/default/scripts/ArrayUtils.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var array0 = ['0', '1'];
+				var array1 = null;
+				var array2 = [];
+				var array3;
+				var array4 = '';
+				var array5 = 'a';
+				var array6 = [0, 1, '0', '1', 'a', 'b', null];
+				
+				var array7 = [0, 1, 2, 3, 4, 0, 1, 2, 3, 4]
+				console.log(new ArrayUtils().merge(array0, array1));
+				console.log(new ArrayUtils().merge(array0, array2));
+				console.log(new ArrayUtils().merge(array0, array3));
+				console.log(new ArrayUtils().merge(array0, array4));
+				console.log(new ArrayUtils().merge(array0, array5));
+				console.log(new ArrayUtils().merge(array0, array6));
+				console.log(new ArrayUtils().merge(array0, array7));
+				
+				console.log(new ArrayUtils().unique(array7));
+			})
+		</script>
+	</head>
+	
+	<body>
+	
+	</body>
+
+</html>

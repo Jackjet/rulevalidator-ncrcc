@@ -1,0 +1,139 @@
+.sidebox {
+	float: left;
+	margin-top: 9px;
+	width: 223px;
+}
+
+.sidebox_content {
+	background: url("../img/side_box_bg.png") repeat-y scroll 0 0
+		transparent;
+	float: left;
+	width: 223px;
+}
+
+.sidebox_top {
+	background: url("../img/side_box_bg_top.png") no-repeat scroll 0 0
+		transparent;
+	display: inline;
+	float: left;
+	padding: 0 6px;
+	width: 211px;
+}
+
+.sidebox_title {
+	float: left;
+	height: 32px;
+	width: 100%;
+}
+
+.sidebox_title .title_icon.icon_visited {
+	background-position: -24px -133px;
+}
+
+.sidebox_title .title_icon {
+	background: url("../img/icons.png") no-repeat scroll 0 0 transparent;
+	float: left;
+	height: 17px;
+	margin: 9px 5px 0 6px;
+	width: 17px;
+}
+
+.sidebox_title .title_text {
+	color: #2C2C2C;
+	float: left;
+	font-size: 13px;
+	line-height: 32px;
+	text-decoration: none;
+}
+
+.font_yahei {
+	font-family: Microsoft YaHei, serif;
+}
+
+.sidebox_inner_content {
+	background: url("../img/sidebox_inner_bg.png") repeat-y scroll 0 0
+		transparent;
+	float: left;
+	width: 211px;
+}
+
+.sidebox_inner_top {
+	background: url("../img/sidebox_inner_bg_top.png") no-repeat scroll
+		center top transparent;
+	float: left;
+	width: 211px;
+}
+
+.visited_list {
+	display: inline;
+	float: left;
+	margin: 10px 2%;
+	width: 96%;
+}
+
+.visited_list .clearlist {
+	color: #686868;
+	float: left;
+	text-align: right;
+	width: 95%;
+}
+
+.visited_list .clearlist a {
+	color: #686868;
+	text-decoration: none;
+}
+
+.visited_list .visited_item {
+	float: left;
+	margin-bottom: 10px;
+	text-align: center;
+	width: 100%;
+}
+
+.visited_list .visited_item a {
+	display:block;
+	color: black;
+	text-decoration: none;
+	min-height: 50px;
+	width:100%;
+}
+
+.nc-recent-product {
+	height: 94px;
+	width: 107px;
+}
+
+.visited_list .visited_item a img {
+	background: none repeat scroll 0 0 #CCCCCC;
+	border: 0 none;
+	display: block;
+	height: 50px;
+	margin: 0 auto;
+	width: 50px;
+	
+}
+
+.visited_list .visited_item a .product_price {
+	color: #018DC8;
+}
+
+.sidebox_inner_btm {
+	background: url("../img/sidebox_inner_bg_btm.png") no-repeat scroll 0 0
+		transparent;
+	float: left;
+	height: 5px;
+	overflow-y: hidden;
+	width: 211px;
+}
+
+.sidebox_btm {
+	background: url("../img/side_box_bg_btm.png") no-repeat scroll 0 0
+		transparent;
+	float: left;
+	height: 5px;
+	overflow-y: hidden;
+	width: 223px;
+}
+.clear{
+	clear: both;
+}

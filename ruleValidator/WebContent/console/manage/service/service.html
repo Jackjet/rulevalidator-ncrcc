@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;IE=9" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="/web/component/webpub/core/seajs2/dist/sea-debug.js" data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+	<script type="text/javascript"
+		src="/web/component/webpub/tools/ca/ca.js"></script> 
+	<script type="text/javascript" src="/web/component/webpub/tools/formatJson/c.js"></script>
+	<link href="/web/component/webpub/tools/formatJson/s.css" type="text/css" rel="stylesheet"></link>
+<title></title>
+</head>
+<body class="">
+	<div style="margin: 100px; min-height: 600px">
+		<div id="signonform">
+			<div style="width: 232px; height: 289px;"></div>
+		</div>
+		<script type="text/javascript">
+			seajs.use(['$','signonform','store'], function($,SignOnForm,store) {
+				
+				if(!store.get("user")){
+					var signonform = new SignOnForm({
+						renderTo : "signonform",
+						attrs:{
+							success:function(user){
+								$("#signonform").html(user.userName+"登录成功！");
+							}
+						}
+					});
+				}else{
+					$("#signonform").html(store.get("user").userName+"登录成功！");
+				}
+			});
+		</script>
+		<div id="content">
+			<h3>门户服务管理</h3>
+
+			<div style="width: 20%; float: left; border-right: 1px solid black; height: 500px;">
+				<ul id="treeDemo" class="ztree"></ul>
+			</div>
+			<div style="width: 60%; float: left; padding-left: 30px;">
+				<div>
+					<label>接口名称：</label>
+					<span id="name"></span>
+				</div>
+				<div>
+					<label>接口url：</label>
+					<span id="surl"></span>
+				</div>
+				<div>
+					<label>类型</label>
+					<span id="method"></span>
+				</div>
+				<div>
+					<label>参数：</label>
+					<div id="J-allParams"></div>
+				</div>
+				<div>
+					<label>状态：</label>
+					<span id="status"></span>
+				</div>
+				<div>
+					<input id="test" type="button" value="测试接口">
+				</div>
+				<div>
+					<label>输出：</label>
+					<span id="CollapsibleViewDetail">
+				    <a href="javascript:void(0);" onclick="ExpandAllClicked()">展开</a>
+				    <a href="javascript:void(0);" onclick="CollapseAllClicked()">叠起</a>
+				    <a href="javascript:void(0);" onclick="CollapseLevel(3)">2级</a>
+				    <a href="javascript:void(0);" onclick="CollapseLevel(4)">3级</a>
+				    <a href="javascript:void(0);" onclick="CollapseLevel(5)">4级</a>
+				    <a href="javascript:void(0);" onclick="CollapseLevel(6)">5级</a>
+				    <a href="javascript:void(0);" onclick="CollapseLevel(7)">6级</a>
+				    <a href="javascript:void(0);" onclick="CollapseLevel(8)">7级</a>
+				    <a href="javascript:void(0);" onclick="CollapseLevel(9)">8级</a>
+				  </span>
+					<div  id="Canvas" class="Canvas"></div>
+				</div>
+				
+			</div>
+			<script type="text/javascript">
+				seajs.use("./service");
+			</script>
+		</div>
+	</div>
+</body>
+</html>

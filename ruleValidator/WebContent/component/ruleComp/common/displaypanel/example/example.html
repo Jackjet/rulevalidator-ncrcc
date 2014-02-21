@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>button</title>
+<script type="text/javascript" src="/web/component/webpub/core/seajs2/dist/sea-debug.js" 
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+</head>
+<body>
+	<div id="top"></div>
+	<script type="text/javascript">
+		seajs.use("displaypanel",function(DisplayPanel){
+			var displaypanel=new DisplayPanel({
+				attrs:{
+					fields:[
+						{
+							key:"pk_chanlsend_h",
+							show:false
+						},
+						{
+							key:"cchannelnodeid",
+							show:false
+						},
+						{
+							key:"cchannelnodeid_name",
+							label:"渠道节点"
+						},
+						{
+							key:"ctrantypeid_name",
+							label:"交易类型"
+						},
+						{
+							key:"vbillcode",
+							label:"报送表单号"
+							
+						},
+						{
+							key:"cprodlineid_name",
+							label:"产品线"
+						},
+						{
+							key:"cbrandid_name",
+							label:"品牌"
+						},
+						{
+							key:"cpsndocid_name",
+							label:"业务员"
+						},
+						{
+							key:"dfromdate",
+							label:"报送日期从"
+						},
+						{
+							key:"dtodate",
+							label:"报送日期到"
+						},
+						{
+							key:"ccurrencyid_name",
+							label:"币种"
+						},
+						{
+							key:"ccurrencyid_amountScale",
+							show:false
+						},
+						{
+							key:"status",
+							label:"单据状态"
+						}
+					]
+				},
+				renderTo:"top"
+			});
+		});
+	</script>
+</body>
+</html>

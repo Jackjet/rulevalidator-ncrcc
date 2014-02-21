@@ -3,7 +3,7 @@ package com.yonyou.nc.codevalidator.runtime.plugin.mde;
 import java.io.File;
 import java.util.List;
 
-import nc.uap.mde.MDEPlugin;
+import org.eclipse.core.variables.VariablesPlugin;
 
 import com.yonyou.nc.codevalidator.rule.except.RuleBaseException;
 import com.yonyou.nc.codevalidator.rule.except.RuleBaseRuntimeException;
@@ -27,21 +27,18 @@ public final class MdeConfigInfoUtils {
 
 	}
 
-//	public static String getClientIp() {
-//		return MDEPlugin.getDefault().getPreferenceStore().getString(MDE_FIELD_CLINET_IP);
-//	}
-//
-//	public static String getClientPort() {
-//		return MDEPlugin.getDefault().getPreferenceStore().getString(MDE_FIELD_CLINET_PORT);
-//	}
-
 	public static String getMdeNcHome() {
-		String ncHome = MDEPlugin.getDefault().getPreferenceStore().getString(MDE_FIELD_NCHOME);
-		return StringUtils.isNotBlank(ncHome) ? ncHome : MDEPlugin.getNCHome();
+		String result = VariablesPlugin.getDefault().getStringVariableManager().getValueVariable(
+				MDE_FIELD_NCHOME).getValue();
+		if (StringUtils.isBlank(result)) {
+			throw new RuleBaseRuntimeException("未发现MDE插件中设置的NCHome,请检查是否存在!");
+		}
+		return result;
 	}
 
 	/**
 	 * 根据数据源名称获得NCHOME下对应的数据源配置
+	 * 
 	 * @param dataSourceName
 	 * @return
 	 * @throws Exception
@@ -55,8 +52,8 @@ public final class MdeConfigInfoUtils {
 		}
 		return DataSourceUtils.getDataSourceMeta(filename, dataSourceName);
 	}
-	
-	public static List<String> getDataSourceNames() throws RuleBaseException{
+
+	public static List<String> getDataSourceNames() throws RuleBaseException {
 		String ncHome = getMdeNcHome();
 		String filename = String.format("%s/ierp/bin/prop.xml", ncHome);
 		return DataSourceUtils.getDataSourceNameList(filename);

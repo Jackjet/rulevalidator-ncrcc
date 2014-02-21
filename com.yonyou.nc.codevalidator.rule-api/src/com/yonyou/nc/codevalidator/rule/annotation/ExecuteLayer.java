@@ -1,12 +1,14 @@
 package com.yonyou.nc.codevalidator.rule.annotation;
 
+import com.yonyou.nc.codevalidator.rule.ExecutorContextHelperFactory;
+import com.yonyou.nc.codevalidator.rule.SystemRuntimeContext;
+import com.yonyou.nc.codevalidator.rule.except.RuleBaseException;
 
 /**
  * 规则执行的层级
  * 
  * @since 6.0
- * @version 2013-11-19 下午3:33:03
- * @author zhongcha
+ * @author mazhqa
  */
 public enum ExecuteLayer {
 
@@ -43,16 +45,20 @@ public enum ExecuteLayer {
 
 	/**
 	 * 判断当前执行规则能否在执行单元上执行该规则
-	 * 
+	 * <P>
+	 * 应对V5X版本时，根据系统执行参数executeLevelIn5x(true)，支持业务组件的规则可在模块级别执行
 	 * @param executeLayer
 	 *            - 当前执行单元执行的规则
 	 * @return
+	 * @throws RuleBaseException 
 	 */
-	public boolean canExecuteInLayer(ExecuteLayer executeLayer) {
-//		if (getLayerValue() < executeLayer.layerValue) {
-//			throw new RuleConfigException("规则配置错误，不能在低执行层次配置高执行层次规则");
-//		}
-		return getLayerValue() == executeLayer.layerValue || (this == BUSICOMP && executeLayer == MODULE);
+	public boolean canExecuteInLayer(ExecuteLayer executeLayer) throws RuleBaseException {
+		if(getLayerValue() == executeLayer.layerValue) {
+			return true;
+		}
+		SystemRuntimeContext systemRuntimeContext = ExecutorContextHelperFactory.getExecutorContextHelper().getCurrentRuntimeContext().getSystemRuntimeContext();
+		boolean executeLevelIn5x = systemRuntimeContext.isExecuteLevelIn5x();
+		return executeLevelIn5x && this == BUSICOMP && executeLayer == MODULE;
 	}
 
 }

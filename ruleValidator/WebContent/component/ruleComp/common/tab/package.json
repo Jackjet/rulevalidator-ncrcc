@@ -1,0 +1,8 @@
+{
+	"name" : "tab",
+	"javaclass" : "com.yonyou.ec.webpub.comp.category.Category",
+	"theme" : ["default"],
+	"author":"李晓晨",
+	"enable":false
+}
+

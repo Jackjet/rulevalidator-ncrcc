@@ -1,0 +1,40 @@
+.selectbtn{
+	width:17px;
+	height:17px;
+	background:url("../img/selectbtn.png");
+	display: block;
+	float: left;
+	border: 1px solid #D4D0C8;
+	border-right: 1px solid #404040;
+	border-bottom: 1px solid #404040;
+	cursor:pointer;
+}
+#selectedinput{
+	display: block;
+	float: left;
+	width: 178px;
+	height: 16px;
+	border: 1px solid #D4D0C8;
+	border-right:0px;
+	border-top: 2px solid #808080;
+	border-left: 2px solid #808080;
+	cursor:pointer;
+}
+#ztree_container.ztree_container{
+	width:200px;
+	height:300px;
+	overflow:auto;
+	background-color:#fff;
+	position:absolute;
+	margin-top:17px;
+	display:none;
+	border:1px solid gray;
+}
+.clearbtn{
+	position:absolute;
+	top:5px;
+	right:10px;
+	cursor:pointer;
+	text-decoration: underline;
+	color:blue;
+}

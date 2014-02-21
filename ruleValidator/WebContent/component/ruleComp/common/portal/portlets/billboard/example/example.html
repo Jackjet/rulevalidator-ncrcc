@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>billboard商品top10组件测试</title>
+<script type="text/javascript" src="/web/component/webpub/core/seajs2/dist/sea-debug.js" 
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/tools/codemirror/src/codehelper.js"></script>
+<style type="text/css">
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<div class="content">
+		<h1>top10</h1>
+		<ol>
+			<li>
+				<h2>界面</h2>
+				<div id="billboard" style="display: inline-table;"></div>
+				<script type="text/javascript">
+					seajs.use('billboard',function(Billboard){
+						var options= {
+							attrs:{
+								url:'data.json'
+							},
+							renderTo:'billboard'
+						};
+						
+						var c=new Billboard(options);
+					});
+				</script>
+			</li>
+			<li style="clear: both;">
+				<h2>代码示例</h2>
+				<div>
+					<textarea class="js">
+						<div id="billboard" style="display: inline-table;"></div>
+						<script type="text/javascript">
+							seajs.use('billboard',function(Billboard){
+								var options= {
+									attrs:{
+										url:'data.json'
+									},
+									renderTo:'category'
+								};
+								
+								var c=new Billboard(options);
+							});
+						</script>
+					</textarea>
+				</div>
+			</li>
+			<li>
+				<h2>数据模型</h2>
+				<div>
+					<textarea class="js">
+						[{
+							"cproductid":"1001ZF10000000000BMY",
+							"vname":"商品1",
+							"vhtmurl":null,
+							"vminimageurl":null
+						},
+						{
+							"cproductid":"1001ZF10000000000BAA",
+							"vname":"商品2",
+							"vhtmurl":null,
+							"vminimageurl":null
+						},
+						{
+							"cproductid":"1001ZF10000000000BN1",
+							"vname":"商品3",
+							"vhtmurl":null,
+							"vminimageurl":null
+						}]
+					</textarea>
+				</div>
+			</li>
+			<li>
+			<h2>待解决问题</h2>
+			<h3></h3>
+			<p></p>
+			</li>
+		</ol>
+	</div>
+</body>
+</html>

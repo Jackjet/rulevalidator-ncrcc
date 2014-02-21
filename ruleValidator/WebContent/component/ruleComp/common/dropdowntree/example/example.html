@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>quotegrid测试</title>
+<script type="text/javascript" src="/web/component/webpub/core/seajs2/dist/sea-debug.js" 
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<style type="text/css">
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<div class="content">
+		<h1>dropdowntree组件</h1>
+		<ol>
+			<li>
+				<h2>界面</h2>
+				<div style="width:200px" id="dropdowntree">123123</div>
+				<script type="text/javascript">
+				var datajson=[{name:"节点1",id:"1",pid:"null"},
+					          {name:"节点2",id:"2",pid:"null"},
+					          {name:"节点3",id:"3",pid:"null"},
+					          	{name:"节点3.1",id:"31",pid:"3"},
+					          	{name:"节点3.2",id:"32",pid:"3"}];
+				var rootNode = {
+						id : "null",
+						pId : '~',
+						name : '根节点',
+						open : true,
+						isParent : true
+					};
+				var simpleData = {
+					enable: true,
+					idKey: "id",
+					pIdKey: "pid"
+				}
+				seajs.use(['$','dropdowntree'],
+						function($,Dropdowntree) {
+							Dropdowntree.init(
+							{							
+								container:$("#dropdowntree"),
+								url:"data.txt",
+								rootNode:rootNode,
+								simpleData:simpleData,
+								inputname:"name"
+							})
+				});
+			</script>
+			<li>
+				<h2>代码示例</h2>
+				<div>
+					<textarea class="js">
+						<script type="text/javascript">
+						var rootNode = {
+								id : "null",
+								pId : '~',
+								name : '根节点',
+								open : true,
+								isParent : true
+							};
+						var simpleData = {
+							enable: true,
+							idKey: "id",
+							pIdKey: "pid"
+						}
+						seajs.use(['$','dropdowntree'],
+								function($,Dropdowntree) {
+									Dropdowntree.init(
+										{							
+											container:$("#dropdowntree"),
+											url:"data.txt",
+											rootNode:rootNode,
+											simpleData:simpleData,
+											inputname:"name"
+										})
+						});
+						</script>
+					</textarea>
+				</div>
+				
+			</li>
+			<li>
+				<h2>数据模型</h2>
+				<div>
+					<textarea class="js">
+							var datajson=[{"name":"节点1","id":"1","pid":"null"},
+							          {"name":"节点2","id":"2","pid":"null"},
+							          {"name":"节点3","id":"3","pid":"null"},
+							          	{"name":"节点3.1","id":"31","pid":"3"},
+							          	{"name":"节点3.2","id":"32","pid":"3"}];
+					</textarea>
+				</div>
+			</li>
+			<li>
+				<h2>待解决问题</h2>
+				<h3></h3>
+			</li>
+		</ol>
+	</div>
+</body>
+</html>

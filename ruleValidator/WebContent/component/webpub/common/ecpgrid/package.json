@@ -1,0 +1,8 @@
+{
+	"name" : "ecpgrid",
+	"javaclass" : "com.yonyou.ec.webpub.comp.category.Category",
+	"themes" : ["theme"],
+	"author":"孟志昂",
+	"enable":false
+}
+

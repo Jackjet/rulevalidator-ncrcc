@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript" src="/web/component/webpub/core/seajs/src/config.js"></script>
+<title>Bar测试</title> 
+</head>
+<body class="ui-skin-blue">
+	<div>蓝色Bar1</div>
+	 <div id="graybar" ></div>
+			<script type="text/javascript">
+						seajs
+								.use(
+										[ G.base+'common/bar/src/js/bar' ],
+										function(Bar) {
+											var option2 = {
+												attrs : {
+													classPrefix : "default",
+													title : '友情连接'
+												},
+												renderTo : 'graybar'//放到哪个div
+											};
+											var graybar = new Bar(option2);
+										});
+					</script>
+</body>
+</html>

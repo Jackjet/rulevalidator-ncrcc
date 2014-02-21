@@ -1,0 +1,36 @@
+<!DOCTYPE html >
+<html>
+<head>
+<title>NC规则校验查询系统</title>
+<script type="text/javascript" 
+	src="/ruleValidator/component/webpub/core/seajs2/dist/sea.js" 
+	data-config="/ruleValidator/html/global.js" 
+	data-main="/ruleValidator/html/main.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript">
+	seajs.use("order_orderImport");
+</script>
+</head>
+<body class="bg_white">
+	<div data-widget="top"></div>
+	<div data-module="order" class="layout_content">
+		<div data-widget="banner"></div>
+		<div class="top_bar">
+		</div>
+		<div class="side_column">
+			<!--订单中心菜单-->
+			<div class="sidebox">
+				<div data-widget="sidemenu"></div>
+			</div>
+		</div>
+		<div class="subpage_content">
+			<script type="text/javascript">
+				seajs.use("iframeresize");
+			</script>
+			<iframe name="main" class="subiframe" width="100%" frameBorder=0 scrolling="no" src=""></iframe>
+		</div>
+	</div>
+	<div data-widget="footer"></div>
+</body>
+</html>

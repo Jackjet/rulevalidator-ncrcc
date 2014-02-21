@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;IE=9" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="/web/component/webpub/core/seajs2/dist/sea-debug.js" data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+	<script type="text/javascript"
+		src="/web/component/webpub/tools/ca/ca.js"></script> 
+<title></title>
+<style>
+#apilist{
+margin-left: 100px;
+width: 500px;
+min-height: 600px;
+height: 500px;
+}
+h1{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	line-height: 1.1;
+	font-size: 24px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 100px;
+}
+.extendcontent td{
+	width:17%;
+}
+</style>
+</head>
+<body class="">
+	<h1>电子商务平台服务管理</h1>
+	<div id="apilist" ></div>
+	<script type="text/javascript">
+	seajs.use(["$",'extendgrid'],function($,ExtendGrid){
+		var ecpgrid = new ExtendGrid({
+			attrs : {
+				url : G.API.SERVICE_ECPAPI,
+				isSubTitle:true,
+				extendName:"methods",
+				isExtend:true,
+				extendAll:true,
+				columns : [ {
+					label : "服务名称",
+					key : "name"
+				},{
+					label:"所属模块",
+					key:"module"
+				},{
+					label:"查看方法",
+					key:"methods",
+					format:function(value,row){
+						return "<td><a href='#' class='J-method'>查看</a></td>";
+					}
+				}],
+				subcolumns:[{
+					sublabel:"返回类型",
+					subkey:"returnType"
+				},{
+					sublabel:"方法名称",
+					subkey:"methodName"
+				},{
+					sublabel:"方法参数",
+					subkey:"params"
+				},{
+					sublabel:"方法描述",
+					subkey:"methoddescription"
+				},{
+					sublabel:"参数名称",
+					subkey:"parameterName"
+				},{
+					sublabel:"参数描述",
+					subkey:"parameterDescrition"
+				}],
+				events:[{
+					trigger :'click',
+					selector :'.J-method',
+					handler : function() {
+						var nextTR=$(this).parents("tr").next(".detail");
+						if(nextTR.hasClass("Hidden")){
+							nextTR.removeClass("Hidden");
+							nextTR.show();
+						}else{
+							nextTR.addClass("Hidden");
+							nextTR.hide();
+						}
+					}
+				}]
+			},
+			renderTo : "apilist",
+			autoRender:true
+		});
+	});
+	</script>
+</body>
+</html>

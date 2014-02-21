@@ -1,0 +1,98 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;IE=9" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>校验</title>
+<style type="text/css">
+.indent {
+	text-indent: 30px;
+}
+
+.var {
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+}
+</style>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs2/dist/sea-debug.js"
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<script type="text/javascript">
+	seajs.use([ '$', 'validation', 'stringUtils' ], function($, Validation, StringUtils) {
+		var args = arguments;
+		$(function() {
+			$('#validate').click(function() {
+				var value = $('input[name=value]').val();
+				var rules = $('textarea[name=rules]').val();
+				var handler = $('textarea[name=handler]').val();
+
+				if (rules) {
+					rules = eval('(' + rules + ')');
+				} else {
+					alert('规则不能为空');
+				}
+
+				if (handler) {
+					handler = eval('(' + handler + ')');
+				}
+
+				Validation.validate({
+					value : value,
+					rules : rules,
+					handler : function(value, isValid, msg) {
+						$('#isValid').text(isValid);
+						$('#msg').text(msg);
+						handler(value, isValid);
+					}
+				});
+
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="ui-main ui-main-width bar_content">
+		<div>
+			<div>
+				<span>Validation.validate({</span>
+			</div>
+			<div class="indent">
+				<span class="var">value:</span>
+				<input name="value" value="1">
+				,
+			</div>
+			<div class="indent">
+				<span class="var">rules:</span>
+				<textarea name="rules" rows="5" cols="50">
+					[Validation.RULES.NUMBER,{rule:Validation.RULES.MAX, data:20}]
+				</textarea>
+				,
+			</div>
+			<div class="indent">
+				<span class="var">handler:</span>
+				<textarea name="handler" rows="5" cols="50">
+					function(value, isValid) {
+						console.log(isValid);
+					}
+				</textarea>
+			</div>
+			<div>
+				<span>});</span>
+			</div>
+			<div>
+				<div>
+					<label>结果：</label>
+					<span id="isValid"></span>
+				</div>
+				<div>
+					<label>错误提示：</label>
+					<span id="msg"></span>
+				</div>
+			</div>
+			<button id="validate">校验</button>
+		</div>
+	</div>
+</body>
+</html>

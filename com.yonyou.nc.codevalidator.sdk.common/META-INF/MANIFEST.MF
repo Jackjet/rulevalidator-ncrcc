@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: SDK.Common
 Bundle-SymbolicName: com.yonyou.nc.codevalidator.sdk.common;singleton:=true
-Bundle-Version: 2.9.0
+Bundle-Version: 3.0.0
 Bundle-Vendor: YONYOU
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: com.yonyou.nc.codevalidator.sdk.aop,
@@ -46,8 +46,11 @@ Bundle-ClassPath: .,
  lib/cpdetector/cpdetector_1.0.10.jar,
  lib/cpdetector/jargs-1.0.jar,
  lib/commons-lang-2.1.jar
-Require-Bundle: com.yonyou.nc.codevalidator.rule-api,
- org.eclipse.osgi
 Service-Component: OSGI-INF/RuleLogger.xml
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: com.yonyou.nc.codevalidator.sdk.common.Activator
+Import-Package: com.yonyou.nc.codevalidator.rule,
+ com.yonyou.nc.codevalidator.rule.annotation,
+ com.yonyou.nc.codevalidator.rule.except,
+ com.yonyou.nc.codevalidator.rule.vo,
+ org.osgi.framework

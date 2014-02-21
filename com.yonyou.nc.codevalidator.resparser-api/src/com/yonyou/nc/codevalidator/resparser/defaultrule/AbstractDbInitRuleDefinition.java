@@ -12,19 +12,21 @@ import com.yonyou.nc.codevalidator.rule.impl.AbstractRuleDefinition;
  * 抽象的预置脚本脚本规则定义，执行前需要依赖dbinit临时表的初始化
  * <P>
  * 关于预置脚本临时表的名称和字段，可以参考DbInitTableFieldValue
+ * 
  * @author mazhqa
  * @since V2.7
  * @see DbInitTableFieldValue
  */
-public abstract class AbstractDbInitRuleDefinition extends AbstractRuleDefinition{
+public abstract class AbstractDbInitRuleDefinition extends AbstractRuleDefinition {
 
-	protected DataSet executeDbcreateTableQuery(String sqlString, IRuleExecuteContext ruleExecuteContext) throws RuleBaseException {
+	protected DataSet executeDbcreateTableQuery(String sqlString, IRuleExecuteContext ruleExecuteContext)
+			throws RuleBaseException {
 		return SQLQueryExecuteUtils.executeTempTableQuery(sqlString, ruleExecuteContext.getRuntimeContext());
 	}
-	
+
 	@Override
 	public String[] getDependentCreator() {
-		return new String[] {CreatorConstants.DBINIT};
+		return new String[] { CreatorConstants.DBINIT };
 	}
 
 }

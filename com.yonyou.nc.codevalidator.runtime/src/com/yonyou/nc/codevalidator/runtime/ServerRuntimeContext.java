@@ -86,6 +86,8 @@ public class ServerRuntimeContext implements RuntimeContext {
 					: ExecutePeriod.getExecutePeriod(executePeriod);
 			systemRuntimeContext = new SystemRuntimeContext(globalConfigFilePath, globalExportFilePath,
 					globalLogFilePath, globalLogLevel, executePeriodObject);
+			String runIn5x = System.getProperty(RuleConstants.RUN_IN_NC_5X);
+			systemRuntimeContext.setExecuteLevelIn5x(StringUtils.isNotBlank(runIn5x) && Boolean.valueOf(runIn5x));
 		}
 		return systemRuntimeContext;
 	}

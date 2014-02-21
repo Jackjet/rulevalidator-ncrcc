@@ -1,0 +1,49 @@
+.pagination {
+    font-size: 12px;
+}
+        
+.pagination a {
+    text-decoration: underline;
+	/* border: solid 1px #AAE; */
+	color: #15B;
+}
+
+.pagination a, .pagination span {
+    display: block;
+    float: left;
+    padding: 0.3em 0.5em;
+    margin-right: 5px;
+	margin-bottom: 5px;
+	line-height:10px;
+/* 	width:2px; */
+}
+
+.pagination .current {
+    background: #26B;
+    color: #fff;
+	/* border: solid 1px #AAE; */
+}
+
+.pagination .current.prev, .pagination.prev, .pagination a.prev, 
+.pagination .current.next, .pagination.next, .pagination a.next{
+	background: url(../img/icons.png) no-repeat;
+	float: left;
+	width: 20px;
+	height: 20px;
+	padding:0px;
+}
+
+.pagination .current.prev, .pagination.prev {
+	background-position: -218px -76px;
+}
+
+.pagination a.prev {
+	background-position: -26px -76px;
+}
+
+.pagination .current.next, .pagination.next {
+	background-position: -242px -76px;
+}
+.pagination a.next {
+	background-position: -50px -76px;
+}

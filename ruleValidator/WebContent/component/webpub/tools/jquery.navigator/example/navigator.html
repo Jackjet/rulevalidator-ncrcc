@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>NC规则校验系统－系统管理</title>
+    <script type="text/javascript" src="../../../base/jquery-1.7.2.min.js"></script>
+
+    <script type="text/javascript" src="../../drop_menu/src/js/UI.DropMenu.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../drop_menu/src/css/drop_menu.css" />
+    <script type="text/javascript" src="../src/js/UI.Navigator.js"></script>
+    <link rel="stylesheet" type="text/css" href="../src/css/navigator.css" />
+
+    <script type="text/javascript">
+        $(function() {
+            var signedIn = [
+                {
+                    'itemId': "nav0",
+                    'itemName': "首页",
+                    'itemUrl': "."
+                },
+                {
+                    'itemId': "nav1",
+                    'itemName': "投标",
+                    'itemUrl': "."
+                },
+                {
+                    'itemId': "nav2",
+                    'itemName': "合同",
+                    'itemUrl': "."
+                },
+                {
+                    'itemId': "nav3",
+                    'itemName': "订单",
+                    'itemUrl': ".",
+                    'subMenu': [
+                        {
+                            'itemId': "nav3menuItem0",
+                            'itemName': "订单确认",
+                            "itemUrl": ".",
+                            'callback': function() {
+                                alert("Test: Callback function here");
+                            }
+                        },
+                        {
+                            'itemId': "nav3menuItem1",
+                            'itemName': "退货处理",
+                            "itemUrl": ".",
+                            'callback': function() {
+                                console.log("Test: Callback function here");
+                            }
+                        },
+                        {
+                            'itemId': "nav3menuItem2",
+                            'itemName': "订单执行状态维护",
+                            "itemUrl": ".",
+                            'callback': function() {
+                                console.log("Test: Callback function here");
+                            }
+                        },
+                        {
+                            'itemId': "nav3menuItem3",
+                            'itemName': "订单执行情况跟踪",
+                            "itemUrl": ".",
+                            'callback': function() {
+                                console.log("Test: Callback function here");
+                            }
+                        }
+                    ]
+                },
+                {
+                    'itemId': "nav4",
+                    'itemName': "发货排程",
+                    'itemUrl': ".",
+                    'subMenu': [
+                        {
+                            'itemId': "nav4menuItem0",
+                            'itemName': "发货确认",
+                            "itemUrl": ".",
+                            'callback': function() {
+                                alert("Test: Callback function here");
+                            }
+                        }
+                    ]
+                },
+                {
+                    'itemId': "nav5",
+                    'itemName': "库存",
+                    'itemUrl': "."
+                },
+                {
+                    'itemId': "nav6",
+                    'itemName': "结算",
+                    'itemUrl': "."
+                }
+            ];
+            $( "#navigator" ).UINavigator({ 'items': signedIn });
+        });
+    </script>
+</head>
+<body>
+<div style="margin: 0 auto; width: 600px;">
+    <div id="navigator" style="float: left; width: 600px; height: 33px; background: gray;"></div>
+</div>
+</body>
+</html>

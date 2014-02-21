@@ -1,0 +1,69 @@
+
+/*购物车弹出层面板*/
+.ui-dialog { float: left; width: 518px; }
+
+.ui-dialog .dialog_top {
+    background: url("../img/dialog_top.png") no-repeat scroll transparent;
+    float: left;
+    height: 59px;
+    width: 100%;
+}
+
+.ui-dialog .dialog_top .dialog_panel {
+    display: inline;
+    float: left;
+    height: 26px;
+    margin: 34px 0 0 30px;
+    width: 450px;
+}
+
+.ui-dialog .dialog_top .dialog_panel .title{
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+.ui-dialog .dialog_top .dialog_panel span p {
+	padding-left:12px;
+}
+ 
+.ui-dialog .dialog_content p{
+    padding-left:40px;
+}
+.ui-dialog .dialog_content {
+    background: url("../img/dialog_middle.png") repeat-y scroll transparent;
+    display: inline;
+    float: left;
+    width: 518px;
+}
+
+.ui-dialog .dialog_btm {
+    background: url("../img/dialog_bottom.png") no-repeat scroll transparent;
+    float: left;
+    height: 68px;
+    width: 100%;
+}
+
+.ui-dialog .dialog_btm .dialog_pane {
+    display: inline;
+    float: right;
+    margin: 7px 46px 0 0;
+}
+
+.ui-dialog .dialog_btm .dialog_pane a {
+    display: inline;
+    margin-left: 10px;
+}
+
+.dialog-widget-overlay {
+    background: url("../img/dialog_40x40.png") repeat scroll 50% 50% #EEEEEE;
+    opacity: 0.3;
+    filter: Alpha(Opacity = 30);
+}
+
+.dialog-widget-overlay {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}

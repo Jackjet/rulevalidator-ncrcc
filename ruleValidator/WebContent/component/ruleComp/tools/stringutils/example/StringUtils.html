@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>StringUtils测试</title>
+<script type="text/javascript" src="/web/component/webpub/core/seajs/dist/sea-debug.js"></script>
+<script type="text/javascript" src="/web/component/webpub/core/seajs/dist/config.js"></script>
+<script type="text/javascript" src="/web/component/webpub/tools/codemirror/src/codehelper.js"></script>
+<style type="text/css">
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<div class="content">
+		<h1>StringUtils</h1>
+			<script type="text/javascript">
+				seajs.use([
+				           // 依赖jquery
+				           'jquery',
+				           // 依赖StringUtilsecp
+				           '/ecp/component/ecp/tools/stringutils/src/StringUtils.js'
+				          ], function($, StringUtils) {
+					$('.container').html(StringUtils.format('Hello, %s, hello %s%s', ['world', 'Seajs', '!']));
+				});
+			</script>
+		</li>
+		<li>
+			<h2>代码示例</h2>
+			<div>
+				<textarea class="js">
+					<script type="text/javascript">
+						seajs.use([
+						           // 依赖jquery
+						           'jquery',
+						           // 依赖StringUtils
+						           '/ecp/component/ecp/tools/stringutils/src/StringUtils.js'
+						          ], function($, StringUtils) {
+							$('.container').html(StringUtils.format('Hello, %s, hello %s%s', ['world', 'Seajs', '!']));
+						});
+					</script>
+				</textarea>
+			</div>
+		<ol>
+			<li>
+				<h2>结果</h2>
+				<div class="container"></div>
+			</li>
+		</ol>
+	</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+.product_detail .product_picture {
+  float: left;
+  width: 378px;
+}
+.product_picture .picture_box {
+  border: 1px solid #E3E4E4;
+  float: left;
+  height: 350px;
+  overflow: hidden;
+  width: 350px;
+}
+
+.product_picture .picture_box .picture{
+	height: 350px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	width: 350px;
+}
+
+.product_picture .picture_box .picture .active{
+	display: inline-block;
+	line-height: 350px;
+}
+
+.hidden {
+  display: none;
+}
+.product_picture .picture_thumbs {
+  margin: 0;
+  padding: 0;
+  width: 350px;
+}
+
+.picture_thumbs .thumb_item_out{
+	margin: 10px 0 0 8px;
+	float: left;
+	height: 50px;
+  	width: 50px;
+  	border: 1px solid #CDCDCD;
+  	position: relative;
+}
+
+.picture_thumbs .thumb_item_in {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+.clear {
+  clear: both;
+  float: none;
+  height: 0;
+  overflow: hidden;
+}
+.picture_thumbs .thumb_item_in img {
+  border: 0 none;
+}
+
+.picture_thumbs .thumb_item_out .arrow {
+  background: url("../img/icons.png") no-repeat scroll -30px -65px;
+  height: 7px;
+  position: absolute;
+  width: 7px;
+  z-index: 2;
+  left:20px;
+  top:-7px;
+}

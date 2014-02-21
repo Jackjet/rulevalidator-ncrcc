@@ -1,0 +1,27 @@
+.post_list {
+	width: 96%;
+	list-style: inside;
+	padding: 20px 2%;
+	margin: 0;
+}
+
+.post_list li {
+	float: left;
+	width: 100%;
+	line-height: 30px;
+	text-indent: 20px;
+	background: url(../img/dashed_line_gray_1x1.png) 0 100% repeat-x;
+}
+
+.post_list li a {
+	text-decoration: none;
+	color: #323232;
+}
+
+.post_list li a:hover {
+	text-decoration: underline;
+}
+
+.post_list li span {
+	color: #999;
+}

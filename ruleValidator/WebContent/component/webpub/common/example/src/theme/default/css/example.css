@@ -1,0 +1,17 @@
+/* example 组件样式表*/
+/* 命名以 "ui-" 开头 */
+/* 中间用 中划线 "-" 隔开*/
+/* 组件名 ui-组件名 */
+/* 组件模块 ui-组件名-组件模块名 */
+
+.ui-example{
+	border: 2px solid black;
+}
+
+.ui-example-top{
+
+}
+.ui-example-content{
+
+}
+

@@ -1,0 +1,22 @@
+.subpage_navi {
+  border-top: 1px solid #EBEBEB;
+  color: #787878;
+  display: inline;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 2px;
+  width: 100%;
+  margin-bottom:20px;
+}
+.subpage_navi a {
+  color: #787878;
+  text-decoration: none;
+}
+.subpage_navi a:hover {
+	text-decoration: underline;
+	color: #4c4c4c;
+}
+.clear{
+	clear: both;
+}

@@ -1,0 +1,15 @@
+.ui-ecp {
+	border-left: 2px solid #ff9900;
+	border-right: 2px solid #ff9900;
+	border-bottom: 2px solid #ff9900;
+}
+
+.ui-ecp .ui-cust-bar{
+	border-left-color:#ff9900;
+	border-right-color:#ff9900;
+	border-bottom-color:#ff9900;
+}
+
+.ui-ecp .ui-bar-top{
+	background-color:#ff9900;
+}

@@ -2,17 +2,20 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: MDPlugin.Simple
 Bundle-SymbolicName: com.yonyou.nc.codevalidator.mdplugin.simple;singleton:=true
-Bundle-Version: 2.9.0
+Bundle-Version: 3.0.0
 Bundle-Vendor: YONYOU
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Require-Bundle: com.yonyou.nc.codevalidator.rule-api,
- com.yonyou.nc.codevalidator.sdk.common
 Export-Package: ncmdp.model;version="6.3.2.0520";
   uses:="ncmdp.ui.industry,
    ncmdp.wizard.multiwizard.util,
    ncmdp.model.activity,
    org.w3c.dom",
- ncmdp.model.activity;version="6.3.2.0520",
+ ncmdp.model.activity;version="6.3.2.0520";uses:="ncmdp.wizard.multiwizard.util,ncmdp.model,org.w3c.dom",
  ncmdp.serialize;version="6.3.2.0520";uses:="ncmdp.model,org.w3c.dom",
  ncmdp.ui.industry;version="6.3.2.0520"
 Bundle-ActivationPolicy: lazy
+Import-Package: com.yonyou.nc.codevalidator.rule,
+ com.yonyou.nc.codevalidator.rule.except,
+ com.yonyou.nc.codevalidator.sdk.log,
+ com.yonyou.nc.codevalidator.sdk.utils,
+ org.apache.commons.io

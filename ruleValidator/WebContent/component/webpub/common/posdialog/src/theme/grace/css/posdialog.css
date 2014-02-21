@@ -1,0 +1,147 @@
+
+/*购物车弹出层面板*/
+.hint_dialog { float: left; width: 518px; }
+
+.hint_dialog .dialog_top {
+    background: url("../img/dialog_top.png") no-repeat scroll transparent;
+    float: left;
+    height: 59px;
+    width: 100%;
+}
+
+.hint_dialog .dialog_top .dialog_panel {
+    display: inline;
+    float: left;
+    height: 26px;
+    margin: 34px 0 0 30px;
+    width: 450px;
+}
+
+.hint_dialog .dialog_top .dialog_panel span p {
+	padding-left:12px;
+}
+ 
+.hint_dialog .dialog_content p{
+    padding-left:40px;
+}
+.hint_dialog .dialog_content {
+    background: url("../img/dialog_middle.png") repeat-y scroll transparent;
+    display: inline;
+    float: left;
+    width: 518px;
+    height: 95px;
+}
+
+.hint_dialog .dialog_btm {
+    background: url("../img/dialog_bottom.png") no-repeat scroll transparent;
+    float: left;
+    height: 68px;
+    width: 100%;
+}
+
+.hint_dialog .dialog_btm .dialog_pane {
+    display: inline;
+    float: right;
+    margin: 7px 46px 0 0;
+}
+
+.hint_dialog .dialog_btm .dialog_pane a {
+    display: inline;
+    margin-left: 10px;
+}
+
+.dialog-widget-overlay {
+    background: url("../img/dialog_40x40.png") repeat scroll 50% 50% #EEEEEE;
+    opacity: 0.3;
+    filter: Alpha(Opacity = 30);
+}
+
+.dialog-widget-overlay {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/*通用按钮*/
+a.btn_blue,a.btn_gray,a.btn_normal_blue,a.btn_normal_gray,a.btn_gray_long
+	{
+	float: left;
+	text-align: center;
+	text-decoration: none;
+	background: url(../img/buttons.png) no-repeat;
+}
+/*蓝色，灰色大按钮*/
+a.btn_blue,a.btn_gray {
+	width: 82px;
+	height: 29px;
+	line-height: 29px;
+	color: white;
+}
+
+a.btn_blue {
+	color: white;
+	background-position: -421px 0;
+}
+
+a.btn_blue:active {
+	background-position: -421px -29px;
+}
+
+a.btn_gray {
+	color: #040404;
+	background-position: -339px 0;
+}
+
+a.btn_gray:active {
+	background-position: -339px -29px;
+}
+/*蓝色，灰色小按钮*/
+a.btn_normal_blue,a.btn_normal_gray {
+	width: 69px;
+	height: 26px;
+	line-height: 26px;
+}
+
+a.btn_normal_blue {
+	color: white;
+	background-position: -699px 0;
+}
+
+a.btn_normal_blue:hover {
+	background-position: -699px -26px;
+}
+
+a.btn_normal_blue:active {
+	background-position: -699px -52px;
+}
+
+a.btn_normal_gray {
+	color: black;
+	background-position: -768px 0;
+}
+
+a.btn_normal_gray:hover {
+	background-position: -768px -26px;
+}
+
+a.btn_normal_gray:active {
+	background-position: -768px -52px;
+}
+
+a.btn_gray_long {
+	width: 102px;
+	height: 24px;
+	line-height: 24px;
+	color: #2a2a2a;
+	background-position: -837px 0;
+}
+
+a.btn_gray_long:hover {
+	background-position: -837px -24px;
+}
+
+a.btn_gray_long:active {
+	background-position: -837px -48px;
+}

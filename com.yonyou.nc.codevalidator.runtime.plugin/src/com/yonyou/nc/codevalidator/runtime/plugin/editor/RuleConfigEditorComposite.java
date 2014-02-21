@@ -210,7 +210,9 @@ public class RuleConfigEditorComposite extends Composite {
 					RuleExecuteLevel ruleExecuteLevel = (RuleExecuteLevel) value;
 					ruleItemConfigVo.setRuleExecuteLevel(ruleExecuteLevel);
 					ruleConfigTableViewer.refresh();
-					ruleEditorListener.ruleEditorChanged();
+					if (ruleEditorListener != null) {
+						ruleEditorListener.ruleEditorChanged();
+					}
 				}
 			}
 			

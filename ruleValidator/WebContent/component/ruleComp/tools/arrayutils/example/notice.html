@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>通知</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="/ecp/themes/default/css/notice.css" />
+	<link rel="stylesheet" type="text/css" href="/ecp/themes/default/css/default.css" />
+	<link rel="stylesheet" type="text/css" href="/ecp/themes/default/css/style.css" />
+	<script type="text/javascript" src="/ecp/themes/default/scripts/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript"> 
+		function notice(content) {
+			var html = 
+				'<div class="notice_bar">' +
+					'<!-- 上部 -->' +
+					'<div class="corner lt"></div>' +
+					'<div class="top"></div>' +
+					'<div class="corner rt"></div>' +
+					'<!-- 内容 -->' +
+					'<div class="content">' +
+						'<div class="text">' +
+							'<div class="floatcenter" style="width: 431px;">' +
+								content +
+							'</div>' +
+						'</div>' +
+					'</div>' +
+					'<!-- 下部 -->' +
+					'<div class="corner lb"></div>' +
+					'<div class="bottom"></div>' +
+					'<div class="corner rb"></div>' +
+				'</div>';
+			return $(html);
+		}
+	
+	</script>
+</head>
+<body>
+	<div class="notice_bar">
+		<!-- 上部 -->
+		<div class="corner lt"></div>
+		<div class="top"></div>
+		<div class="corner rt"></div>
+		<!-- 内容 -->
+		<div class="content">
+			<div class="text">
+				<div class="floatcenter" style="width: 431px;">
+				测试文字</br>
+				测试文字</br>
+				测试文字</br>
+				测试文字</br>
+				</div>
+			</div>
+		</div>
+		<!-- 下部 -->
+		<div class="corner lb"></div>
+		<div class="bottom"></div>
+		<div class="corner rb"></div>
+	</div>
+</body>
+</html>

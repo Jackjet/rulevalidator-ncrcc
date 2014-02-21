@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;IE=9" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="/web/component/webpub/core/seajs2/dist/sea-debug.js" data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<title>NC规则校验系统－系统管理</title>
+<style>
+	.navi{
+		font-size: 11px;
+		color: black;
+	}
+	.navi a{
+		padding: 3px;
+		border-bottom: solid 1px black;
+		text-decoration: none;
+	}
+	.navi .active{
+		border: solid 1px black;
+		border-bottom: none;
+	}
+
+</style>
+</head>
+<body>
+<h3>门户个性化定制</h3>
+	<div style="margin: 10px; min-height: 200px; float:left;" >
+		<div id="content">
+			<div class="navi"><a class="active" href="#" id="pageview">页面视图</a><a href="#" id="compview">组件视图</a></div>
+			<ul id="treeDemo" class="ztree"></ul>
+			<script type="text/javascript">
+				seajs.use("./menu");
+			</script>
+		</div>
+	</div>
+	<div style="float: left;width: 1150px;">
+		<iframe name="main" frameBorder=0 scrolling="no" src="/ecp/" width="100%"></iframe>
+	</div>
+</body>
+</html>

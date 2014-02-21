@@ -1,0 +1,14 @@
+/* UI Plugin Navigator */
+
+.ui-navigator {
+    float: left; height: 33px; font-size: 14px; font-weight: bold;
+}
+.ui-navigator a {
+    float: left; height: 31px; line-height: 31px; margin: 2px 15px 0 0; padding: 0 15px; display: inline;
+    text-align: center; text-decoration: none; color: white;
+}
+.ui-navigator a.focus {
+    margin-top: 0; height: 33px; line-height: 33px;
+    background: url(../img/bg_navigator_focus.png) center 0 no-repeat !important;
+}
+.ui-navigator a:hover, .ui-navigator a.extends { background-color: #164071; }

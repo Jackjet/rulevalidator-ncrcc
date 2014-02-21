@@ -1,0 +1,70 @@
+#content {
+	margin-top: 100px;
+	margin-left: 100px;
+}
+
+#content table {
+	border: 1px solid black;
+	border-collapse: collapse;
+	font-size: 12px;
+	line-height: 26px;
+	width: 90%;
+	table-layout:fixed;
+	word-wrap:break-word;
+	
+}
+#content table thead th{
+    background-color: #C9DEEE;
+    border: 1px solid black;
+    color: #191919;
+    height: 26px;
+}
+td{
+   border: 1px solid black;
+}
+.error{
+	color: red;
+}
+.success{
+	color: green;
+}
+.td-tip {
+	position: relative;
+	background: #fff;
+	/* position: relative;
+	color: #666;
+	text-decoration: none;
+	font-size: 12px;
+	width: 150px;
+	text-align: center;
+	border: 1px solid #ccc;
+	height: 25px;
+	line-height: 25px; */
+}
+ 
+/*设置链接的属性,一定要设置为relative才能使提示层跟着链接走*/
+.td-tip:hover { 
+	background: #eee;
+	color: #333; 
+}
+ 
+/*设置正常下的span为隐藏状态*/
+.td-tip div {
+	z-index: 100;
+	display: none;
+}
+ 
+/*设置hover下的span属性为呈现状态,并设置提示层的位置*/
+.td-tip:hover div {
+	z-index: 100;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 830px;
+	border: 1px solid grey;
+	background: #fff;
+	color: #000;
+	padding: 5px 10px;
+	text-align: left;
+}

@@ -1,0 +1,14 @@
+@CHARSET "utf-8";
+@IMPORT url("./order_return_price.css");
+
+/* 币符 */
+.ui-order-price-currency-symbol {
+	font-family: Microsoft YaHei, serif;
+	color: black;
+}
+
+/* 价格数字 */
+.ui-order-price-currency-number {
+	font-family: Microsoft YaHei, serif;
+	color: black;
+}

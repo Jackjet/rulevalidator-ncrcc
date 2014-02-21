@@ -1,0 +1,84 @@
+.ui-ecpeditgrid{
+	width:600px;
+}
+.ui-ecpeditgrid  table{
+	border: 0;
+	width: 100%;
+	line-height: 26px;
+	border-collapse: collapse;
+}
+
+.ui-ecpeditgrid thead tr {
+	border: 1px solid #9ABBD5;/*old*/
+	border: 1px solid #E0E0E0;
+	color: #191919;
+	height: 26px;
+	padding-left: 10px;
+	background-color: #D3E5F1;/*old*/
+	background-color: #F1F1F1;
+}
+
+.ui-ecpeditgrid td {
+	padding: 0px;
+	text-align: center;
+}
+
+.ui-ecpeditgrid thead tr td {
+	padding-left: 10px;
+	border: 1px solid #9ABBD5;/*old*/
+	border: 1px solid #E0E0E0;
+}
+
+.ui-ecpeditgrid  a {
+	color: #35719A;
+	text-decoration: none;
+}
+
+.ui-ecpeditgrid tbody td {
+	border: 1px solid #e5e5e5;
+	padding-left: 10px;
+}
+
+.ui-ecpeditgrid td.left_align {
+	text-align: left;
+}
+
+.ui-ecpeditgrid td.center_align {
+	text-align: center;
+}
+
+.ui-ecpeditgrid td.right_align {
+	text-align: right;
+}
+
+#center_content .edit,#center_content .save {
+	display: none;
+}
+
+#center_content tr.editing .edit,#center_content tr.editing .save {
+	display: inline;
+	margin: 0;
+	width: 90%;
+}
+
+#center_content .editing .view,#center_content .editing .modify {
+	display: none;
+}
+#center_content .editing .view,#center_content .editing .destroy {
+	display: none;
+}
+#center_content  li {
+	list-style: none;
+}
+
+#center_content  a {
+	margin-right: 5px;
+}
+
+#center_content  td div {
+	display: inline;
+	width: 500px;
+}
+a{
+	cursor:pointer;
+}

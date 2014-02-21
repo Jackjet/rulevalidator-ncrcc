@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript"
+	src="/ecp/component/ecp/core/config.js"></script>
+</head>
+<body>
+	<div id="search"></div>
+	<script type="text/javascript">
+		seajs.use('/ecp/component/ecp/common/search/src/js/search',function(Search){
+			var options= {
+				attrs:{
+					//对应搜索框的url
+					indexurl:'data.json',
+					//图标对应的url
+					iconUrl:"http://www,baidu.com",
+					//高级搜索对应的url
+					advanceQueryUrl:"http://www,baidu.com"
+				},
+				renderTo:'search'
+			};
+			
+			var s=new Search(options);
+			
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+

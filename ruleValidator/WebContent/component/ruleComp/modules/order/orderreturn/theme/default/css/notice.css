@@ -1,0 +1,143 @@
+
+.notice_bar {
+	width:935px;
+	height:36px;
+}
+
+.notice_bar .corner {
+	float: left;
+	width: 5px;
+	height: 5px;
+	overflow:hidden;
+	background: url(../img/notice_corner_org.png) no-repeat;
+}
+.notice_bar .lt {
+	background-position: 0 0;
+}
+.notice_bar .top {
+	float: left;
+	width: 925px;
+	height: 5px;
+	background: url(../img/notice_border_top_org.png) repeat-x;
+}
+.notice_bar .rt {
+	background-position: -5px 0;
+}
+
+.notice_bar .lb {
+	background-position: 0 -5px;
+}
+.notice_bar .bottom {
+	float: left;
+	width: 925px;
+	height: 5px;
+	background: url(../img/notice_border_bottom_org.png) repeat-x;
+}
+.notice_bar .rb {
+	background-position: -5px -5px;
+}
+
+.notice_bar .content {
+	float:left;
+	display:inline;
+	width:935px;
+	overflow-y: hidden;
+	background: url(../img/notice_corner_fill_point.png) repeat ;
+}
+
+.notice_bar .content .text {
+	padding:0px;
+	font-weight: bold;
+	font-size:12px;
+	line-height: 23px;
+	color: white;
+}
+
+
+.notice_bar .warning_icon {
+	float:left;
+	width: 23px;
+	height: 23px;
+	margin-right:5px;
+	background: url(../img/icons.png) -29px -155px no-repeat;
+}
+/*错误／警告提示信息条*/
+.notice_bar_blue,.notice_bar_org {
+	float: left;
+}
+
+.notice_bar_blue.bar_outter,.notice_bar_org.bar_outter {
+	width: 930px;
+	height: 36px;
+	padding-left: 5px;
+	display: inline;
+}
+
+.notice_bar_blue.bar_inner,.notice_bar_org.bar_inner {
+	width: 925px;
+	height: 36px;
+	padding-right: 5px;
+	display: inline;
+}
+
+.notice_bar_blue.bar_outter {
+	background: url(../images/bg_notice_bar_border_blue.png) 0 0 no-repeat;
+}
+
+.notice_bar_blue.bar_inner {
+	background: url(../images/bg_notice_bar_border_blue.png) 100% 0
+		no-repeat;
+}
+
+.notice_bar_org.bar_outter {
+	background: url(../images/bg_notice_bar_border_org.png) 0 0 no-repeat;
+}
+
+.notice_bar_org.bar_inner {
+	background: url(../images/bg_notice_bar_border_org.png) 100% 0 no-repeat;
+}
+
+.notice_bar_blue .bar_content,.notice_bar_org .bar_content {
+	float: left;
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+}
+
+.notice_bar_blue .bar_content {
+	background: url(../images/bg_notice_bar_fill_blue.png) repeat-x;
+}
+
+.notice_bar_org .bar_content {
+	background: url(../images/bg_notice_bar_fill_org.png) repeat-x;
+}
+
+.notice_icon.for_notice_blue,.notice_icon.for_notice_org {
+	float: left;
+	width: 23px;
+	height: 23px;
+	margin-top: 6px;
+	background: url(../images/icons.png) no-repeat;
+}
+
+.notice_icon.for_notice_blue {
+	background-position: -2px -155px
+}
+
+.notice_icon.for_notice_org {
+	background-position: -29px -155px
+}
+
+.notice_text.for_notice_blue,.notice_text.for_notice_org {
+	float: left;
+	font-weight: bold;
+	text-indent: 12px;
+}
+
+.notice_text.for_notice_blue {
+	color: #1a7ec3;
+}
+
+.notice_text.for_notice_org {
+	color: white;
+}

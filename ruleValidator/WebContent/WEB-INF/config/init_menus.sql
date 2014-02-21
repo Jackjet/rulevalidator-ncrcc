@@ -1,0 +1,16 @@
+insert into rv_menus (menuid, menutitle, resourceid, parentid, seq, hide, leaf) values ('men_001',     '首页', 'res_001', 'root', 1, 0,  0);
+insert into rv_menus (menuid, menutitle, resourceid, parentid, seq, hide, leaf) values ('men_001_001', '最新检查结果', 'res_001_001', 'men_001', 1, 0,1);
+insert into rv_menus (menuid, menutitle, resourceid, parentid, seq, hide, leaf) values ('men_001_002', '历史检查结果', 'res_001_002', 'men_001', 2, 0,  1);
+insert into rv_menus (menuid, menutitle, resourceid, parentid, seq, hide, leaf) values ('men_002',     '查询', 'res_002', 'root', 2, 0,  0);
+insert into rv_menus (menuid, menutitle, resourceid, parentid, seq, hide, leaf) values ('men_002_001', '执行结果查询', 'res_002_001', 'men_002', 1, 0, 1);
+insert into rv_menus (menuid, menutitle, resourceid, parentid, seq, hide, leaf) values ('men_002_002', '历史检查结果', 'res_002_002', 'men_002', 2, 0, 1);
+insert into rv_menus (menuid, menutitle, resourceid, parentid, seq, hide, leaf) values ('men_003',     '报表统计', 'res_003', 'root', 3, 0, 0);
+insert into rv_menus (menuid, menutitle, resourceid, parentid, seq, hide, leaf) values ('men_003_001', '趋势报表', 'res_003_001', 'men_003', 1, 0, 1);
+insert into rv_menus (menuid, menutitle, resourceid, parentid, seq, hide, leaf) values ('men_003_002', '通过率', 'res_003_002', 'men_003', 2, 0,  1);
+insert into rv_menus (menuid, menutitle, resourceid, parentid, seq, hide, leaf) values ('men_003_003', '部门报表统计', 'res_003_003', 'men_003', 3, 0,  1);
+insert into rv_menus (menuid, menutitle, resourceid, parentid, seq, hide, leaf) values ('men_004',     '账户管理', 'res_004', 'root', 4, 0, 0);
+insert into rv_menus (menuid, menutitle, resourceid, parentid, seq, hide, leaf) values ('men_004_001', '用户管理', 'res_004_001', 'men_004', 1, 0, 1);
+insert into rv_menus (menuid, menutitle, resourceid, parentid, seq, hide, leaf) values ('men_004_002', '修改密码', 'res_004_002', 'men_004', 2, 0,  1);
+insert into rv_menus (menuid, menutitle, resourceid, parentid, seq, hide, leaf) values ('men_005',     '系统管理', 'res_005', 'root', 5, 0, 0);
+insert into rv_menus (menuid, menutitle, resourceid, parentid, seq, hide, leaf) values ('men_005_001', '资源管理', 'res_005_001', 'men_005', 1, 0,  1);
+insert into rv_menus (menuid, menutitle, resourceid, parentid, seq, hide, leaf) values ('men_005_002', '菜单管理', 'res_005_002', 'men_005', 2, 0,  1);

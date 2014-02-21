@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>导航栏组件测试</title>
+<script type="text/javascript" src="/web/component/webpub/core/seajs2/dist/sea-debug.js" 
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/tools/codemirror/src/codehelper.js"></script>
+<style type="text/css">
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<div class="content">
+		<h1>导航栏组件</h1>
+		<ol>
+			<li>
+				<h2>界面</h2>
+				<div data-widget="navigation"></div>
+			</li>
+			<li style="clear: both;">
+				<h2>代码示例</h2>
+				<div>
+					<textarea class="js">
+						<script type="text/javascript">
+							seajs.use('navigation',function(Navigation){
+								var options= {
+									attrs:{},		
+									renderTo:'nav'
+								};
+								
+								var n=new Navigation(options);
+							});
+						</script>
+					</textarea>
+				</div>
+			</li>
+			<li>
+				<h2>数据模型</h2>
+				<div>
+					<textarea class="js">
+					</textarea>
+				</div>
+			</li>
+		</ol>
+	</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+.posdialog{
+	position:absolute;
+}
+
+.posdialog .panel_top {
+	float: left;
+	width: 877px;
+	height: 14px;
+	padding: 11px 18px;
+	display: inline;
+	background: url(../img/bg_panel_add_from_cart.png) 0 0 no-repeat;
+}
+
+.posdialog .panel_title {
+	float: left;
+	line-height: 22px;
+	color: #252525;
+}
+
+.posdialog .panel_content {
+	float: left;
+	width: 913px;
+	padding: 11px 0 13px 0;
+	background: url(../img/bg_panel_add_from_cart_fill.png) repeat-y;
+}
+.posdialog .panel_content .content{
+	width:97%;
+	margin-left:15px;
+	overflow: auto;
+	height: 200px;
+}
+.posdialog .panel_btm {
+	float: left;
+	width: 913px;
+	height: 55px;
+	background: url(../img/bg_panel_add_from_cart.png) 0 -36px no-repeat;
+}
+
+.posdialog .panel_btm .btns {
+	float: right;
+	margin: 9px 35px 0 0;
+	display: inline;
+}
+
+.posdialog .panel_btm .btns .btn_normal_gray {
+	margin-left: 10px;
+	display: inline;
+}
+
+.posdialog .panel_btm .btns .list_clear {
+	font-size: 14px;
+	line-height: 26px;
+	color: #335d7a;
+}
+
+.posdialog .panel_btm .btns .list_clear a {
+	color: #335d7a;
+	text-decoration: none;
+}
+
+.posdialog a.btn_normal_blue,.posdialog a.btn_normal_gray {
+	background: url("../img/buttons.png") no-repeat scroll 0 0 transparent;
+	float: left;
+	text-align: center;
+	text-decoration: none;
+}
+
+.posdialog a.btn_gray {
+	background-position: -339px 0;
+	color: #040404;
+}
+
+.posdialog a.btn_normal_gray {
+	background-position: -768px 0;
+	color: black;
+}
+
+.posdialog a.btn_blue {
+	background-position: -421px 0;
+	color: white;
+}
+
+.posdialog a.btn_normal_blue {
+	background-position: -699px 0;
+	color: white;
+}
+
+.posdialog a.btn_normal_blue,a.btn_normal_gray {
+	height: 26px;
+	line-height: 26px;
+	width: 69px;
+}
+
+.posdialog .rounded_single_bar .bar_content,.rounded_extended_bar .bar_content {
+	border-style: none solid;
+}
+

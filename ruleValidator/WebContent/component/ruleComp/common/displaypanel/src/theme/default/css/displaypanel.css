@@ -1,0 +1,50 @@
+.ui-displaypanel{
+	width: 100%;
+}
+
+.ui-displaypanel-title span{
+	height: 28px;
+	line-height: 28px;
+	padding: 0 10px 0 5px;
+	display: inline;
+	font-size: 15px;
+	font-family: Microsoft YaHei, serif;
+}
+
+.ui-displaypanel-content{
+	padding: 20px 30px 15px;
+	background-color: #F2F3F4;
+	border-radius:7px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border: 1px solid #EDEDED;
+}
+
+.ui-displaypanel .item{
+	float: left;
+	width: 33%;
+	margin-bottom: 10px;
+	text-align: left;
+	height: 21px;
+}
+
+.ui-displaypanel .item label{
+	width: 30%;
+	float: left;
+	text-align: right;
+}
+.ui-displaypanel .item span{
+	width: 70%;
+	float: left;
+	text-align: left;
+}
+
+.ui-displaypanel .noborder{
+	border: 0 none;
+	background: #F2F3F4;
+	color: black;
+}
+
+.hidden{
+	display: none;
+}

@@ -11,3 +11,4 @@ build.xml
 */bin
 */target
 */.settings
+.settings

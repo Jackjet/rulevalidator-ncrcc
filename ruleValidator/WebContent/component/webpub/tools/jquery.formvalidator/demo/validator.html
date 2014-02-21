@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/config.js"></script>
+<title>validate测试</title>
+</head>
+<body class="ui-skin-blue">
+	<div>validate使用</div>
+	<div id="graybar" style="width: 200px;"></div>
+	<script type="text/javascript">
+		seajs.use([ 'jquery',
+				'tools/jquery.formvalidator/src/jquery.validationEngine' ],
+				function($, validationEngine) {
+					var $ = validationEngine($);
+					$(document).ready(function() {
+						$("#form").validationEngine();
+					});
+
+				});
+	</script>
+
+	<form action="" name="" id="form">
+		<input  class="validate[required]" type="text"
+			name="req" id="req" />
+	</form>
+</body>
+</html>

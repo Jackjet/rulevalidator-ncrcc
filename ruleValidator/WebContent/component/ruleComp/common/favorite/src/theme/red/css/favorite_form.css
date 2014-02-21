@@ -1,0 +1,56 @@
+@CHARSET "utf-8";
+
+/* 对话框 */
+.ui-ecp-favorite-form {
+	font-size:12px;
+	width: 100%;
+}
+
+.ui-ecp-favorite-form .field {
+	/* border: blue solid 1px; */
+	float: left;
+	height:30px;
+}
+
+.ui-ecp-favorite-form .field .label {
+	float: left;
+	/* border: red solid 1px; */
+	line-height:20px;
+	margin: 0px 2px;
+	padding-top:3px;
+	text-align:right;
+	width: 80px;
+}
+
+.ui-ecp-favorite-form .field .value {
+	float: left;
+	width: 300px;
+	margin: 0px 2px;
+	/* border: green solid 1px; */
+}
+
+.ui-ecp-favorite-form .field .tags {
+	
+}
+
+.ui-ecp-favorite-form .field .tags a {
+	display: inline-block;
+	line-height: 20px;
+	text-decoration: none;
+	background-color: silver;
+	min-width: 60px;
+	text-align: center;
+	padding: 0 10px 0 20px;
+	margin: 2px 0px;
+	/* background: url("../img/bg_tag.gif") repeat-x; */
+	background-color: #cee1f0;
+	border: 1px solid #9ABBD5;
+}
+
+.ui-ecp-favorite-form .field .tags a:ACTIVE {
+	color: black;
+}
+
+.ui-ecp-favorite-form .field .tags a:VISITED {
+	color: black;
+}

@@ -2,12 +2,16 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Runtime.Publish
 Bundle-SymbolicName: com.yonyou.nc.codevalidator.runtime.publish;singleton:=true
-Bundle-Version: 2.9.0
+Bundle-Version: 3.0.0
 Bundle-Vendor: YONYOU
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Require-Bundle: com.yonyou.nc.codevalidator.sdk.common;bundle-version="1.0.0",
- com.yonyou.nc.codevalidator.resparser-api;bundle-version="1.0.0",
- com.yonyou.nc.codevalidator.rule-api;bundle-version="1.0.0",
- com.yonyou.nc.codevalidator.runtime.core;bundle-version="1.0.0"
 Service-Component: OSGI-INF/DataSourceImpl.xml, OSGI-INF/ClassLoaderUtilsImpl.xml
 Bundle-ActivationPolicy: lazy
+Import-Package: com.yonyou.nc.codevalidator.resparser,
+ com.yonyou.nc.codevalidator.resparser.datasource,
+ com.yonyou.nc.codevalidator.rule,
+ com.yonyou.nc.codevalidator.rule.except,
+ com.yonyou.nc.codevalidator.sdk.datasource,
+ com.yonyou.nc.codevalidator.sdk.project,
+ com.yonyou.nc.codevalidator.sdk.rule,
+ com.yonyou.nc.codevalidator.sdk.utils

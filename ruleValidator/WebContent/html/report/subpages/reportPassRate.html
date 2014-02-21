@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="/ruleValidator/component/webpub/common/echarts/echarts-plain-map.js"></script>
+<script type="text/javascript" 
+	src="/ruleValidator/component/webpub/core/seajs2/dist/sea.js" 
+	data-config="/ruleValidator/html/global.js" 
+	data-main="/ruleValidator/html/main.js"></script>
+</head>
+<body>
+	<div id="form" style="margin-top: 10px;"></div>
+	<br />
+	<div id="main" style="height:500px;border:1px solid #ccc;padding:10px;"></div>
+	<script type="text/javascript">
+		seajs.use(['$',"api", 'form', 'ecppagegrid', "order_orderImport", "request", 'order_store' ],
+			function($, G_API,Form, EcpPageGrid, OrderImport, request, OrderStore) {
+				$(parent.document).find(".module_nav").show();
+				// 改为从localstore中获取 
+// 				var orderCode = OrderStore.getCurrentOrderCode();
+// 				OrderStore.setCurrentOrderCode('');
+// 				orderCode = decodeURI(orderCode || "");
+				var form = new Form({
+					attrs : {
+						id : "orderListGrid",
+						items : [{
+							label : "规则执行记录",
+							name : "recordID",
+							type : "select",
+							options : "CODENAME_RULE_RECORD",
+							required:true
+						} ,{
+							label : "产品",
+							name : "product",
+							type : "select",
+							options : "CODENAME_RULE_PROD"
+						}],
+						buttons : [{
+							text : "统计",
+							id : "submit",
+							handler : function() {
+								var data=new Object();
+								data.recordID=$("select[name=recordID] option:selected").val();
+								$.ajax({
+					 				url: G_API.RULE_PASSRATE,
+					 				type:'POST',
+					 				data:data,
+					 				success:function(data){
+					 					paintChar(data);
+					 				}
+					 			});
+								return false;
+							}
+						}, {
+							text : "重置",
+							type : "reset"
+						} ]
+					},
+					renderTo : 'form'
+				});
+				
+				
+	 			function paintChar(data){
+	 				//--- 折柱 ---
+	 			   	var myChart = echarts.init($('#main')[0]);
+	 				var seriesData=data.seriesData;
+	 				var legendData=new Array();
+	 				var series=new Array() ;
+	 				var i=0;
+	 				for(var name in seriesData){
+	 					legendData[i]=name;
+	 					var item=new Object();
+	 					item.value=seriesData[name];
+	 					item.name=name;
+	 					series[i++]=item;
+	 				}
+	 			    var option = {
+	 			    	title : {
+	 			    		text: data.titleText,
+	 			    	    subtext: data.titleSubText,
+	 			    	    x:'center'
+	 			   		},
+	 			    	tooltip : {
+	 			    		trigger: 'item',
+	 			    	    formatter: "{a} <br/>{b} : {c} ({d}%)"
+	 			    	},
+	 			    	legend: {
+	 			    		orient : 'vertical',
+	 			    	    x : 'left',
+	 			    	    data:legendData
+	 			    	},
+	 			    	toolbox: {
+	 			    		show : true,
+	 			    	    feature : {
+	 			    	    	mark : true,
+	 			    	        dataView : {readOnly: false},
+	 			    	        restore : true,
+	 			    	        saveAsImage : true
+	 			    	    }
+	 			   		},
+	 			    	calculable : true,
+	 			    	series : [{
+	 			    		name:'执行状态',
+	 			    	    type:'pie',
+	 			    	    radius : '55%',
+	 			    	    center: ['50%', 255],
+	 			    	    data:series
+	 			    	}]
+	 			   	};
+	 				myChart.setOption(option);			   
+	 			}
+			});
+	</script>
+</body>
+</html>

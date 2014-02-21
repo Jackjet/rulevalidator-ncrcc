@@ -1,0 +1,85 @@
+.ui-orderplanpanel{
+	width:100%;
+	background: #F4F4F4;
+	font-family: Microsoft YaHei, serif;
+	overflow-y: hidden;
+	font-size: 12px;
+}
+
+.ui-orderplanpanel-content{
+	width: 54%;
+	float: left;
+}
+
+.ui-orderplanpanel-content .item{
+	width: 31%;
+	margin: 13px 1%;
+	float: left;
+}
+
+.ui-orderplanpanel-button{
+	margin-top: 11px;
+	margin-right:12px;
+	float: right;
+}
+.btn_wrap{
+	float: right;
+}
+
+.btn_wrap a{
+    background: url("../img/buttons.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    z-index: 3;
+    cursor: pointer;
+    background-position: -767px 0;
+	height: 26px;
+	width: 70px;
+	line-height: 26px;
+	color: #343434;
+	margin-right: 8px;
+}
+
+.btn_wrap a.blue{
+  	background-position: -699px 0;
+	color: white;
+}
+
+.ui-orderplanpanel-icon{
+	float: left;
+}
+.ui-orderplanpanel-icon a{
+	float: left;
+	width: 20px;
+	height: 19px;
+	margin: 11px 6px 0 20px;
+	display: inline;
+	background: url(../img/icons.png) no-repeat;
+}
+
+.ui-orderplanpanel-icon a.open{
+	background-position: -219px -43px;
+}
+
+.ui-orderplanpanel-icon a.close{
+	background-position: -288px -43px;
+}
+
+.ui-orderplanpanel-content .item label,.ui-orderplanpanel-content .item span{
+	display: inline-block;
+}
+
+.height_40{
+	height: 40px;
+}
+.noborder{
+	border: 0 none;
+	background-color: #F4F4F4;
+	color: black;
+	font-family: Microsoft YaHei, serif;
+	font-size: 12px;
+}
+.deligrid{
+	margin-top:40px;
+}

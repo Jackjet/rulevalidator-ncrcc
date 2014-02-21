@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+
+.ui-refer{
+	width: 98%;
+	margin: 0 1%;
+}
+
+.ui-refer-tree{
+	overflow-y: auto;
+	float: left;
+	border-radius: 8px;
+	border: 3px #9ABBD5 double;
+	margin-left: 1%;
+	height: 360px;
+	padding:0 !important;
+	overflow: auto;
+}
+
+.ui-refer-ecpgrid {
+	float: left;
+	border-radius: 8px;
+	border: 3px #9ABBD5 double;
+	margin-left: 1%;
+	height: 360px;
+	overflow: auto;
+}
+.ui-refer-ecppagegrid {
+	float: left;
+	border-radius: 8px;
+	border: 3px #9ABBD5 double;
+	margin-left: 1%;
+	height: 360px;
+	overflow: auto;
+}
+
+.ui-refer-form{
+	margin-left: 1%;
+}

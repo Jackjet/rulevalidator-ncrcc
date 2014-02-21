@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>订单数据封装</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<script type="text/javascript" src="/ecp/themes/default/scripts/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="/ecp/themes/default/scripts/ArrayUtils.js"></script>
+		<script type="text/javascript" src="/ecp/themes/default/scripts/orderdata.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				// mock
+				var product0 = new Product({id:'product0', price:10});
+				var product1 = new Product({id:'product1', price:20});
+				var product2 = new Product({id:'product2', price:30});
+				var product3 = new Product({id:'product3', price:40});
+				// sum = 20
+				var line0 = new OrderLine({product:product0, num:2});
+				// sum = 60
+				var line1 = new OrderLine({product:product1, num:3});
+				// sum = 300
+				var line2 = new OrderLine({product:product2, num:10});
+				// sum = 200
+				var line3 = new OrderLine({product:product3, num:5});
+
+				// sum = 20 + 60 = 80
+				var address0 = new OrderAddress({lines:[line0, line1]});
+				// sum = 60 + 300 = 360
+				var address1 = new OrderAddress({lines:[line1, line2]});
+				// sum = 20 + 300 = 320
+				var address2 = new OrderAddress({lines:[line0, line2]});
+				// sum = 20 + 200 = 220
+				var address3 = new OrderAddress({lines:[line0, line3]});
+
+				// sum = 80
+				// productIds = product0,product1
+				var order0 = new Order({addresses:[address0]});
+				// sum = 360 + 320 = 680
+				// productIds = prodcut0,product1,product2
+				var order1 = new Order({addresses:[address1, address2]});
+				// sum = 80 + 360 + 320 + 220 = 980
+				// productIds = prodcut0,product1,product2,product3
+				var order2 = new Order({addresses:[address0, address1, address2, address3]});
+				
+				// 80
+				console.log(order0.getSum());
+				// 680
+				console.log(order1.getSum());
+				// 980
+				console.log(order2.getSum());
+
+				// productIds = product0,product1
+				console.log(order0.listProductId());
+				// productIds = prodcut0,product1,product2
+				console.log(order1.listProductId());
+				// productIds = prodcut0,product1,product2,product3
+				console.log(order2.listProductId());
+			})
+		</script>
+	</head>
+	
+	<body>
+	
+	</body>
+
+</html>

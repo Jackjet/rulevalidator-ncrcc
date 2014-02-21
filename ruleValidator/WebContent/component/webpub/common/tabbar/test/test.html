@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TabBar测试</title>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/config.js"></script>
+</head>
+<body>
+	<div id="tab" style="width: 409px;"></div>
+	<script type='text/javascript'>
+		seajs.use([
+				GLOBAL.base
+						+ 'common/tabbar/src/js/tabbar',
+				GLOBAL.base + 'common/grid/src/js/Grid' ],
+				function(TabBar, Grid) {
+					var option = {
+						attrs : {
+							items : [ {
+								title : '采购动向',
+								content :  new Grid(
+										{
+											attrs : {
+												url : 'data1.json',
+												columns : [ {
+													label : "商品名称",
+													key : "name"
+												}, {
+													label : "商品编码",
+													key : "code"
+												}, {
+													label : "商品价格",
+													key : "price"
+												} ]
+											}
+										})
+							}, {
+								title : '政策法规',
+								content : '内容B'
+							}, {
+								title : '其他',
+								content : '内容D'
+							} ],
+							triggerType : 'click',
+							activeIndex : 0,
+							moreurl:"http://www.baidu.com"
+						},
+						renderTo : 'tab',
+						theme : 'default',
+						model : '{}'
+					};
+					var tabbar = new TabBar(option);
+				});
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.ui-creditamount{
+	width:100%;
+}
+.ui-creditamount .ui-creditamoutul{
+	padding-left:20px;
+	margin:0;
+}
+.ui-creditamount .ui-creditamoutsubul{
+	padding:0;
+	margin:0;
+}
+.ui-creditamount .ui-creditamoutli{
+	float:left;
+	line-height: 26px;
+	width:100%;	
+}
+.ui-creditamount .ui-creditamoutsubli{
+	list-style:none;
+	line-height: 14px;
+	color:#A4999E;
+}
+.ui-creditamout-productline{
+	font-weight: bolder;
+	color:#797375;
+}
+.ui-creditamout-balance{
+	float:right;
+}
+.ui-creditamout-curSign{
+	color:#BC313E;
+}
+.ui-creditamout-nbalancemny{
+	color:#8F5C61;
+	padding-right:5px;
+	font-weight: bolder;
+}

@@ -1,0 +1,19 @@
+/*-------------------------------------结构性样式------------*/
+.sidebox_gray {
+	float: left;
+	width: 230px;
+	margin-bottom: 13px;
+	border: 1px solid #d1d1d1;
+	background: #f9f9f9;
+}
+
+.sidebox_gray .box_title {
+	float: left;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-indent: 7px;
+	font-weight: bold;
+	color: #3a3a3a;
+	background: url(../img/bg_box_title_gray.png) repeat-x;
+}

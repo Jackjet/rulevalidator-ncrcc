@@ -1,0 +1,36 @@
+@CHARSET "utf-8";
+
+/* <div class="w_180px J-order-return-total-price-address-collapse">
+	<span class="ui-order-total-price-label">合计金额：</span>
+	<span class="ui-order-price-return-number" scale="2">0</span>
+	<span class="ui-order-price-return-symbol">[退]</span>
+	<span class="ui-order-price-exchange-number" scale="2">0</span>
+	<span class="ui-order-price-exchange-symbol">[换]</span>
+</div> */
+
+/* 价格合计ui */
+
+.ui-order-total-price {
+	font-family: Microsoft YaHei, serif;
+}
+
+
+.ui-order-total-price-label {
+	color:gray;
+}
+
+.ui-order-price-return-number {
+	color:red;
+}
+
+.ui-order-price-return-symbol {
+	color:red;
+}
+
+.ui-order-price-exchange-number {
+	color:chocolate;
+}
+
+.ui-order-price-exchange-symbol {
+	color:chocolate;
+}

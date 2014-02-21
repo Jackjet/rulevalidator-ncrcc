@@ -2,11 +2,13 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Export.Xml
 Bundle-SymbolicName: com.yonyou.nc.codevalidator.export.xml;singleton:=true
-Bundle-Version: 2.9.0
+Bundle-Version: 3.0.0
 Bundle-Vendor: YONYOU
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Require-Bundle: com.yonyou.nc.codevalidator.export,
- com.yonyou.nc.codevalidator.rule-api,
- com.yonyou.nc.codevalidator.sdk.common
 Service-Component: OSGI-INF/XmlRulePersistenceStrategy.xml
 Bundle-ActivationPolicy: lazy
+Import-Package: com.yonyou.nc.codevalidator.export.api,
+ com.yonyou.nc.codevalidator.rule,
+ com.yonyou.nc.codevalidator.rule.except,
+ com.yonyou.nc.codevalidator.sdk.utils,
+ org.apache.commons.io

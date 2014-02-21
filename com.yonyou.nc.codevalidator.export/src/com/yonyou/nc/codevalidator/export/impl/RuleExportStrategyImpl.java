@@ -2,9 +2,12 @@ package com.yonyou.nc.codevalidator.export.impl;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 
@@ -74,6 +77,7 @@ public class RuleExportStrategyImpl implements IRuleExportStrategy {
 				.getTaskExecuteId();
 		String globalExportFilePath = systemRuntimeContext.getGlobalExportFilePath();
 
+		Set<String> filePaths = new HashSet<String>();
 		for (IPortionRulePersistence rulePersistence : portionRulePersistenceMap.values()) {
 			String filePath = rulePersistence.batchExportResult(businessComponent, ruleExecuteResultList,context);
 			String resultFolderName = rulePersistence.getResultFolderName();
@@ -83,6 +87,7 @@ public class RuleExportStrategyImpl implements IRuleExportStrategy {
 						resultFolderName));
 				try {
 					FileUtils.forceMkdir(resultFolder);
+					rulePersistence.resultFolderInitialize(resultFolder);
 					String fileName = filePath.substring(filePath.lastIndexOf("/") + 1);
 					File resultFile = new File(resultFolder, String.format("%s_%s",
 							businessComponent.getDisplayBusiCompName(), fileName));
@@ -94,6 +99,17 @@ public class RuleExportStrategyImpl implements IRuleExportStrategy {
 					Logger.error(String.format("在整合文件，进行复制操作时失败...详情：%s", resultFolder.getAbsolutePath()), e);
 					continue;
 				}
+			}
+			filePaths.add(filePath);
+		}
+		removeAllFilesInExecuteUnit(filePaths);
+	}
+	
+	private void removeAllFilesInExecuteUnit(Collection<String> filePathList) {
+		if(filePathList != null && !filePathList.isEmpty()) {
+			for (String filePath : filePathList) {
+				File file = new File(filePath);
+				file.delete();
 			}
 		}
 	}

@@ -1,0 +1,7 @@
+{
+	"name" : "picturedisplay",
+	"javaclass" : "com.yonyou.ec.webpub.comp.navigation.Navigation",
+	"theme" : "grace",
+	"author":"lixcha",
+	"enable":false
+}

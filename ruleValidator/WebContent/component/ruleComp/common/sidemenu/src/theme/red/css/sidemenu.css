@@ -1,0 +1,117 @@
+.sidemenu{
+	width: 99%;
+	margin-top: 9px;
+	border: 1px solid #f9bbaa;
+	border-radius:6px 6px 0 0; 
+	-moz-border-radius:6px 6px 0 0; 
+	-webkit-border-radius:6px 6px 0 0; 
+}
+.menu_group_title {
+
+	line-height: 20px;
+	padding: 5px 10px;
+	font-weight: bold;
+	color: white;
+	background: #D9592E;
+	border: 1px solid #D9592E;
+	border-radius:5px 5px 0 0; 
+	-moz-border-radius:5px 5px 0 0; 
+	-webkit-border-radius:5px 5px 0 0; 
+}
+
+.menu_group_title .title_icon {
+	float: left;
+	width: 18px;
+	height: 20px;
+	margin-right: 5px;
+	display: inline;
+	background: url(../img/icons.png) no-repeat;
+}
+
+.menu_group_title .title_icon.order {
+	background-position: -46px -132px;
+}
+
+.order_menu {
+	min-height: 300px;
+	border-top: 0;
+	background: #fff4f0;
+}
+
+ul.menu_group {
+	z-index: 2;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul.menu_group li {
+	width: 100%;
+}
+
+ul.menu_group li a {
+	float: left;
+	height: 31px;
+	line-height: 30px;
+	text-indent: 27px;
+	text-decoration: none;
+	color: black;
+	/* background: url(../img/separator_menugroup_list.png) 50% 100%
+		no-repeat; */
+	width: 100%;
+}
+
+ul.menu_group li a:hover {
+	width: 100%;
+	/* background: url(../img/border_dbline_blue.png) 0 100% repeat-x
+		#e7f0f6; */
+	background-color:#FEFEFE;
+}
+
+ul.menu_group li a.active {
+	width: 100%;
+	/* background: url(../img/border_dbline_blue.png) 0 100% repeat-x white; */
+	background-color:#FFF;
+}
+
+ul.menu_group li a span {
+	float: left;
+}
+ul.menu_group li a .active_icon {
+	display: none;
+}
+ul.menu_group li a.active .active_icon {
+	float: left;
+	width: 4px;
+	height: 7px;
+	margin: 11px 0 0 10px;
+	display: inline;
+	background: url(../img/icons.png) -40px -65px no-repeat;
+}
+ul.menu_group li a:hover .menu_bottomline{
+	width: 100%;
+	margin-left: 0px;
+	display: block;
+	border-bottom: 2px solid #F2C0B2;
+}
+ul.menu_group li a.active .menu_bottomline{
+	width: 100%;
+	margin-left: 0px;
+	display: block;
+	border-bottom: 2px solid #F2C0B2;
+}
+.menu_bottomline{
+	width: 80%;
+	margin-left: 20px;
+	display: block;
+	border-bottom: 1px solid #F2C0B2;
+}
+@media only screen and (max-width:800px){
+}
+@media only screen and (max-width:640px){
+	.sidemenu
+	{
+		display: none;
+	}
+}

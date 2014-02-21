@@ -10,8 +10,8 @@ import com.yonyou.nc.codevalidator.rule.vo.RuleItemConfigVO;
  * @since V2.4
  */
 public interface IRuleConfigVOProperty {
-	
-	public static final IRuleConfigVOProperty EXECUTE_LEVEL = new IRuleConfigVOProperty(){
+
+	public static final IRuleConfigVOProperty EXECUTE_LEVEL = new IRuleConfigVOProperty() {
 
 		@Override
 		public String getPropertyValue(RuleItemConfigVO ruleItemConfigVO) {
@@ -22,7 +22,7 @@ public interface IRuleConfigVOProperty {
 		public String getPropertyValue(RuleDefinitionAnnotationVO ruleDefinitionVO) {
 			throw new UnsupportedOperationException();
 		}
-		
+
 	};
 
 	public static final IRuleConfigVOProperty SIMPLE_CLASSNAME = new AbstractRuleConfigVoProperty() {
@@ -99,6 +99,14 @@ public interface IRuleConfigVOProperty {
 		@Override
 		public String getPropertyValue(RuleDefinitionAnnotationVO ruleDefinitonVO) {
 			return ruleDefinitonVO.getMemo();
+		}
+	};
+
+	public static final IRuleConfigVOProperty REPAIR_LEVEL = new AbstractRuleConfigVoProperty() {
+
+		@Override
+		public String getPropertyValue(RuleDefinitionAnnotationVO ruleDefinitionVO) {
+			return ruleDefinitionVO.getRepairLevel().getName();
 		}
 	};
 

@@ -2,7 +2,7 @@
 <feature
       id="com.yonyou.nc.codevalidator.plugin.domain.feature"
       label="Domain.Plugin.Feature"
-      version="2.9.0"
+      version="3.0.0"
       provider-name="YONYOU">
 
    <description url="http://ncrcc.yonyou.com/">

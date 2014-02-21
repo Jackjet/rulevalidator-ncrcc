@@ -1,0 +1,24 @@
+ul.friends_list {
+	float: left;
+	width: 90%;
+	line-height: 24px;
+	margin: 0;
+	padding: 15px 5% 10px 5%;
+	list-style: none;
+}
+
+ul.friends_list li {
+	float: left;
+	width: 100%;
+	text-indent: 15px;
+	background: url(../img/list_img_dot_gray.png) 0 50% no-repeat;
+}
+
+ul.friends_list li a {
+	text-decoration: none;
+	color: #4a4a4a;
+}
+
+ul.friends_list li a:hover {
+	text-decoration: underline;
+}

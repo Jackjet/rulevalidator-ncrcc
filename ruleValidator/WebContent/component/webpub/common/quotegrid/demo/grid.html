@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/config.js"></script>
+<title>extendgrid示例</title>
+</head>
+<body>
+	<div id="grid" style="width: 712px;"></div>
+	<script type="text/javascript">
+		seajs.use('/web/component/webpub/common/quotegrid/src/js/QuoteGrid',
+			function(QuoteGrid) {
+				var quotegrid = new QuoteGrid({
+					attrs : {
+						url : 'data.json'
+					},
+					renderTo : "grid"
+				});
+	});
+	</script>
+</body>
+</html>

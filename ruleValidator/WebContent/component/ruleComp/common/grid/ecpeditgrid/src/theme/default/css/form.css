@@ -1,0 +1,151 @@
+.ui-form{
+	margin-top: 10px;
+}
+
+.ui-form .bar_corner{
+	float: left;
+    height: 5px;
+    overflow: hidden;
+    width: 5px;
+	background: url(../img/rounded_gray_gradient_corner.png) no-repeat;
+}
+
+.ui-form .bar_corner.lt {
+	background-position: 0 0;
+	clear: both;
+}
+
+.ui-form .bar_border {
+	background: url(../img/rounded_gray_gradient_border_ver.png) repeat-x;
+	float: left;
+    height: 5px;
+    overflow: hidden;
+}
+
+.bar_border.top {
+	background-position: 0 0;
+}
+
+.ui-form .bar_corner.rt {
+	background-position: -5px 0;
+}
+
+.ui-form .bar_content {
+	float: left;
+	margin: 0 1px;
+	display: inline;
+	border: 1px solid #b4bbc2;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.ui-form .bar_content.query_form_width {
+	background: url(../img/rounded_lightgray_gradient_bg_fill.png) 0
+		-100px repeat-x white;
+}
+
+.ui-form .bar_content.query_form_width.short {
+	width: 596px;
+}
+
+.ui-form .return_query_form {
+	float: left;
+}
+
+.ui-form .return_query_form.short {
+	margin: 0;
+}
+
+.ui-form .form_content {
+	float: left;
+	width: 590px;
+	overflow-y: hidden;
+	height:100%;
+}
+
+.ui-form .return_query_form .form_filed {
+	float: left;
+	margin-right: 3px;
+	padding: 6px 0;
+	display: inline;
+}
+
+.ui-form .nc-form-label {
+	float: left;
+	width: 80px;
+	margin: 0px 10px;
+	text-align: right;
+}
+
+.ui-form .nc-form-textfield {
+	-moz-border-bottom-colors: none;
+	-moz-border-image: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: #ABADB3 #DBDFE5 #E3E9EF #E2E3EA;
+	border-style: solid;
+	border-width: 1px;
+	display: inline;
+	height: 16px;
+	line-height: 16px;
+	width: 140px;
+}
+
+.ui-form .nc-form-select {
+	width: 144px;
+}
+
+.ui-form .return_query_form .button_filed {
+	float: left;
+	margin-right: 3px;
+	padding: 3px 0 0 0;
+	display: inline;
+}
+
+.ui-form .button_filed .button_wrapper {
+	float: right;
+	margin-right: 20px;
+	display: inline;
+}
+
+
+
+.ui-form .clear{
+	clear: both;
+}
+
+.ui-form .bar_corner.lb {
+	background-position: 0 -5px;
+	clear: both;
+}
+
+.ui-form .bar_corner.rb {
+	background-position: -5px -5px;
+}
+
+.ui-form .bar_border.query_form_width.short {
+	width: 590px;
+}
+
+.ui-form .bar_border.top {
+	background-position: 0 0;
+}
+
+.ui-form .bar_border.btm {
+	background-position: 0 -5px;
+}
+.textfield{
+	border-color: #ABADB3 #DBDFE5 #E3E9EF #E2E3EA;
+    border-style: solid;
+    border-width: 1px;
+    display: inline;
+    height: 16px;
+    line-height: 16px;
+    padding: 2px;
+    width: 130px;
+    text-align: right;
+}
+.ui-form .textfield_long{
+	width:200px;
+}

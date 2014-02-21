@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Persistence.Dao
 Bundle-SymbolicName: com.yonyou.nc.codevalidator.persistence.dao;singleton:=true
-Bundle-Version: 2.9.0
+Bundle-Version: 3.0.0
 Bundle-Activator: com.yonyou.nc.codevalidator.persistence.dao.Activator
 Bundle-Vendor: YONYOU
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -1,0 +1,114 @@
+.ui-ecpgrid{
+	border: 0;
+	width: 100%;
+	line-height: 26px;
+	border-collapse: collapse;
+	font-size:12px;
+}
+
+.ui-ecpgrid thead tr{
+    color: #191919;
+    height: 26px;
+    background:#F1F1F1;
+	background: -moz-linear-gradient(top,#F7F7FE,#DADADB);
+	background: -webkit-linear-gradient(top,#F7F7FE,#DADADB);
+}
+
+
+.ui-ecpgrid thead tr td{
+	border: 1px solid #E0E0E0;
+	text-align: center;
+}
+.ui-ecpgrid  a{
+    color: #35719A;
+    text-decoration: none;
+}
+.ui-ecpgrid tbody td{
+	border: 1px solid #e5e5e5;
+	text-align: center;
+	padding: 0 10px;
+	word-break:break-all;
+	word-wrap:break-word;
+}
+
+.ui-ecpgrid td.left_align{
+	text-align: left;
+}
+
+.ui-ecpgrid td.center_align{
+	text-align: center;
+}
+
+.ui-ecpgrid td.right_align{
+	text-align: right;
+}
+.ui-ecpgrid-status{
+/* 	border: 1px solid #9ABBD5; */
+	color: black;
+	text-align: center;
+ 	margin:5px; 
+}
+
+.ui-ecpgrid-index {
+	width:7%;
+}
+
+/* �۸�ϼ�ui */
+.ui-order-total-price {
+	font-family: Microsoft YaHei, serif;
+}
+
+
+.ui-order-total-price-label {
+	color:gray;
+}
+
+.ui-order-price-return-currency-sign{
+	color:red;
+}
+
+.ui-order-price-exchange-currency-sign {
+	color:chocolate;
+}
+
+.ui-order-price-return-number {
+	color:red;
+}
+
+.ui-order-price-return-symbol {
+	color:red;
+}
+
+.ui-order-price-exchange-number {
+	color:chocolate;
+}
+
+.ui-order-price-exchange-symbol {
+	color:chocolate;
+}
+
+.ui-order-price-currency-sign {
+	color:red;
+}
+
+.ui-order-price-number {
+	color:red;
+}
+.ecpgrid_btn{
+	cursor:pointer;
+}
+@media only screen and (max-width:800px){
+	.ui-ecpgrid  td:nth-child(7),.ui-ecpgrid  th:nth-child(7)
+	.ui-ecpgrid  td:nth-child(8),.ui-ecpgrid  th:nth-child(8)
+	.ui-ecpgrid  td:nth-child(9),.ui-ecpgrid  th:nth-child(9){
+		display: none;
+	}
+}
+@media only screen and (max-width:640px){
+	.ui-ecpgrid  td:nth-child(1),.ui-ecpgrid  th:nth-child(1),
+	.ui-ecpgrid  td:nth-child(4),.ui-ecpgrid  th:nth-child(4),
+	.ui-ecpgrid  td:nth-child(5),.ui-ecpgrid  th:nth-child(5),
+	.ui-ecpgrid  td:nth-child(6),.ui-ecpgrid  th:nth-child(6){
+		display: none;
+	}
+}

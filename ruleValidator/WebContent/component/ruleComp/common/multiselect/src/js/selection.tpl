@@ -1,0 +1,1 @@
+<span class="selected-option" data-attrs-key="{{key}}">{{value}}<a href="#" class="remove hidden" data-attrs-key="{{key}}">x</a></span>

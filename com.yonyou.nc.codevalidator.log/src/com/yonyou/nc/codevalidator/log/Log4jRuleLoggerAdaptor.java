@@ -1,5 +1,6 @@
 package com.yonyou.nc.codevalidator.log;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -46,7 +47,7 @@ public class Log4jRuleLoggerAdaptor implements IRuleLogger {
 					.getProperty(RuleConstants.CURRENT_SERVER_FOLDER);
 			if(!StringUtils.isBlank(currentServerFolder)) {
 				String globalLogFilePath = currentServerFolder + System.getProperty(RuleConstants.GLOBAL_LOG_FILEPATH);
-				properties.setProperty("log4j.appender.logfile.File", globalLogFilePath + "/" + RuleConstants.LOG_FILENAME);
+				properties.setProperty("log4j.appender.logfile.File", globalLogFilePath + File.separator + RuleConstants.LOG_FILENAME);
 				PropertyConfigurator.configure(properties);
 			}
 		} catch (IOException e) {

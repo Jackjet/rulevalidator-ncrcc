@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/config.js"></script>
+
+<title>example测试</title>
+</head>
+<body>
+	<h1>UIExample测试</h1>
+	<br>
+	<div id="example" style="width: 200px; height: 500px;"></div>
+
+	<script type="text/javascript">
+		seajs.use([ 'common/example/src/js/example' ], function(Example) {
+			var example = new Example({
+				//组件的配置信息
+				attrs : {
+					title : 'example组件标题',
+				},
+				renderTo : 'example'//放到哪个div
+			});
+		});
+	</script>
+
+</body>
+</html>

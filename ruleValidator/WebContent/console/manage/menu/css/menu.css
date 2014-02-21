@@ -1,0 +1,179 @@
+@CHARSET "UTF-8";
+
+@MEDIA screen and (min-width: 1024px) {
+	.ui-main-width { /* width: 900px; */
+		
+	}
+}
+
+@MEDIA screen and (max-width: 1024px) {
+	.ui-main-width { /* width: 800px; */
+		
+	}
+}
+
+.ui-main {
+	font-size: 12px;
+	width: 90%;
+	min-width: 600px;
+	min-height: 600px;
+	margin: 10px auto auto auto;
+	min-height: 600px;
+}
+
+.ui-container {
+	min-height: 500px;
+	/* background-color: blue; */
+}
+
+.ui-menu {
+	float: left;
+	/* background-color: red; */
+	width: 30%;
+	height: 500px;
+	border-radius: 8px;
+	border: 1px #9ABBD5 solid;
+}
+
+.ui-menu-tree { /* height:450px; */
+	height: 450px;
+	overflow-y: auto;
+}
+
+.ui-menuitem { /* background-color: yellow; */
+	width: 60%;
+	height: 500px;
+	border-radius: 8px;
+	border: 1px #9ABBD5 solid;
+}
+
+.ui-menuitem-form {
+	border-radius: 6px;
+	/* height:40px; */
+	border: 1px #9ABBD5 dotted;
+}
+
+.ui-menuitem-grid {
+	border-radius: 6px;
+	min-height: 415px;
+	border: 1px #9ABBD5 dotted;
+}
+
+.ui-form-field {
+	padding: 0 5%;
+	height: 20px;
+	padding: 2px 5px;
+	display: inline-block;
+	/* float: left; */
+	width: 300px;
+}
+
+.ui-form-field .label {
+	width: 100px;
+	display: inline-block;
+	text-align: right;
+}
+
+.ui-form-field .textfield {
+	height: 16px;
+}
+
+.ui-form-field .readonly {
+	background-color: lightgrey;
+}
+
+.ui-form-field .button {
+	margin: -1px 0 0 0;
+}
+
+.ui-form-panel {
+	width: 300px;
+	/* height: 200px; */
+	margin: 0 100px;
+}
+
+.ui-hidden {
+	display: none;
+}
+
+.ui-legend-separater {
+	display: inline-block;
+	width: 500px;
+	border-bottom: 1px #9ABBD5 dotted;
+	vertical-align: middle;
+}
+
+.ui-container .ui-button {
+	width: 60px;
+	margin-left: 12px;
+}
+
+.ui-icon-add {
+	background-image: url("../image/add.png") !important;
+}
+
+.ui-searche-title {
+	color: red;
+	font-weight: bold;
+}
+
+.ui-searche-url {
+	color: green;
+	font-weight: bold;
+}
+
+.ui-grid-cell {
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.ui-menu-hide {
+	color: lightgray
+}
+
+.ui-inlineblock {
+	display: inline-block;
+}
+
+.ui-to-long {
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.ui-tree-search {
+	margin: 0;
+	padding: 0 5px 5px 5px;
+}
+
+.ui-label {
+	
+}
+
+.ui-search {
+	height: 16px;
+	width: 70%;
+}
+
+.ui-cleaner {
+	width: 16px;
+	height: 15px;
+	display: inline-block;
+	position: absolute;
+	margin-left: -20px;
+	margin-top: 3px;
+	background: url('../image/icons.png') -201px -45px no-repeat;
+}
+.ui-menuitem-form {
+	border:0px;
+}
+.ui-menuitem-form legend{
+	display:none;
+}

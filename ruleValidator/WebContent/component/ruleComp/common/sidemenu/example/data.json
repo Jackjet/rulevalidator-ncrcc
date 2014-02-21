@@ -1,0 +1,13 @@
+[{
+	"id":"aaa",
+	"name":"渠道报送",
+	"url":"http://www.baidu.com"
+},{
+	"id":"bbb",
+	"name":"期初报送",
+	"url":"http://www.baidu.com"
+},{
+	"id":"ccc",
+	"name":"渠道报送查询",
+	"url":"http://www.baidu.com"
+}]

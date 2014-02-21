@@ -1,0 +1,38 @@
+[
+    {
+        "itemId": "menuItem0",
+        "itemName": "修改密码",
+        "itemUrl": ".",
+        "callback": "test()"
+    },
+    {
+        "itemId": "menuItem1",
+        "itemName": "个人信息维护",
+        "itemUrl": ".",
+        "callback": null
+    },
+    {
+        "itemId": "menuItem2",
+        "itemName": "企业信息变更",
+        "itemUrl": ".",
+        "callback": null
+    },
+    {
+        "itemId": "menuItem3",
+        "itemName": "联系人维护",
+        "itemUrl": ".",
+        "callback": null
+    },
+    {
+        "itemId": "menuItem4",
+        "itemName": "产品价格维护",
+        "itemUrl": ".",
+        "callback": null
+    },
+    {
+        "itemId": "menuItem5",
+        "itemName": "下载中心",
+        "itemUrl": ".",
+        "callback": null
+    }
+]

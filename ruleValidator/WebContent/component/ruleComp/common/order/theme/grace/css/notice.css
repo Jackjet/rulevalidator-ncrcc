@@ -1,0 +1,64 @@
+
+.notice_bar {
+	width:935px;
+	height:36px;
+}
+
+.notice_bar .corner {
+	float: left;
+	width: 5px;
+	height: 5px;
+	overflow:hidden;
+	background: url(../img/notice_corner_org.png) no-repeat;
+}
+.notice_bar .lt {
+	background-position: 0 0;
+}
+.notice_bar .top {
+	float: left;
+	width: 925px;
+	height: 5px;
+	background: url(../img/notice_border_top_org.png) repeat-x;
+}
+.notice_bar .rt {
+	background-position: -5px 0;
+}
+
+.notice_bar .lb {
+	background-position: 0 -5px;
+}
+.notice_bar .bottom {
+	float: left;
+	width: 925px;
+	height: 5px;
+	background: url(../img/notice_border_bottom_org.png) repeat-x;
+}
+.notice_bar .rb {
+	background-position: -5px -5px;
+}
+
+.notice_bar .content {
+	float:left;
+	display:inline;
+	width:935px;
+	overflow-y: hidden;
+	background: url(../img/notice_corner_fill_point.png) repeat ;
+}
+
+.notice_bar .content .text {
+	padding:0px;
+	font-weight: bold;
+	font-size:12px;
+	line-height: 23px;
+	color: white;
+}
+
+
+.notice_bar .warning_icon {
+	float:left;
+	width: 23px;
+	height: 23px;
+	margin-right:5px;
+	background: url(../img/icons.png) -29px -155px no-repeat;
+}
+

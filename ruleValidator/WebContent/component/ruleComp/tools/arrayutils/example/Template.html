@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>模板</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<script type="text/javascript" src="/ecp/themes/default/scripts/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="/ecp/themes/default/scripts/StringUtils.js"></script>
+		<script type="text/javascript" src="/ecp/themes/default/scripts/Template.js"></script>
+		<script type="text/javascript">
+
+		$(function() {
+				var tpl = '<html>' + 
+											'<body>' +
+											'ajsldjflkajsdkfl' +
+											'asdklfas238491jfoasjdfiojawf#@(*&$@#(' +
+											'flkasjdkfljlasdf()*#$)()*%)(*@#)%*@)#' +
+											'lqsdkfj${a}123123${aaaa}asldjfklasjd' +
+											'${b}kdsflkasdj${c}' +
+											'kasdjfkj${d.e.f.g}' +
+											'</body>' +
+										'<html>';
+				var data = {
+						a:'__this is a__',
+						b:'__this is b__',
+						c:'__this is c__',
+						d:{
+							e:{
+								f:{
+									g:'__this is g__'
+								}
+							}
+						}
+				};
+				
+				var template = new Template(tpl);
+				var str = template.apply(data);
+				template.trace();
+				
+			});
+		</script>
+	</head>
+	
+	<body>
+	
+	</body>
+
+</html>

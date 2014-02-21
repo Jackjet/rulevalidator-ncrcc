@@ -11,7 +11,7 @@ import java.util.List;
 public class RuleResultConstants {
 	
 	public static final List<RuleResultColumnVO> RULE_RESULT_COLUMNS = Arrays.asList(
-			new RuleResultColumnVO("状态", 20, IRuleResultVOProperty.RULE_EXECUTE_STATUS),
+			new RuleResultColumnVO("状态", 30, IRuleResultVOProperty.RULE_EXECUTE_STATUS),
 			new RuleResultColumnVO("执行级别", 80, IRuleResultVOProperty.RULE_EXECUTE_LEVEL),
 			new RuleResultColumnVO("规则标识", 120, IRuleResultVOProperty.RULE_IDENTIFIER),
 			new RuleResultColumnVO("执行单元", 150, IRuleResultVOProperty.EXECUTE_UNIT),

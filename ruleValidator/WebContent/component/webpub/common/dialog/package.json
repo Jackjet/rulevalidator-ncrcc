@@ -1,0 +1,7 @@
+{
+    "name":"dropmenu",
+    "javaclass":"com.yonyou.ec.webpub.comp.dropmenu.DropMenu",
+    "theme":["default"],
+    "author":"李晓晨",
+    "enable":false
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.yonyou.nc.codevalidator.plugin.feature_3.0.0.jar" id="com.yonyou.nc.codevalidator.plugin.feature" version="3.0.0">
+      <category name="com.yonyou.nc.codevalidator"/>
+   </feature>
+   <feature url="features/com.yonyou.nc.codevalidator.plugin.domain.feature_3.0.0.jar" id="com.yonyou.nc.codevalidator.plugin.domain.feature" version="3.0.0">
+      <category name="com.yonyou.nc.codevalidator.plugin"/>
+   </feature>
+   <category-def name="com.yonyou.nc.codevalidator" label="NC规则检查插件"/>
+   <category-def name="com.yonyou.nc.codevalidator.plugin" label="NC领域规则集合"/>
+</site>

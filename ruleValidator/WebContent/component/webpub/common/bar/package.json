@@ -1,0 +1,7 @@
+{
+	"name" : "bar",
+	"javaclass" : "com.yonyou.ec.webpub.comp.bar.Bar",
+	"theme" : ["default"],
+	"language":"zh"
+	
+}

@@ -1,0 +1,44 @@
+[{
+	"id":"1001ZF10000000000BMY",
+	"url":null,
+	"children":[{
+		"id":"1001ZF1000000000E4HS",
+		"url":null,
+		"children":[],
+		"vname":"商品分类一",
+		"vcode":"01",
+		"leaf":false
+	},{
+		"id":"1001ZF10000000000BN7",
+		"url":null,
+		"children":[],
+		"vname":"集团子分类2",
+		"vcode":"00102",
+		"leaf":false
+	},{
+		"id":"1001ZF1000000000E4HT",
+		"url":null,
+		"children":[],
+		"vname":"商品分类二",
+		"vcode":"02",
+		"leaf":false
+	},{
+		"id":"1001ZF10000000000BN4",
+		"url":null,
+		"children":[],
+		"vname":"集团子分类1",
+		"vcode":"00101",
+		"leaf":false
+	}],
+	"vname":"集团商品分类1",
+	"vcode":"001",
+	"leaf":false
+},
+{
+	"id":"1001ZF10000000000BN1",
+	"url":null,
+	"children":[],
+	"vname":"集团商品分类2",
+	"vcode":"002",
+	"leaf":false
+}]

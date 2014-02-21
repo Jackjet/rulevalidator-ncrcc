@@ -1,0 +1,7 @@
+
+.ui-cleaner { position: absolute; z-index: 5; float: left; display: none; }
+.ui-cleaner a { float: left; width: 18px; height: 18px; background: url(../img/btn_cleaner.png) no-repeat; }
+.ui-cleaner a:active { background-position: 0 -18px; }
+label.tipinside { float: left; width: 100%; }
+/*label.tipinside input { position: absolute; z-index: 2; }*/
+label.tipinside span.revert { float: left; line-height: 22px; text-indent: 5px; color: #9f9f9f; }

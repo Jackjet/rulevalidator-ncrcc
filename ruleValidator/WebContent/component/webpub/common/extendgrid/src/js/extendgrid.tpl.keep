@@ -1,0 +1,20 @@
+<table class="infolist"  cellspacing="0" cellpadding="0" >
+	<thead>
+		<tr class="row_bg">
+			{{#each attrs.columns}}
+			<td>{{this.label}}</td> 
+			{{/each}}
+		</tr>
+	</thead>
+	<tbody>
+		{{#grid this}}
+			{{this}}
+			
+		{{/grid}}
+	</tbody>
+</table>
+
+
+
+
+

@@ -1,0 +1,100 @@
+.subpage_table { 
+	float: left; 
+	width: 768px;
+	margin-top: 10px; 
+	padding: 0 2px; 
+	display: inline; 
+}
+
+.subpage_table table { 
+	width: 767px; 
+	border: 1px solid #cacaca; 
+	border-bottom: 0; 
+	border-right: 0; 
+}
+
+.subpage_table table thead td, .subpage_table table tbody td {
+    height: 26px; 
+    line-height: 26px; 
+    text-align: center; 
+    border: 1px solid #cacaca; 
+    border-top: 0; 
+    border-left: 0;
+}
+.subpage_table table thead td { 
+	background: url(../img/bg_table_title.png) repeat-x; 
+}
+
+.subpage_table table tbody tr.odd {
+	 background: #efefef; 
+}
+.subpage_table table tbody td { 
+	text-indent: 12px; 
+}
+tr.inner_flow { 
+	display: none; 
+}
+tr.inner_flow td { 
+	width: 768px; 
+	vertical-align: top; 
+	text-indent: 0!important; 
+}
+tr.inner_flow .flow_wrapper { 
+	float: left; width: 763px; 
+}
+
+.ui-flow {
+    float: left; width: 949px; padding: 0 20px; display: inline; border: 1px solid #e0e0e0; border-top: 0; border-bottom: 0;
+    color: #1d1d1d; background: url(../img/bg_flow.png) repeat-x;
+}
+.ui-flow .arrow_up {
+    position: absolute; z-index: 2; float: left; width: 16px; height: 10px; margin: -8px 0 0 198px;
+    background: url(../img/arrow_up.png) no-repeat;
+}
+.ui-flow a { float: left; width: 137px; height: 45px; margin: 4px 0 3px 0; text-decoration: none; text-indent: 0; }
+.ui-flow a span.bg_left { float: left; width: 5px; height: 45px; }
+.ui-flow a:hover span.bg_left { background: url(../img/bg_hover_lft.png) no-repeat; }
+.ui-flow a span.bg_right { float: left; width: 127px; height: 27px; line-height: 27px; padding: 9px 0 9px 5px; display: inline; }
+.ui-flow a:hover span.bg_right { background: url(../img/bg_hover_rit.png) 100% 0 no-repeat; }
+
+.ui-flow a span.bg_right span.icon_no { float: left; width: 25px; height: 26px; background: url(../img/bg_sn.png) no-repeat; }
+.ui-flow a span.bg_right span.icon_no.gray { }
+.ui-flow a span.bg_right span.icon_no.blue { background-position: 0 -52px; }
+.ui-flow a span.bg_right span.icon_no.active { background-position: 0 -78px; }
+.ui-flow a span.bg_right span.icon_no.active.arrow { width: 32px; background-position: 0 -26px; }
+
+.ui-flow a span.bg_right span.icon_no span.number {
+    float: left; width: 10px; height: 16px; margin: 5px 0 5px 8px; display: inline;
+    background: url(../img/icon_flow_no.png) no-repeat;
+}
+.bg_right .icon_no .number.gray.no_1 { background-position: 0 0; }
+.bg_right .icon_no .number.gray.no_2 { background-position: -10px 0; }
+.bg_right .icon_no .number.gray.no_3 { background-position: -20px 0; }
+.bg_right .icon_no .number.gray.no_4 { background-position: -30px 0; }
+.bg_right .icon_no .number.gray.no_5 { background-position: -40px 0; }
+.bg_right .icon_no .number.gray.no_6 { background-position: -50px 0; }
+.bg_right .icon_no .number.gray.no_7 { background-position: -60px 0; }
+.bg_right .icon_no .number.gray.no_8 { background-position: -70px 0; }
+
+.bg_right .icon_no .number.blue.no_1 { background-position: 0 -16px; }
+.bg_right .icon_no .number.blue.no_2 { background-position: -10px -16px; }
+.bg_right .icon_no .number.blue.no_3 { background-position: -20px -16px; }
+.bg_right .icon_no .number.blue.no_4 { background-position: -30px -16px; }
+.bg_right .icon_no .number.blue.no_5 { background-position: -40px -16px; }
+.bg_right .icon_no .number.blue.no_6 { background-position: -50px -16px; }
+.bg_right .icon_no .number.blue.no_7 { background-position: -60px -16px; }
+.bg_right .icon_no .number.blue.no_8 { background-position: -70px -16px; }
+
+.bg_right .icon_no .number.active.no_1 { background-position: 0 -32px; }
+.bg_right .icon_no .number.active.no_2 { background-position: -10px -32px; }
+.bg_right .icon_no .number.active.no_3 { background-position: -20px -32px; }
+.bg_right .icon_no .number.active.no_4 { background-position: -30px -32px; }
+.bg_right .icon_no .number.active.no_5 { background-position: -40px -32px; }
+.bg_right .icon_no .number.active.no_6 { background-position: -50px -32px; }
+.bg_right .icon_no .number.active.no_7 { background-position: -60px -32px; }
+.bg_right .icon_no .number.active.no_8 { background-position: -70px -32px; }
+.flow_name { float: left; height: 27px; line-height: 27px; margin-left: 7px; display: inline; }
+.flow_name.gray { color: #6c6c6c; }
+.flow_name.blue { color: #1d1d1d; }
+.flow_name.active { color: #e67212; font-weight: bold; }
+.flow_name.active.arrow { margin-left: 3px; }

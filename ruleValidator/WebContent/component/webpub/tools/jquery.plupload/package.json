@@ -1,0 +1,16 @@
+{
+  "name": "widget",
+  "version": "1.0.0",
+   "spmConfig":{
+    	"*":{
+    		"idRule":"{{moduleName}}"
+    	}
+    },
+  "dependencies": {
+    "../theme/default/css/jquery.plupload.queue.css": "$"
+  },
+  "root":"ecwebpub",
+  "output": {
+    "js/jquery.plupload.queue.js": "."
+  }
+}

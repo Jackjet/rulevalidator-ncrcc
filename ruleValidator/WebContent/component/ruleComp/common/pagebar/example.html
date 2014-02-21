@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN' 'http://www.w3.org/TR/html4/loose.dtd'>
+<html>
+<head>
+
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<title>ecp栏目组件测试</title>
+<script type='text/javascript'
+	src='/web/component/webpub/core/seajs/src/sea-debug.js'></script>
+<script type='text/javascript' src='/ecp/component/ecp/core/config.js'></script>
+<script type='text/javascript'
+	src='/web/component/webpub/tools/codemirror/src/codehelper.js'></script>
+<style type='text/css'>
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+	<div class='content'>
+		<h1>收藏夹</h1>
+		<ol>
+			<li>
+				<h2>界面</h2>
+				<div id='container' style='float: left; width: 100%'></div>
+				<script type='text/javascript'>
+						seajs.use(['PageToolBar'],
+							function(PageToolBar) {
+								var pageToolBar = new PageToolBar({
+										
+								});
+							}
+						);
+					</script></li>
+		</ol>
+	</div>
+</body>
+</html>

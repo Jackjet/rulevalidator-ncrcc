@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "rv_excute_unit")
+@Table(name = "rv_execute_unit")
 public class ExecuteUnitVO implements Serializable, IEntityIdentifier {
 
 	/**
@@ -53,7 +53,7 @@ public class ExecuteUnitVO implements Serializable, IEntityIdentifier {
 	/**
 	 * нд╪Ч
 	 */
-	@Column(name = "file", length = 20)
+	@Column(name = "related_file", length = 20)
 	private String file;
 
 	public String getUnitId() {

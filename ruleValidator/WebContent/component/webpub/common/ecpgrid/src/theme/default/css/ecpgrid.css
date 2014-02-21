@@ -1,0 +1,44 @@
+.ui-ecpgrid{
+	border: 0;
+	width: 100%;
+	line-height: 26px;
+	border-collapse: collapse;
+}
+
+.ui-ecpgrid thead tr{
+	background: url("../img/bg_cart_table_header.gif") repeat-x scroll 0 0 transparent; 
+	background-color:rgb(201,222,238);
+    border: 1px solid #9ABBD5;
+    color: #191919;
+    height: 26px;
+    padding-left: 10px;
+}
+
+
+.ui-ecpgrid thead tr td{
+	padding-left: 10px;
+	border: 1px solid #9ABBD5;
+	text-align: center;
+}
+.ui-ecpgrid  a{
+    color: #35719A;
+    text-decoration: none;
+}
+.ui-ecpgrid tbody td{
+	border: 1px solid #e5e5e5;
+	padding-left: 10px;
+}
+
+.ui-ecpgrid td.left_align{
+	text-align: left;
+}
+
+.ui-ecpgrid td.center_align{
+	text-align: center;
+}
+
+.ui-ecpgrid td.right_align{
+	text-align: right;
+}
+
+

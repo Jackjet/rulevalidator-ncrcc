@@ -1,0 +1,21 @@
+@CHARSET "utf-8";
+
+
+.ui-credit {
+	
+}
+
+.ui-credit .error-message {
+	padding-left:20px;
+}
+
+.error-message .message{
+	color:red;
+}
+
+.error-message .detail{
+	display:none;
+	padding:10px;
+	background-color:gray;
+	color:black;
+}

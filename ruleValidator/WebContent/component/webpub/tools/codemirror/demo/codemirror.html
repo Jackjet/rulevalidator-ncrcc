@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript"
+	src="/web/component/webpub/core/sea-debug.js"></script>
+<script type="text/javascript">
+	seajs.config({
+		preload : [ 'seajs/plugin-text' ],
+		debug : true,
+		base : 'http://localhost/web/component/webpub/',
+		charset : 'utf-8'
+	});
+	seajs.use("/web/component/webpub/core/jquery", function($) {
+		window.jQuery = window.$ = $;
+	});
+</script>
+
+<title>Bar测试</title>
+</head>
+<body class="ui-skin-red">
+
+	<div style="width: 900px; height: 900px;">
+		<textarea id="code" name="code" readonly="readonly" cols="50" rows="100">
+// Demo code (the actual new parser character stream implementation)
+	seajs.use([ '/web/component/webpub/common/bar/src/js/bar',
+								'/web/component/webpub/common/list/src/js/list' ],
+						function(Bar, List) {
+							var option1 = {
+								attrs : {
+									url : '/web/component/webpub/common/list/test/data.json'
+								}
+							};
+							var list = new List(option1);
+
+							var option2 = {
+								attrs : {
+									classPrefix : "default",
+									title : '查询结果',//头部标题
+									icon : 'query',//"查询"
+									top_tip : true,//头部是否数字提示
+									top_link : true,//头部是否显示"更多"链接
+									top_url : 'http://www.baidu.com',//顶部链接的url,
+									top_tip : false,
+									content : list
+								},
+								renderTo : 'graybar'//放到哪个div
+							};
+							var graybar = new Bar(option2);
+							//测试get方法
+							//alert(graybar.get("icon"));
+							//测试set方法
+							//graybar.set("icon","warn");
+						});
+
+</textarea>
+	</div>
+
+	<script>
+		seajs
+				.use(
+						"/web/component/webpub/tools/codemirror/src/mode/javascript/javascript",
+						function(CodeMirror) {
+							var editor = CodeMirror.fromTextArea(document
+									.getElementById("code"), {
+								lineNumbers : true,
+								matchBrackets : true,
+								theme:"eclipse"
+							});
+						})
+	</script>
+</body>
+</html>

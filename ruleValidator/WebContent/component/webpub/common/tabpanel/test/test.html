@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TabPanel测试</title>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/config.js"></script>
+</head>
+<body class="ui-skin-red">
+	<div id="tab" style="width: 409px;"></div>
+	<script type='text/javascript'>
+		seajs.use([
+				GLOBAL.base
+						+ 'common/tabpanel/src/js/tabpanel',
+				GLOBAL.base + 'common/list/src/js/list' ],
+				function(TabPanel, List) {
+					var option = {
+						attrs : {
+							items : [ {
+								title : '页签A',
+								content : new List({
+									attrs : {
+										url : 'data.json'
+									},
+									renderTo : 'list'
+								})
+							}, {
+								title : '页签B',
+								content : '内容A'
+							}, {
+								title : '页签C',
+								content : new List({
+									attrs : {
+										url : 'data.json'
+									},
+									renderTo : 'list'
+								})
+							}, {
+								title : '页签D',
+								content : '内容A'
+							} ],
+							triggerType : 'click',
+							activeIndex : 0
+						},
+						renderTo : 'tab',
+						theme : 'default',
+						model : '{}'
+					};
+					var tabPanel = new TabPanel(option);
+				});
+	</script>
+</body>
+</html>

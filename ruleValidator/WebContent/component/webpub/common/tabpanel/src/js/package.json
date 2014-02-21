@@ -1,0 +1,7 @@
+{
+	"name":"页签",
+	"javaclass":"com.yonyou.ec.webpub.comp.tabpanel.TabPanelItem",
+	"theme":[],
+	"author":"李晓晨",
+	"enable":false
+}

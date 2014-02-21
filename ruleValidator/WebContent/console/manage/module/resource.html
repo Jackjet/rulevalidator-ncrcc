@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;IE=9" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>资源维护</title>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs2/dist/sea-debug.js"
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<script type="text/javascript">
+	seajs.use([ '$', 'module_manage', 'resource_manage' ], function($, Module, Resource) {
+		$(function() {
+			// 模块
+			var module = Module.create({
+				containerId : 'module-tree'
+			});
+			// 资源
+			var resource = Resource.create({
+				containerId : 'resource-grid'
+			});
+
+		});
+	});
+</script>
+<style>
+h1{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	line-height: 1.1;
+	font-size: 24px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+hr{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0;
+	border-top: 1px solid #eeeeee;
+}
+</style>
+</head>
+<body>
+	<div class="ui-main ui-main-width">
+		<h1>菜单资源管理-资源管理</h1>
+		<hr>
+		<div class="ui-container">
+			<fieldset class="ui-module">
+				<legend style="font-weight: bold; font-size: 14px;">模块视图</legend>
+				<div class="ui-tree-search">
+					<form>
+						<label class="ui-lable">搜索</label>
+						<input class="ui-search" placeholder="请输入资源名称">
+						<a href="#" class="ui-cleaner hidden"></a>
+					</form>
+				</div>
+				<div id="module-tree" class="ui-module-tree"></div>
+				<!-- <input id="current-module-id" type="hidden">
+				<input id="current-module-code" type="hidden"> -->
+			</fieldset>
+			<fieldset class="ui-resource">
+				<legend style="font-weight: bold; font-size: 14px;">资源视图</legend>
+				<div class="">
+					<fieldset class="ui-resource-form">
+						<legend>查询条件</legend>
+						<div id="resource-form">
+							<form id="form" action="">
+								<input id="currentModuleId" type="hidden">
+								<input id="currentModuleCode" type="hidden">
+								<input name="moduleId" type="hidden">
+								<div class="ui-form-field" style="width: 350px;">
+									<label class="label">关键字</label>
+									<input id="keywords" class="textfield J-resource-searcher"
+										type="text" name="keywords" class="ui-form-text"
+										style="width: 200px;" placeholder="请输入资源名称或者URL">
+								</div>
+								<div class="ui-form-field">
+									<button class="ui-button" type="button" title="查询"
+										id="button-query">查询</button>
+									<button class="ui-button" type="button" title="重置"
+										id="button-reset">重置</button>
+								</div>
+							</form>
+						</div>
+					</fieldset>
+					<fieldset class="ui-resource-grid">
+						<legend>
+							<span>
+								<!-- <span>资源列表</span>
+								<span class="ui-legend-separater"></span> -->
+								<button class="ui-button" title="新增" id="button-resource-add">新增</button>
+								<button class="ui-button" title="修改" id="button-resource-update">修改</button>
+								<button class="ui-button" title="删除" id="button-resource-remove">删除</button>
+							</span>
+						</legend>
+						<div id="resource-grid">这里显示资源列表</div>
+					</fieldset>
+				</div>
+			</fieldset>
+		</div>
+	</div>
+</body>
+</html>

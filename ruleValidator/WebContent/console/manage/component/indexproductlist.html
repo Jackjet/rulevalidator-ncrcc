@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;IE=9" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="/web/component/webpub/core/seajs2/dist/sea-debug.js" data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<script type="text/javascript">
+	seajs.use("bootstrap");
+</script>
+<style>
+.backgroundgray{
+	background-color:lightgray;
+}
+tr.hidden{
+	display:table-row !important;
+	visibility: visible !important;
+}
+div.hidden{
+	clear:both;
+	display:block !important;
+	visibility: visible !important;
+}
+.J-indexproductlist .product_list_title  a.hidetab{
+	float:right;
+	color:lightgray;
+	display:block;
+}
+.product_properties_hide,.product_thumb_hide{
+	display:block;
+	padding-left:20px;
+}
+.product_properties_hide label,.product_thumb_hide label{
+	width:80px;
+}
+</style>
+</head>
+<body class="bg_white J-indexproductlist">
+	<h3>商品查询页面</h3>
+	<div id="productlist" class="config_productlist">			
+	</div>
+	<h3>展销商品查询页面</h3>
+	<div id="onsalelist" class="config_onsalelist">
+	</div>
+	<h3>报表中心-统计中心</h3>
+	<div id="report" class="config_report">
+	</div>
+	<h3>报表中心-销售排行查询</h3>
+	<div id="reportlist" class="config_reportlist">
+	</div>
+	<script>
+		seajs.use([ "$", 'ecpproductgrid'],function($,EcpProductGrid){
+			var productGrid = new EcpProductGrid({
+				attrs : {
+					isPagination : true
+				},
+				renderTo : "productlist",
+				autoRender : false
+			});
+			productGrid.after("afterRender",function(){
+				productGrid.bindManagementEvent();
+				productGrid.drawsetting();
+			});
+			var onsalelistGrid = new EcpProductGrid({
+				attrs : {
+					isPagination : true
+				},
+				renderTo : "onsalelist",
+				autoRender : false
+			});
+			onsalelistGrid.after("afterRender",function(){
+				onsalelistGrid.bindManagementEvent();
+				onsalelistGrid.drawsetting();
+			});
+			var reportGrid = new EcpProductGrid({
+				attrs : {
+					isPagination : true
+				},
+				renderTo : "report",
+				autoRender : false
+			});
+			reportGrid.after("afterRender",function(){
+				reportGrid.bindManagementEvent();
+				reportGrid.drawsetting();
+			});
+			var reportlistGrid = new EcpProductGrid({
+				attrs : {
+					isPagination : true
+				},
+				renderTo : "reportlist",
+				autoRender : false
+			});
+			reportlistGrid.after("afterRender",function(){
+				reportlistGrid.bindManagementEvent();
+				reportlistGrid.drawsetting();
+			});
+		});
+	</script>
+</body>
+</html>

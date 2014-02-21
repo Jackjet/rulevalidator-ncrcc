@@ -1,0 +1,8 @@
+{
+	"name" : "ecpbar",
+	"javaclass" : "com.yonyou.ec.webpub.comp.category.Category",
+	"theme" : "default",
+	"author":"孟志昂",
+	"enable":false
+}
+

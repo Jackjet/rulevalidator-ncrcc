@@ -1,0 +1,50 @@
+.ui-product-searcher-field {
+	
+}
+
+
+.ui-product-searcher-field .ui-searcher {
+	color: #666666;
+	float: left;
+	text-align: left;
+	width: 193px;
+}
+
+.ui-product-searcher-field .ui-amout {
+	display: inline;
+	float: left;
+	margin: 0 5px;
+	width: 75px;
+}
+
+.ui-product-searcher-field .ui-button-add {
+	background: url("../img/icons.png") no-repeat scroll -130px -43px
+		transparent;
+	display: inline;
+	height: 20px;
+	margin: 1px 12px 1px 0;
+	width: 20px;
+	float: left;
+}
+
+.ui-product-searcher-field .ui-button-add:hover {
+	background-position: -154px -43px;
+}
+
+.ui-product-searcher-field .ui-button-add:active {
+	background-position: -178px -43px;
+}
+
+.clear {
+	clear: both;
+}
+
+.textfiled {
+	border-color: #ABADB3 #DBDFE5 #E3E9EF #E2E3EA;
+	border-style: solid;
+	border-width: 1px;
+	display: inline;
+	height: 16px;
+	line-height: 16px;
+	padding: 2px;
+}

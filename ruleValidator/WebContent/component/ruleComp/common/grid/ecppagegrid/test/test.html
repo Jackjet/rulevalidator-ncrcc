@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript" src="/ecp/component/ecp/core/config.js"></script>
+<title>EcpBar测试</title>
+</head>
+<body >
+	<h2> 继承webpub的bar，覆写css样式</h2>
+	<div id="graybar" style="width: 200px;"></div>
+	<div id="bar" style="width: 200px;"></div>
+	<script type="text/javascript">
+		seajs.use([ GLOBAL.base+'common/ecpbar/src/js/ecpbar' ],
+				function(EcpBar) {
+					var option2 = {
+						attrs : {
+							classPrefix : "default",
+							title : '查询结果',//头部标题
+							icon : 'query',//"查询"
+							top_tip : true,//头部是否数字提示
+							top_link : true,//头部是否显示"更多"链接
+							top_url : 'http://www.baidu.com',//顶部链接的url,
+							top_tip : false
+						},
+						renderTo : 'graybar'//放到哪个div
+					};
+					var graybar = new EcpBar(option2);
+				});
+	</script>
+<pre>
+	<code>
+		var GLOBAL = {
+			base : "http://localhost/ecp/component/",
+			pbase:"http://localhost/web/component/webpub/"
+		};
+		window.GLOBAL = window.G = GLOBAL;
+		seajs.config({
+			preload : [ 'seajs/plugin-text' ],
+			base:"http://localhost/web/component/webpub/",
+			debug : true,
+			charset : 'utf-8'
+		});
+		seajs.use(GLOBAL.pbase+"/core/jquery", function($) {
+			window.jQuery = window.$ = $;
+		});
+	</code>
+</pre>
+</body>
+</html>

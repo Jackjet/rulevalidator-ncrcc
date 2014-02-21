@@ -1,0 +1,52 @@
+.search_bar {
+	float: left;
+	height: 29px;
+	font-family: "宋体",SimSun,serif;
+    font-size: 12px;
+    margin-left:10px;
+}
+
+.search_bar label {
+	float: left;
+	height: 29px;
+	padding-left: 12px;
+	display: inline;
+}
+
+.search_bar label input {
+	float: left;
+	height: 19px;
+	line-height: 19px;
+	margin-top: 6px;
+	border: 0;
+}
+.search_bar input {
+  width: 400px;
+}
+.search_bar label.input_blur {
+	background: url(../img/search_bar_bg.png) 0 0 no-repeat;
+}
+
+.search_bar label.input_hover {
+	background: url(../img/search_bar_bg.png) 0 -30px no-repeat;
+}
+
+.search_bar label.input_focus {
+	background: url(../img/search_bar_bg.png) 0 -60px no-repeat;
+}
+
+.search_bar label input.focus {
+	color: #2b2b2b;
+}
+
+.search_bar label input.blur {
+	color: #bababa;
+}
+
+.search_bar label input:focus {
+	outline: none;
+}
+
+.hidden{
+	display: none;
+}

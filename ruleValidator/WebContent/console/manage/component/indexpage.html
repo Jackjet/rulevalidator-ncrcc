@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>NC规则校验系统－系统管理</title>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs2/dist/sea-debug.js"
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style>
+.top_banner_left {
+	background-position: -20px 0;
+}
+body .layout_content {
+	width: 100%;
+}
+
+.floatmodal{
+ width:100%;
+ height:132px;
+ position:absolute;
+ top:0;
+ z-index:999;
+}
+.account_func .management{
+	display:none;
+}
+.J-portlet-dragable .loading{
+	background:#fff;
+}
+/* .J-portlet-dragable .ui-portlet-noborder .ui-portlet{
+	border:solid 1px #B5B7BA;
+}
+.J-portlet-dragable .ui-portlet-noborder .ui-portlet-top,.J-portlet-dragable .ui-portlet-noborder .ui-portlet-bottom{
+	display:block;
+}
+.J-portlet-dragable .ui-portlet-noborder .ui-portlet-content{
+	margin:0 5px 5px 5px;
+} */
+</style>
+</head>
+<body class="J-portlet-dragable">
+	<div data-widget="top"></div>
+	<div class="layout_content">
+		<div data-widget="banner"></div>
+		<!--搜索栏及购物车-->
+		<div class="top_bar">
+			<!--商品分类-->
+			<div data-widget="category" data-attrs-iscollapse="true"></div>
+			<!--搜索框-->
+			<div data-widget="search"></div>
+			<!--购物车按钮-->
+			<div data-widget="shopcart"></div>
+		</div>
+		<!--右侧浮动布局\组件编辑栏-->
+		<div id="construct" data-widget="construct"></div>
+	</div>
+	<div data-widget="footer"></div>
+	<div class="floatmodal"></div>
+</body>
+</html>

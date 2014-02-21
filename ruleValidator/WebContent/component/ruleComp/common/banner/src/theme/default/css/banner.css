@@ -1,0 +1,126 @@
+.top_banner {
+	position: relative;/*淇敼logo鏇撮�鍚堜慨鏀�*/
+}
+@media print{
+	.top_banner {
+		display: none;
+	}
+}
+.top_banner .banner_logo{
+	/*background: url("../img/logo_default.png") no-repeat ;
+	width:256px;
+	height:40px;
+	float:left;
+	margin-top:20px;*/
+	background: url("../img/logo_default.png") no-repeat;
+	width: 320px;
+	height: 64px;
+	position: absolute;
+	float: left;
+	top: 20px;
+	left: 0px;
+}
+.top_banner .banner_right {
+  float: right;
+  height: 84px;
+  width: 73%;
+}
+.top_banner .banner_right .banner_top {
+  color: white;
+  float: left;
+  vertical-align: bottom;
+  width: 100%;
+}
+.hotline {
+  float: left;
+  font-size: 14px;
+  font-style: italic;
+  margin: 19px 0 0 60px;
+}
+.hotline span {
+  line-height: 20px;
+}
+.onlineservice{
+	margin-left:20px;
+	height: 20px;
+	display: none;
+}
+.onlineservice a{
+	text-decoration: none;
+	color: white;
+	vertical-align: top;
+	margin-left: 5px;
+}
+.onlineservice_logo{
+	background: url("../img/onlineservice.png") no-repeat scroll 0 0 transparent;
+	height: 20px;
+	width: 18px;
+	display: inline-block;
+}
+.font_arial {
+  font-family: Arial,serif;
+}
+.floatleft {
+  float: left;
+}
+.account_func {
+  color: #ffffff;
+  float: right;
+  height: 23px;
+  margin: 10px 12px 0 0;
+}
+.account_func div {
+  display: inline;
+  float: left;
+  height: 23px;
+  line-height: 18px;
+  margin-left: 10px;
+  padding: 3px 0 2px 7px;
+}
+.account_func div.separator {
+  background: url("../img/separator_blue.png") no-repeat scroll left top transparent;
+}
+.account_func a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.account_icon.username {
+  background-position: -2px -44px;
+}
+.account_icon.signout {
+  background-position: -22px -44px;
+}
+.account_icon {
+  background: url("../img/icons.png") no-repeat scroll 0 0 transparent;
+  float: left;
+  height: 18px;
+  width: 18px;
+}
+.mrg_l5px {
+  display: inline;
+  margin-left: 5px;
+}
+.icon_help {
+  background-image: url("../img/help.png");
+  float: left;
+  height: 18px;
+  width: 18px;
+}
+
+.favorite_icon {
+	float: left;
+	height: 18px;
+	width: 18px;
+	background: url("../img/favorite-button.png") no-repeat scroll 0 0 transparent;
+}
+.clear{
+	clear: both;
+}
+@media only screen and (max-width:800px){
+}
+@media only screen and (max-width:640px){
+	.top_banner
+	{
+		display: none;
+	}
+}

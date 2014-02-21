@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>search测试</title>
+<script type="text/javascript" src="/web/component/webpub/core/seajs2/dist/sea.js" data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		seajs.use("BigDecimal", function(big) {
+			var BigDecimal = big.BigDecimal;
+			var MathContext = big.MathContext;
+			var nc_before = "";
+			var nc_after = "";
+			for ( var i = 1; i < 20; i++) {
+				nc_before += "9";
+				if (i < 9) {
+					nc_after += "9"
+				}
+				var value = nc_before + "." + nc_after;
+				var s = new BigDecimal(value).setScale(i,
+						MathContext.ROUND_HALF_UP);
+				document.write(i + "位：" + value + "=" + s + "<br>");
+			}
+			
+			var before = "";
+			var after = "";
+			for ( var i = 1; i < 20; i++) {
+				before += "9";
+				if (i < 9) {
+					after += "9"
+				}
+				var value = before + "." + after;
+				var s = parseFloat(value).toFixed(i);
+				document.write(i + "位：" + value + "=" + s + "<br>");
+			}
+		})
+	</script>
+</body>
+</html>
+
+
+
+
+
+

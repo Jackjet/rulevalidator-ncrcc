@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>button</title>
+<script type="text/javascript" src="/web/component/webpub/core/seajs2/dist/sea-debug.js" 
+	data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+</head>
+<body>
+	<div id="top"></div>
+	<script type="text/javascript">
+		seajs.use("extendpanel",function(ExtendPanel){
+			var extendPanel=new ExtendPanel({
+				attrs:{
+					url:G.API.ORDERPLAN_QRYHEAD,
+					buttons:[{
+						name:"询价"
+					},{
+						name:"保存"
+					},{
+						name:"报送确认"
+					},{
+						name:"关闭"
+					}]
+				},
+				renderTo:"top"
+			});
+		});
+	</script>
+</body>
+</html>

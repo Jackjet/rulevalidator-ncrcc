@@ -1,0 +1,203 @@
+.ui-button{
+	font-size:12px;
+}
+
+.ui-button a{
+  background: url("../img/buttons.png") no-repeat scroll 0 0 transparent;
+    display: inline;
+    float: left;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    z-index: 3;
+    cursor: pointer;
+}
+.ui-button a.normal{
+	background-position: -340px 0;
+	height: 30px;
+	width: 80px;
+	line-height: 30px;
+	color: #343434;
+}
+
+.ui-button a.blue{
+	background-position: -699px 0;
+	height: 26px;
+	width: 70px;
+	line-height: 26px;
+	color: white;
+}
+/**************dialog**************/
+/*通用按钮*/
+a.btn_blue,a.btn_gray,a.btn_normal_blue,a.btn_normal_gray,a.btn_gray_long
+{
+	float: left;
+	text-align: center;
+	text-decoration: none;
+	background: url(../img/buttons.png) no-repeat;
+}
+/* 蓝色，灰色大按钮 */
+a.btn_blue,a.btn_gray {
+	width: 82px;
+	height: 29px;
+	line-height: 29px;
+	color: white;
+}
+a.btn_gray_long{
+	background-position: -837px 0;
+    color: #2A2A2A;
+    height: 24px;
+    line-height: 24px;
+    width: 102px;
+}
+a.btn_normal_blue {
+    background-position: -699px 0;
+    color: #FFFFFF;
+}
+/* 蓝色，灰色小按钮 */
+a.btn_normal_blue, a.btn_normal_gray {
+  height: 26px;
+  line-height: 26px;
+  width: 69px;
+}
+/*蓝色大按钮*/
+a.btn_blue {
+	color: white;
+	background-position: -421px 0;
+}
+a.btn_blue:active {
+	background-position: -421px -29px;
+}
+/*灰色大按钮*/
+a.btn_gray {
+	color: #040404;
+	background-position: -339px 0;
+}
+a.btn_gray:active {
+	background-position: -339px -29px;
+}
+/* 灰色小按钮*/
+a.btn_normal_gray{
+	color: black;
+	background-position: -768px 0;
+}
+a.btn_normal_gray:hover {
+	background-position: -768px -26px;
+}
+/**************dialog**************/
+/**************search**************/
+a.search_btn {
+	position: absolute;
+	z-index: 2;
+	float: left;
+	width: 45px;
+	height: 29px;
+	margin-left: -110px;
+	background: url(../img/buttons.png) -188px 0 no-repeat;
+}
+
+a.search_btn:hover {
+	background-position: -188px -29px;
+}
+
+a.search_btn:active {
+	background-position: -188px -58px;
+}
+
+a.search_btn_advance {
+	float: left;
+	width: 80px;
+	height: 29px;
+	line-height: 29px;
+	padding-right: 11px;
+	text-align: right;
+	text-decoration: none;
+	color: #636363;
+	background: url(../img/buttons.png) -97px 0 no-repeat;
+}
+a.search_btn_advance:hover {
+	background-position: -97px -29px;
+}
+
+a.search_btn_advance:active {
+	background-position: -97px -58px;
+}
+/**************search**************/
+/**************shopcart**************/
+.cart_checkout a.cart_amount,.cart_checkout a.checkout {
+	background: url("../img/buttons.png") no-repeat scroll 0 0 transparent;
+	float: left;
+	height: 33px;
+	text-align: center;
+	text-decoration: none;
+	color:#3D3D3D;
+}
+.cart_checkout a.cart_amount {
+	background-position: -503px 0;
+	width: 102px;
+}
+.cart_checkout a.cart_amount:hover,a.cart_amount.shown {
+	background-position: -503px -33px;
+	color:#91969B;
+}
+.cart_checkout a.checkout {
+	background-position: -604px 0;
+	width: 94px;
+	color: #3D3D3D;
+}
+.cart_checkout a.checkout:hover {
+	background-position: -604px -33px;
+	color: #91969B;
+}
+/**************shopcart**************/
+/**************ecpeditgrid form**************/
+.button_wrapper a {
+	float: left;
+	width: 69px;
+	height: 26px;
+	line-height: 26px;
+	margin-left: 10px;
+	display: inline;
+	text-align: center;
+	text-decoration: none;
+	background: url(../img/buttons.png) no-repeat;
+}
+.button_wrapper a.button_main {
+	color: white;
+	background-position: -699px 0;
+}
+
+.button_wrapper a.button_main:hover {
+	background-position: -699px -26px;
+}
+
+.button_wrapper a.button_main:active {
+	background-position: -699px -52px;
+}
+/**************ecpeditgrid form**************/
+/**************signonform**************/
+a.signon_button, .signon_btn_animated {
+  color: white;
+  float: left;
+  font-size: 16px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  text-decoration: none;
+  width: 97px;
+}
+a.signon_button {
+  background: url("../img/buttons.png") no-repeat scroll 0 0px transparent;
+  cursor: pointer;
+}
+.signon_btn_animated {
+  background: url("../img/animated_btn.gif") no-repeat scroll 0 0 transparent;
+}
+.signon_button_wrapper .btn_inverse {
+  background: url("../img/buttons.png") no-repeat scroll 0 100% transparent;
+  float: left;
+  height: 18px;
+  margin-top: 1px;
+  width: 97px;
+}
+/**************signonform**************/

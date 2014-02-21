@@ -1,0 +1,13 @@
+[ {
+	name : 'menu-0',
+	iconCls : 'ui-icon-add',
+	handler : function() {
+		console.log('menu-0');
+	}
+}, {
+	name : 'menu-1',
+	iconCls : 'ui-icon-delete',
+	handler : function() {
+		console.log('menu-0');
+	}
+} ]

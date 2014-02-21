@@ -1,0 +1,159 @@
+body {
+  font-family: "宋体",SimSun,serif;
+  font-size: 12px;
+}
+.slideshow {
+	position: relative;
+	z-index: 1;
+	width: 614px;
+	height: 320px;
+	overflow: hidden;
+}
+
+/* 
+	幻灯片图片布局
+	左居中
+	可容纳9张图片
+*/
+.slideshow_pics {
+	float: left;
+	/* 默认宽度，实际使用中会重新计算 */
+	/* width: 5526px; */
+	height: 230px;
+}
+
+/*
+	幻灯片图片外部为锚点
+*/
+.slideshow_pics a {
+	float: left;
+	width: 614px;
+	height: 230px;
+}
+
+/*
+
+	幻灯片锚点内部的图片
+	不要边框
+*/
+.slideshow_pics a img {
+	border: 0;
+	position: relative;
+}
+
+/* 
+	翻页区 
+*/
+.slideshow_thumbs {
+	float: left;
+	width: 614px;
+	height: 87px;
+	margin-top: 3px;
+	overflow-x: hidden;
+}
+
+/*
+	前一页、下一页按钮
+*/
+.slideshow_thumbs a.pic_prev,.slideshow_thumbs a.pic_next {
+	position: absolute;
+	z-index: 5;
+	float: left;
+	width: 16px;
+	height: 32px;
+	margin-top: 29px;
+	background: url(../img/icons.png) no-repeat;
+}
+
+/*
+	前一页按钮图片
+*/
+.slideshow_thumbs a.pic_prev {
+	background-position: -65px -96px;
+}
+/*
+	下一页按钮图片
+*/
+.slideshow_thumbs a.pic_next {
+	margin-left: 134px;
+	background-position: -81px -96px;
+}
+
+/*
+	翻页容器
+	
+*/
+.slideshow_thumbs .thumbs_container {
+	float: left;
+	/* 会根据实际数据个数重新计算 */
+	/* width: 1078px; */
+	height: 87px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+	缩略图容器
+*/
+.slideshow_thumbs .thumbs_container .container_item {
+	position: relative;
+	float: left;
+	width: 150px;
+	height: 87px;
+	margin-right: 4px;
+	display: inline;
+	overflow: hidden;
+}
+.container_item .icon_arrow_up {
+	float: left;
+	width: 13px;
+	height: 7px;
+	/* (150 / 2) - (13 / 2) */
+	margin-left: 68px;
+	display: inline;
+}
+
+.container_item .icon_arrow_up.thumb_active {
+	background: url(../img/icons.png) -46px -65px no-repeat;
+}
+
+/* 
+	按钮描述遮罩 
+*/
+.container_item a.desc_mask {
+	position: absolute;
+	z-index: 2;
+	float: left;
+	width: 140px;
+	height: 50px;
+	margin-top: 35px;
+	padding: 30px 5px 0 5px;
+	display: inline;
+	text-decoration: none;
+	text-align: left;
+	overflow-y: hidden;
+	color: white;
+	background: url(../img/bg_slideshow_thumb_mask.png) 50% 100%
+		no-repeat;
+}
+
+.container_item a.desc_mask span {
+	float: left;
+	width: 100%;
+	line-height: 20px;
+	margin: 0;
+	font-weight: bold;
+}
+
+.container_item a.desc_mask.recover {
+	margin-top: 35px;
+}
+a.desc_mask.over_up {
+	margin-top: 7px;
+}
+
+.container_item img {
+	position:relative;
+	border: 0;
+}

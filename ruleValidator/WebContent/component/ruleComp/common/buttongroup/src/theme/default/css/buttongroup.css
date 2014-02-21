@@ -1,0 +1,84 @@
+
+/* .subpage_navi {
+  border-top: 1px solid #EBEBEB;
+  color: #787878;
+  display: inline;
+  float: left;
+  height: 40px;
+  line-height: 30px;
+  margin-left: 4px;
+  padding-left: 2px;
+  width: 100%;
+}
+ */
+.ui-buttongroup{
+	font-size:12px;
+}
+.btn_wrapper {
+  float: right;
+  width: 106px;
+}
+.btn_add_order {
+  background: url("../img/buttons.png") no-repeat scroll -234px 0 transparent;
+  color: #343434;
+  display: inline;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  position: absolute;
+  text-decoration: none;
+  width: 80px;
+  z-index: 3;
+  text-align: center;
+}
+.mrg_-t12px {
+  margin-top: -12px;
+}
+.btn_add_select, .btn_add_select_excel {
+  background: url("../img/buttons.png") no-repeat scroll -312px 0 transparent;
+  color: #343434;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 87px;
+  position: absolute;
+  text-decoration: none;
+  width: 28px;
+  z-index: 3;
+}
+.btn_menu {
+  float: left;
+  position: absolute;
+  width: 106px;
+  z-index: 2;
+}
+.btn_menu .menu_border.top {
+  background-position: 0 0;
+  height: 6px;
+}
+.btn_menu .menu_border {
+  background: url("../img/button_menu_border.png") no-repeat scroll 0 0 transparent;
+  float: left;
+  width: 106px;
+}
+.btn_menu .menu_list {
+  background: url("../img/button_menu_fill.png") repeat-y scroll 0 0 transparent;
+  float: left;
+  line-height: 20px;
+  width: 106px;
+}
+.btn_menu .menu_list .menu_item_single {
+  color: #323232;
+  display: inline;
+  float: left;
+  margin-left: 2px;
+  padding-left: 24px;
+  text-decoration: none;
+  width: 77px;
+}
+.btn_menu .menu_border.btm {
+  background-position: 0 100%;
+  height: 7px;
+}
+ 

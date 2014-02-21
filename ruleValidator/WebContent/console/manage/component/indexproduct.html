@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<meta http-equiv="X-UA-Compatible" content="IE=7;IE=8;IE=9" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="/web/component/webpub/core/seajs2/dist/sea-debug.js" data-config="/ecp/html/global.js" data-main="/ecp/html/main.js"></script>
+<script type="text/javascript">
+	seajs.use(["product_product","bootstrap"]);
+</script>
+<style>
+	.page_config .product_picturedisplay{
+		display:none;
+	}
+	.page_config .purchase_box{
+		display:none;
+	}
+	.page_config .product_detail_desc_box{
+		margin-left:20px;
+	}
+	.page_config .product_detail_title{
+		height:5px;
+	}
+	.clear{
+		clear:both;
+	}
+	.modaldiv{
+		position: absolute;
+		width: 100%;
+		margin-top: 27px;
+		height: 30px;
+		background-color: #fff;
+	}
+	.page_config .product_detail_desc_box{
+		float:left;
+	}
+	h3{
+		float:left;
+	}
+	.btn{
+		float:right;
+		margin-top:15px;
+	}
+	.subpage_content hr{
+		margin:0px;
+	}
+	.subpage_content{
+		width:100% !important;
+	}
+</style>
+</head>
+<body class="bg_white page_config">
+	<div class="floatrelated">
+		<div class="page_content">
+			<div class="floatcenter idContentPosi">
+				<div class="w_1024px bg_gray_shadow_wide idPageContainer">
+					<div class="floatcenter home_doc_width">
+						<div class="subpage_content">
+							<h3>商品描述：属性设置</h3>
+							<button id="propdefault" class="btn btn-info" type="button">
+							<span class="glyphicon glyphicon-remove"></span> 默认</button>
+							<div class="clear"></div>
+							<div data-widget="productdesc"></div>
+							<div class="product_picturedisplay" data-widget="picturedisplay"></div>
+							<div class="clear"></div>
+							<h3>商品描述：Tab页签设置</h3>
+							<button id="tabdefault" class="btn btn-info" type="button">
+							<span class="glyphicon glyphicon-remove"></span> 默认</button>
+							<div class="clear"></div>
+							<hr></hr>
+							<div class="product_tab" id="tab"></div>
+							<div class="modaldiv"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

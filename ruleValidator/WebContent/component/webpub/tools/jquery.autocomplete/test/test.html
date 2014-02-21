@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/sea-debug.js"></script>
+<script type="text/javascript"
+	src="/web/component/webpub/core/seajs/src/config.js"></script>
+<link rel="stylesheet"
+	href="../src/theme/default/css/jquery.autocomplete.css"
+	type="text/css" media="screen" />
+</head>
+<body>
+	<input type="text" id="advanceSearch">
+	<div id="productName"></div>
+	<script type="text/javascript">
+		seajs.use(['jquery','tools/search/src/js/jquery.autocomplete'],function($,autocomplete){
+			var $ = autocomplete($);
+			$('#advanceSearch').autocomplete(G.API.PRODUCT_AUTOFILL, {
+				max: 10,
+				minChars: 1,
+				width: 435,
+				scrollHeight: 300,
+				matchContains: true,
+				autoFill: false,
+					 
+				formatItem: function(row, i, max) {
+					return row.name +"/"+ row.to ;
+				},
+				formatMatch: function(row, i, max) {
+					return row.name + row.to;
+				},
+				formatResult: function(row) {
+					return row.to;
+				},
+				parse: function(data) {
+					return $.map(eval(data), function(row) {
+						return {
+							data: row,
+							value: row.name,
+							result: row.name
+						}
+					});
+				}		 
+			}).result(function(event, row, formatted) {
+				$("#productName").attr("value",row.name);
+		 	});
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+

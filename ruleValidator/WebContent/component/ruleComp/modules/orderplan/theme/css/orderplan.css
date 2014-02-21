@@ -1,0 +1,90 @@
+.orderplan_button{
+	position: absolute;
+	top: 170px;
+	right: 280px;
+}
+
+.buttons{
+	float: right;
+	width: 1060px;
+	margin: 0 auto;
+}
+
+
+.handfillarea{
+	float: right;
+	margin-right: 90px;
+	margin-top: 30px;
+}
+
+.commonarea{
+	float: right;
+	margin-right: 200px;
+	margin-top: 30px;
+}
+.hidden{
+	display: none !important;
+}
+
+.handoperate{
+	text-decoration: none;
+	color: #35719A;
+	display: block;
+	margin-top: 10px;
+}
+
+.clear{
+	clear: both;
+}
+
+.orderplanpanel{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 650;
+}
+.execgrid{
+	border: 0;
+	width: 100%;
+	line-height: 26px;
+	border-collapse: collapse;
+	font-size:12px;
+}
+.execgrid thead{
+	z-index: 100;
+}
+.execgrid thead tr{
+	background-color: #F1F1F1;
+  	background: -moz-linear-gradient(top,#F7F7FE,#DADADB);
+  	background: -webkit-linear-gradient(top,#F7F7FE,#DADADB);
+    border: 1px solid #9ABBD5;
+    color: #191919;
+    height: 26px;
+}
+.execgrid td{
+	text-align: center;
+	width: 100px;
+}
+.execgrid thead td{
+	border: 1px solid #D1D1D1;
+}
+.execgrid tbody td{
+	border: 1px solid #e5e5e5;
+}
+
+.form{
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+.exec-total{
+	background: rgb(201,222,238);
+}
+
+.hidden{
+	display: none;
+}
+/*保证始终出现垂直滚动条*/
+.deligrid{
+	min-height: 800px;
+}

@@ -1,0 +1,37 @@
+.autoInput{
+	float:left;
+	text-indent: 15px;
+	margin-top: 2px;
+}
+.loadBtn{
+	float: left;
+	margin-top: 2px;
+	width: 20px;
+	height: 19px;
+	background-color: #F3F2F2;
+	border: solid 1px #D4D0C8;
+	border-top: solid 1px #404040;
+	cursor: pointer;
+	border-left: solid 1px #404040;
+}
+.addPic{
+	background-image:url("../img/add.png");
+	width: 10px;
+	height: 10px;
+	position:absolute;
+	margin-left:5px;
+	margin-top:8px;
+	left:5px;
+	top: -1px;
+}
+.enter{
+	background-image:url("../img/enter.png");
+	width: 0px;
+	height: 5px;
+	position:absolute;
+	margin-left:-15px;
+	margin-top:11px;
+}
+.clear{
+	clear:both;
+}

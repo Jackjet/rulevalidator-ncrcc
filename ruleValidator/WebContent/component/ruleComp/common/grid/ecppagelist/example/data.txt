@@ -1,0 +1,20 @@
+{
+	"total":"6",
+	"records":[{
+		"name":"商品3",
+		"vtitle":"商品3",
+		"code":"123",
+		"num":"123",
+		"state":"状态很好",
+		"price":"2342",
+		"_teffectivedate":"2012-11-07"
+	},{
+		"name":"商品4",
+		"vtitle":"商品4",
+		"code":"123",
+		"num":"123",
+		"state":"状态很好",
+		"price":"2342",
+		"_teffectivedate":"2012-11-07"
+	}]
+}

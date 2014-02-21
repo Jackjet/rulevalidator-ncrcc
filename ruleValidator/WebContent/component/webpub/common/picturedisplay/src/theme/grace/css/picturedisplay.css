@@ -1,0 +1,66 @@
+.product_picture {
+	width: 378px;
+}
+
+.product_picture .picture_box {
+	border: 1px solid #E3E4E4;
+	height: 350px;
+	overflow: hidden;
+	width: 350px;
+	text-align: center;
+}
+
+.product_picture .picture_box div {
+	display: none;
+}
+
+.product_picture .picture_box div.active {
+	display: inline-block;
+	line-height: 350px;
+}
+
+.hidden {
+	display: none;
+}
+
+.product_picture .picture_thumbs {
+	height: 70px;
+	margin: 0;
+	padding: 0;
+	width: 350px;
+}
+
+.picture_thumbs .thumb_item {
+	display: inline;
+	float: left;
+	margin: 5px 0 0 0px;
+}
+
+.clear {
+	clear: both;
+	float: none;
+	height: 0;
+	overflow: hidden;
+}
+
+.picture_thumbs .thumb_item a {
+	border: 1px solid #CDCDCD;
+	float: left;
+	height: 50px;
+	width: 50px;
+	overflow: hidden;
+}
+
+.picture_thumbs .thumb_item a img {
+	border: 0 none;
+}
+
+.picture_thumbs .thumb_item .arrow {
+	background: url("../img/icons.png") no-repeat scroll -30px -65px;
+	float: left;
+	height: 7px;
+	margin: -5px 0 0 -30px;
+	position: absolute;
+	width: 7px;
+	z-index: 2;
+}

@@ -1,0 +1,38 @@
+.w_100ps {
+	width: 100%;
+}
+
+.idTopBanner {
+	top:0px;
+	position: absolute;
+	z-index: -1;
+}
+
+.top_banner_right {
+	background: url("../img/bg_banner_right_right.png") no-repeat scroll
+		100% 0 transparent;
+	float: right;
+	width: 100%;
+}
+
+.top_banner_left {
+	background: url("../img/bg_banner_left_fill_new.png") no-repeat scroll 0
+		0 transparent;
+	float: left;
+	height: 142px;
+	width: 70%;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+@media only screen and (max-width:800px){
+}
+@media only screen and (max-width:640px){
+	.ui-top
+	{
+		display: none;
+	}
+}

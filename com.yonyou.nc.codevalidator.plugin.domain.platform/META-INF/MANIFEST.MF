@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Plugin.Domain.Platform
 Bundle-SymbolicName: com.yonyou.nc.codevalidator.plugin.domain.platform;singleton:=true
-Bundle-Version: 2.9.0
+Bundle-Version: 3.0.0
 Bundle-Vendor: YONYOU
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: com.yonyou.nc.codevalidator.resparser-api,

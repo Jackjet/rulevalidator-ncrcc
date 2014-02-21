@@ -1,0 +1,234 @@
+.bid_products {
+	float: left;
+	margin: 7px;
+	display: inline;
+	border: 1px solid #cacaca;
+	font-family: 'Simsun',serif;
+    font-size: 12px;
+    width: 712px;
+}
+
+ul.bid_products_header {
+	float: left;
+	width: 100%;
+	height: 26px;
+	line-height: 26px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-weight: bold;
+	border-bottom: 1px solid #cacaca;
+	background: url(../img/bg_table_title.png) repeat-x;
+}
+
+ul.bid_products_header li {
+	float: left;
+	height: 26px;
+	text-align: center;
+	background: url(../img/bd_table_header.png) 100% 0 no-repeat;
+}
+
+ul.bid_products_header li.first_column {
+	width: 258px;
+	text-align: left;
+	text-indent: 28px;
+}
+
+ul.bid_products_header li.amount_column {
+	width: 95px;
+}
+
+ul.bid_products_header li.price_column {
+	width: 231px;
+}
+
+ul.bid_products_header li.last_column {
+	width: 128px;
+	background: none;
+}
+
+
+.bid_products_body,.big_detail_module {
+	float: left;
+	width: 100%;
+	padding-bottom: 15px;
+}
+
+.bid_products_body .first_column {
+	float: left;
+	width: 258px;
+}
+
+.first_column strong {
+	float: left;
+	width: 100%;
+	text-indent: 5px;
+	margin-top: 5px;
+}
+
+.bid_products_body .amount_column {
+	float: left;
+	width: 95px;
+	text-align: center;
+	padding-top: 14px;
+}
+
+.bid_products_body .price_column {
+	float: left;
+	width: 231px;
+}
+.bid_products_body .price_column input {
+	text-align: right;
+	background: white;
+}
+
+.bid_products_body .last_column {
+	float: left;
+	width: 100px;
+	padding: 55px 0 0 0;
+	text-align: right;
+}
+
+.bid_products_body .last_column span {
+	float: left;
+	width: 100%;
+	line-height: 19px;
+}
+
+.bid_product_detail {
+	float: left;
+	width: 680px;
+	margin-left: 17px;
+	display: inline;
+	background: url(../img/dashed_line_gray_3x1_vertical.png) repeat-y;
+}
+
+.bid_product_detail .switcher {
+	float: left;
+	width: 100%;
+	background: url(../img/dashed_line_gray_3x1.png) repeat-x;
+}
+
+.switcher a {
+	float: left;
+	height: 19px;
+	line-height: 19px;
+	margin: -9px 0 0 -9px;
+	padding-right: 5px;
+	display: inline;
+	text-indent: 22px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: black;
+	background: url(../img/btn_switch.png) no-repeat #f8f8f8;
+}
+
+.switcher a.up {
+	background-position: 0 -19px;
+}
+
+.big_detail_modules {
+	float: left;
+	width: 100%;
+	display: none;
+}
+
+.bid_product_detail .first_column {
+	float: left;
+	width: 240px;
+}
+
+.bdtop_dashed,.bdbtm_dashed {
+	background: url(../img/dashed_line_gray_3x1.png) repeat-x;
+}
+
+.bdbtm_dashed {
+	background-position: 0 100%;
+}
+
+.bid_product_prices {
+	float: left;
+	width: 712px;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 7px;
+	display: inline;
+	font-weight: bold;
+}
+
+.bid_product_prices input {
+	margin: 12px 0;
+	text-align: right;
+}
+
+dl.bid_product_config {
+	float: left;
+	margin-left: 25px;
+}
+
+dl.bid_product_config dt {
+	float: left;
+	width:36px;
+	margin: 0;
+	padding: 0;
+}
+
+dl.bid_product_config dd {
+	float: left;
+	width:176px;
+	margin: 0;
+	padding: 0;
+}
+
+.form_row {
+	float: left;
+	margin-top: 5px;
+	display: inline;
+	white-space: nowrap;
+	word-wrap: normal;
+}
+
+.form_row .form_title {
+	float: left;
+	height: 24px;
+	line-height: 24px;
+	display: inline;
+	text-align: right;
+	font-size: 12px;
+	width: 25%;
+}
+
+.form_row .form_field {
+	float: left;
+	line-height: 24px;
+	display: inline;
+	font-size: 14px;
+}
+
+.bg_f8  {
+    background-color: #F8F8F8;
+}
+
+.color_f73107 { 
+	color: #f73107; 
+}
+.w_80px { 
+	width: 80px; 
+}
+
+.w_100ps  {
+    width: 100%;
+}
+
+.w_120px  {
+    width: 120px;
+}
+
+.pd_2px { 
+	
+}
+
+input.textfield {
+    height: 12px;
+}
